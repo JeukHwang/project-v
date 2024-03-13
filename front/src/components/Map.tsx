@@ -1,6 +1,6 @@
 import "leaflet/dist/leaflet.css";
 import { MapContainer, Polyline, TileLayer } from "react-leaflet";
-import { WAY_DRAW_MAP } from "../../../data/wrapper";
+import { WAYV_GROUP_MAP } from "../../../data/processed";
 
 const position = [35.95, 128.25];
 const CartoDB_DarkMatterNoLabels = {
@@ -9,13 +9,16 @@ const CartoDB_DarkMatterNoLabels = {
     '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
 };
 
-export default function Map() {
+interface Props {
+  group: string | null;
+}
+export default function Map({ group }: Props) {
   return (
     <MapContainer
       center={position}
       zoom={7}
       scrollWheelZoom={true}
-      style={{ width: "1280px", height: "720px" }}
+      style={{ width: "100vw", height: "100vh" }}
     >
       <TileLayer
         // attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -23,15 +26,17 @@ export default function Map() {
         attribution={CartoDB_DarkMatterNoLabels.attribution}
         url={CartoDB_DarkMatterNoLabels.url}
       />
-      {[...WAY_DRAW_MAP.entries()].map(([key, way_draw]) => {
-        return (
-          <Polyline
-            key={key}
-            pathOptions={{ color: "blue" }}
-            positions={way_draw.nodes}
-          />
-        );
-      })}
+      {(group ? [WAYV_GROUP_MAP.get(group)!] : [...WAYV_GROUP_MAP.values()])
+        .flat()
+        .map((wayV) => {
+          return (
+            <Polyline
+              key={wayV.id}
+              pathOptions={{ color: "blue" }}
+              positions={wayV.nodes}
+            />
+          );
+        })}
     </MapContainer>
   );
 }
