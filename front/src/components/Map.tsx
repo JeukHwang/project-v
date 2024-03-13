@@ -1,5 +1,6 @@
 import "leaflet/dist/leaflet.css";
-import { MapContainer, TileLayer } from "react-leaflet";
+import { MapContainer, Polyline, TileLayer } from "react-leaflet";
+import { WAY_DRAW_MAP } from "../../../data/wrapper";
 
 const position = [35.95, 128.25];
 const CartoDB_DarkMatterNoLabels = {
@@ -22,6 +23,15 @@ export default function Map() {
         attribution={CartoDB_DarkMatterNoLabels.attribution}
         url={CartoDB_DarkMatterNoLabels.url}
       />
+      {[...WAY_DRAW_MAP.entries()].map(([key, way_draw]) => {
+        return (
+          <Polyline
+            key={key}
+            pathOptions={{ color: "blue" }}
+            positions={way_draw.nodes}
+          />
+        );
+      })}
     </MapContainer>
   );
 }
