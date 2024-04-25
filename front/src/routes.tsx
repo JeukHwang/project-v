@@ -1,5 +1,6 @@
-import { createBrowserRouter, Link } from "react-router-dom";
+import { createBrowserRouter } from "react-router-dom";
 import App from "./App";
+import Election from "./Election";
 
 const router = createBrowserRouter([
   {
@@ -8,12 +9,7 @@ const router = createBrowserRouter([
   },
   {
     path: "election",
-    element: (
-      <div>
-        <h1>Hello World</h1>
-        <Link to="about">About Us</Link>
-      </div>
-    ),
+    element: <Election />,
   },
 ]);
 
