@@ -8,12 +8,6 @@ importers:
 
   .:
     dependencies:
-      '@types/topojson-client':
-        specifier: ^3.1.4
-        version: 3.1.4
-      '@types/topojson-server':
-        specifier: ^3.0.4
-        version: 3.0.4
       leaflet:
         specifier: ^1.9.4
         version: 1.9.4
@@ -48,6 +42,12 @@ importers:
       '@types/react-dom':
         specifier: ^18.2.21
         version: 18.2.22
+      '@types/topojson-client':
+        specifier: ^3.1.4
+        version: 3.1.4
+      '@types/topojson-server':
+        specifier: ^3.0.4
+        version: 3.0.4
       '@typescript-eslint/eslint-plugin':
         specifier: ^7.1.1
         version: 7.2.0(@typescript-eslint/parser@7.2.0(eslint@8.57.0)(typescript@5.4.2))(eslint@8.57.0)(typescript@5.4.2)
