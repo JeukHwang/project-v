@@ -12,7 +12,7 @@ import {
   validateOrReject,
 } from "class-validator";
 import { Person, PersonData } from "../model/person";
-import { constant } from "./constant";
+import { constant21 } from "./constant";
 
 class 의원활동Validator {
   @IsDate()
@@ -61,8 +61,8 @@ class PersonValidator {
   의원활동!: 의원활동Validator[];
 }
 
-export async function test(peopleData: PersonData[]) {
-  for (const personData of peopleData) {
+export async function test(peopleData: PersonData[]): Promise<void> {
+  await peopleData.map((personData) => {
     const personValidator = new PersonValidator();
     personValidator.개인정보_이름_한글 = personData.개인정보.이름.한글;
     personValidator.개인정보_이름_한자 = personData.개인정보.이름.한자;
@@ -79,32 +79,33 @@ export async function test(peopleData: PersonData[]) {
       v.선거구 = 의원활동.value.선거구;
       return v;
     });
-    await validateOrReject(personData);
-  }
+    return validateOrReject(personData);
+  });
 
   const people = peopleData.map((p) => new Person(p));
   const people21 = people.filter((p) => p.의원활동at(21) !== null);
   console.assert(people.length === people21.length, "전체수");
   console.assert(
-    people21.filter((p) => p.의원활동at(constant.임기.시작) !== null).length ===
-      constant.의원수.지역구 + constant.의원수.비례대표,
+    people21.filter((p) => p.의원활동at(constant21.임기.시작) !== null)
+      .length ===
+      constant21.의원수.지역구 + constant21.의원수.비례대표,
     "의원수 시작"
   );
   console.assert(
     people21.filter((p) => p.의원활동at(new Date("2024-05-29")) !== null)
       .length ===
-      constant.의원수.지역구 + constant.의원수.비례대표 - 4,
+      constant21.의원수.지역구 + constant21.의원수.비례대표 - 4,
     "의원수 마무리"
   );
   console.assert(
-    people21.filter((p) => p.의원활동at(constant.임기.끝) !== null).length ===
+    people21.filter((p) => p.의원활동at(constant21.임기.끝) !== null).length ===
       0,
     "의원수 끝"
   );
   console.assert(
     new Set(
       people21.map((p) => p.의원활동at(21)!.선거구).filter((v) => v !== null)
-    ).size === constant.의원수.지역구,
+    ).size === constant21.의원수.지역구,
     "선거구"
   );
 }

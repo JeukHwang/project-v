@@ -1,4 +1,4 @@
-export const constant = {
+export const constant21 = {
   임기: {
     /** @description include */
     시작: new Date("2020-05-30"),

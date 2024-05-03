@@ -1,6 +1,7 @@
-import { PersonData } from "../model/person";
-import { readExcelAsJson } from "../util";
-import { constant } from "./constant";
+import { Person, PersonData } from "../model/person";
+import { readExcelAsJson, readJson, saveJson } from "../util";
+import { constant21 } from "./constant";
+import { test } from "./person.test";
 
 type Member = {
   이름: string;
@@ -38,7 +39,7 @@ type CurrentMember = Member & {
   비서: string;
 };
 
-export function build(): PersonData[] {
+async function build(): Promise<PersonData[]> {
   const excel = readExcelAsJson<Member[]>("../election/processed/SGG.xlsx");
   const peopleData: PersonData[] = [];
 
@@ -99,7 +100,7 @@ export function build(): PersonData[] {
   }
 
   for (const member of excel["21대_현직"] as CurrentMember[]) {
-    let startDate = constant.임기.시작;
+    let startDate = constant21.임기.시작;
     if (member["선거구"] === "비례대표") {
       switch (member["이름"]) {
         case "김의겸":
@@ -160,7 +161,7 @@ export function build(): PersonData[] {
       의원활동: [
         {
           start: startDate,
-          end: constant.임기.끝,
+          end: constant21.임기.끝,
           value: {
             대: 21,
             선거구: member["선거구"] === "비례대표" ? null : member["선거구"],
@@ -170,5 +171,13 @@ export function build(): PersonData[] {
     });
   }
 
+  await test(peopleData);
+
   return peopleData;
 }
+
+const path = "../election/processed/21/person.json";
+export const person21 = {
+  build: async () => saveJson(path, await build()),
+  load: () => readJson<PersonData[]>(path).map((p) => new Person(p)),
+};
