@@ -8,12 +8,18 @@ importers:
 
   .:
     dependencies:
+      '@types/geojson':
+        specifier: ^7946.0.14
+        version: 7946.0.14
       class-transformer:
         specifier: ^0.5.1
         version: 0.5.1
       class-validator:
         specifier: ^0.14.1
         version: 0.14.1
+      edit-distance:
+        specifier: ^1.0.5
+        version: 1.0.5
       fastest-levenshtein:
         specifier: ^1.0.16
         version: 1.0.16
@@ -26,6 +32,9 @@ importers:
         version: 20.12.8
 
 packages:
+
+  '@types/geojson@7946.0.14':
+    resolution: {integrity: sha512-WCfD5Ht3ZesJUsONdhvm84dmzWOiOzOAqOncN0++w0lBw1o8OuDNJF2McvvCef/yBqb/HYRahp1BYtODFQ8bRg==}
 
   '@types/node@20.12.8':
     resolution: {integrity: sha512-NU0rJLJnshZWdE/097cdCBbyW1h4hEg0xpovcoAQYHl8dnEyp/NAOiE45pvc+Bd1Dt+2r94v2eGFpQJ4R7g+2w==}
@@ -55,6 +64,9 @@ packages:
     resolution: {integrity: sha512-ROmzCKrTnOwybPcJApAA6WBWij23HVfGVNKqqrZpuyZOHqK2CwHSvpGuyt/UNNvaIjEd8X5IFGp4Mh+Ie1IHJQ==}
     engines: {node: '>=0.8'}
     hasBin: true
+
+  edit-distance@1.0.5:
+    resolution: {integrity: sha512-kgJKxFAxa6PlpfVAiCfj8uCUyhs6PZWZDxW2EaX7ra1+WmLkoVjG9Z1BHfPDfhrJvWaOSm9qf/CmxqH44EVlcQ==}
 
   fastest-levenshtein@1.0.16:
     resolution: {integrity: sha512-eRnCtTTtGZFpQCwhJiUOuxPQWRXVKYDn0b2PeHfXL6/Zi53SLAzAHfVhVWK2AryC/WH05kGfxhFIPvTF0SXQzg==}
@@ -93,6 +105,8 @@ packages:
 
 snapshots:
 
+  '@types/geojson@7946.0.14': {}
+
   '@types/node@20.12.8':
     dependencies:
       undici-types: 5.26.5
@@ -117,6 +131,8 @@ snapshots:
   codepage@1.15.0: {}
 
   crc-32@1.2.2: {}
+
+  edit-distance@1.0.5: {}
 
   fastest-levenshtein@1.0.16: {}
 
