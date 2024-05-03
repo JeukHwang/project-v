@@ -2,6 +2,13 @@
 
 ## Processed
 
+### 제21대\_국회의원지역선거구\_구역표.xlsx
+
+2024.05.03
+
+- Sheet1 [제21대*국회의원지역선거구*구역표.hwp](#제21대_국회의원지역선거구_구역표hwp)
+  - 그저 표 형태로 옮김
+
 ### SGG.xlsx
 
 2024.05.03
@@ -66,6 +73,11 @@ https://open.assembly.go.kr/portal/infs/list/infsListDownPage.do
 
 2024.05.01
 https://open.assembly.go.kr/portal/infs/list/infsListDownPage.do
+
+### 제21대\_국회의원지역선거구\_구역표.hwp
+
+2024.05.03
+https://www.nec.go.kr/site/nec/ex/bbs/View.do?cbIdx=1486&bcIdx=190518
 
 ## 기타
 
