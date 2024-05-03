@@ -1,3 +1,5 @@
+import { District } from "./district";
+
 export type Variable<T> = {
   /** @description include */
   start: Date;
@@ -6,7 +8,10 @@ export type Variable<T> = {
   value: T;
 }[];
 
-export type district = { 대: number; 선거구: string | null };
+export type AssemblyActivity = {
+  대: number;
+  시도_선거구명: District["시도_선거구명"] | null;
+};
 
 export type PersonData = {
   개인정보: {
@@ -22,7 +27,7 @@ export type PersonData = {
     성별: "남" | "여";
   };
   정당활동: Variable<string> /** @todo */;
-  의원활동: Variable<district>;
+  의원활동: Variable<AssemblyActivity>;
 };
 
 export class Person {
@@ -58,7 +63,7 @@ export class Person {
     };
   }
 
-  의원활동at<T extends number | Date>(value: T): district | null {
+  의원활동at<T extends number | Date>(value: T): AssemblyActivity | null {
     if (typeof value === "number") {
       const district = this.data.의원활동.find((v) => v.value.대 === value);
       return district === undefined ? null : district.value;

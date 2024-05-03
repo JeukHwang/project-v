@@ -78,7 +78,7 @@ async function test(peopleData: PersonData[]): Promise<void> {
       v.start = 의원활동.start;
       v.end = 의원활동.end;
       v.대 = 의원활동.value.대;
-      v.선거구 = 의원활동.value.선거구;
+      v.선거구 = 의원활동.value.시도_선거구명;
       return v;
     });
     return validateOrReject(personData);
@@ -106,7 +106,9 @@ async function test(peopleData: PersonData[]): Promise<void> {
   );
   console.assert(
     new Set(
-      people21.map((p) => p.의원활동at(21)!.선거구).filter((v) => v !== null)
+      people21
+        .map((p) => p.의원활동at(21)!.시도_선거구명)
+        .filter((v) => v !== null)
     ).size === constant21.의원수.지역구,
     "선거구"
   );
@@ -191,7 +193,8 @@ async function build(): Promise<PersonData[]> {
           end: end,
           value: {
             대: 21,
-            선거구: member["선거구"] === "비례대표" ? null : member["선거구"],
+            시도_선거구명:
+              member["선거구"] === "비례대표" ? null : member["선거구"],
           },
         },
       ],
@@ -203,7 +206,9 @@ async function build(): Promise<PersonData[]> {
       .find(
         (p) =>
           p.개인정보.이름.한글 === name &&
-          p.의원활동.some((v) => v.value.대 == 21 && v.value.선거구 === null)
+          p.의원활동.some(
+            (v) => v.value.대 == 21 && v.value.시도_선거구명 === null
+          )
       )!
       .의원활동.find((v) => v.value.대 === 21)!.end;
   }
@@ -246,7 +251,7 @@ async function build(): Promise<PersonData[]> {
           (d) =>
             d.value.대 === 21 &&
             member["선거구"] !== "비례대표" &&
-            d.value.선거구 === member["선거구"]
+            d.value.시도_선거구명 === member["선거구"]
         )
       );
       if (exist !== undefined) {
@@ -273,7 +278,8 @@ async function build(): Promise<PersonData[]> {
           end: constant21.임기.끝,
           value: {
             대: 21,
-            선거구: member["선거구"] === "비례대표" ? null : member["선거구"],
+            시도_선거구명:
+              member["선거구"] === "비례대표" ? null : member["선거구"],
           },
         },
       ],
@@ -283,15 +289,16 @@ async function build(): Promise<PersonData[]> {
   const 선거구 = new Set(
     peopleData
       .map((p) =>
-        p.의원활동.find((v) => v.value.대 === 21)!.value.선거구?.trim()
+        p.의원활동.find((v) => v.value.대 === 21)!.value.시도_선거구명?.trim()
       )
       .filter((v) => v !== null && v !== undefined)
   );
   const converter = map2district(district21.load(), [...선거구]);
   peopleData.forEach((p) => {
     const v = p.의원활동.find((v) => v.value.대 === 21)!;
-    if (v.value.선거구) {
-      v.value.선거구 = converter[v.value.선거구.trim()].시도_선거구명;
+    if (v.value.시도_선거구명) {
+      v.value.시도_선거구명 =
+        converter[v.value.시도_선거구명.trim()].시도_선거구명;
     }
   });
 
