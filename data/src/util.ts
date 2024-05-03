@@ -16,7 +16,7 @@ export function readExcelAsJson<T>(filePath: string): { [key in string]: T } {
   );
 }
 
-export  function readJson<T>(filePath: string) :T{
+export function readJson<T>(filePath: string): T {
   const content = fs.readFileSync(path.join(__dirname, filePath), "utf8");
   return JSON.parse(content);
 }
@@ -73,11 +73,14 @@ export function map2district<T extends string>(
     "pair"
   );
 
-  if (strict) {
-    pair.forEach(([d, { overlap }]) => {
-      console.assert(d.length === overlap, "include");
-    });
-  }
+  pair.forEach(([d, { value, overlap }]) => {
+    if (strict) {
+      console.assert(d.length === overlap, `include ${d} ${value}`);
+    } else if (d.length !== overlap) {
+      console.warn(d.length, overlap, `include ${d} ${value}`);
+    }
+  });
+
   return Object.fromEntries(
     pair.map(([d, { value }]) => [
       d,

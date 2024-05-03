@@ -1,6 +1,7 @@
 import { Person, PersonData } from "../model/person";
-import { readExcelAsJson, readJson, saveJson } from "../util";
+import { map2district, readExcelAsJson, readJson, saveJson } from "../util";
 import { constant21 } from "./constant";
+import { district21 } from "./district.build";
 import { test } from "./person.test";
 
 type Member = {
@@ -89,7 +90,7 @@ async function build(): Promise<PersonData[]> {
     });
   }
 
-  function getEnd(name: string) {
+  function getEnd(name: string): Date {
     return peopleData
       .find(
         (p) =>
@@ -171,6 +172,21 @@ async function build(): Promise<PersonData[]> {
     });
   }
 
+  const 선거구 = new Set(
+    peopleData
+      .map((p) =>
+        p.의원활동.find((v) => v.value.대 === 21)!.value.선거구?.trim()
+      )
+      .filter((v) => v !== null && v !== undefined)
+  );
+  const converter = map2district(district21.load(), [...선거구]);
+  peopleData.forEach((p) => {
+    const v = p.의원활동.find((v) => v.value.대 === 21)!;
+    if (v.value.선거구) {
+      v.value.선거구 = converter[v.value.선거구.trim()].시도_선거구명;
+    }
+  });
+
   await test(peopleData);
 
   return peopleData;
@@ -179,5 +195,15 @@ async function build(): Promise<PersonData[]> {
 const path = "../election/processed/21/person.json";
 export const person21 = {
   build: async () => saveJson(path, await build()),
-  load: () => readJson<PersonData[]>(path).map((p) => new Person(p)),
+  load: () => {
+    const content = readJson<PersonData[]>(path);
+    content.forEach((p) => {
+      p.개인정보.생년월일.날짜 = new Date(p.개인정보.생년월일.날짜);
+      p.의원활동.forEach((v) => {
+        v.start = new Date(v.start);
+        v.end = new Date(v.end);
+      });
+    });
+    return content.map((p) => new Person(p));
+  },
 };
