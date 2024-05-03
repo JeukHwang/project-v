@@ -1,6 +1,6 @@
 import { Assembly } from "../model/assembly";
 import { constant21 } from "./constant";
-import { person21 } from "./person.build";
+import { person21 } from "./person";
 
 function load(): Assembly {
   return new Assembly({
