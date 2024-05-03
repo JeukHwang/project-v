@@ -1,10 +1,9 @@
-import { saveJson } from "./util";
-import { build } from "./제21대/person.build";
-import { test } from "./제21대/person.test";
+import { district21 } from "./제21대/district.build";
+import { geometry21 } from "./제21대/geometry.build";
+import { person21 } from "./제21대/person.build";
 
-export async function update21(): Promise<void> {
-  const peopleData = build();
-  await test(peopleData);
-  saveJson(peopleData, "../election/processed/person21.json");
+async function build21() {
+  district21.build();
+  geometry21.build();
+  await person21.build();
 }
-update21();
