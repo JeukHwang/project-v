@@ -1,14 +1,24 @@
-https://overpass-turbo.eu/#
+# Reference
+
+## Processed
+
+## Raw
+
+### 국토교통부\_일반국도 도로중심선\_20230906
+
+2024.05.05
+~~출처~~
+
+https://github.com/vuski/admdongkor
+
+```sh
+npx shp2json ./highway/raw/구역의도형_전체분_서울특별시/TL_SCCO_GEMD.shp --encoding euc-kr > test3.json
+npx shp2json ./highway/raw/국토교통부_일반국도_도로중심선_20230906/road.shp --encoding euc-kr > test4.json
+npx shp2json ./highway/raw/국토교통부_일반국도_도로중심선_20230906/road.shp --encoding euc-kr -n > test4.shp.json
+npx dbf2json ./highway/raw/국토교통부_일반국도_도로중심선_20230906/road.dbf --encoding euc-kr -n > test4.dbf.json
 ```
-[out:json][timeout:50];
-// Find South Korea by its name
-area["ISO3166-1"="KR"][admin_level=2]->.southKorea;
-// Fetch motorways in the area of South Korea
-(
-  way(area.southKorea)["highway"="motorway"];
-);
-// setup the output
-out body;
->;
-out skel qt;
+
+2530 -
+```text
+0010,��μ�,253.3000,127.622493639,36.292409254,255918.725016,410670.688684
 ```
