@@ -11,6 +11,7 @@ export default function OptionSelector({ options, onChange }: Props) {
       <Select
         options={options}
         menuPlacement="auto"
+        defaultValue={options[0]}
         onChange={(e) => {
           onChange(e ? e.value : null);
         }}
