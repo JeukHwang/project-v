@@ -1,4 +1,5 @@
 import { LeafletMouseEventHandlerFn, PathOptions } from "leaflet";
+import { PropsWithChildren } from "react";
 import { GeoJSON } from "react-leaflet";
 
 interface Props {
@@ -15,7 +16,8 @@ export default function MapGeoJSON({
   pathOptions,
   interactive = true,
   onClick,
-}: Props) {
+  children,
+}: PropsWithChildren<Props>) {
   return (
     <GeoJSON
       data={data}
@@ -23,6 +25,8 @@ export default function MapGeoJSON({
       pathOptions={pathOptions}
       interactive={interactive}
       eventHandlers={{ click: onClick }}
-    />
+    >
+      {children}
+    </GeoJSON>
   );
 }
