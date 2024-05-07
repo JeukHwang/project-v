@@ -1,5 +1,5 @@
+import { map2district, readJson, saveJson } from "../../util";
 import { Geometry } from "../model/geometry";
-import { map2district, readJson, saveJson } from "../util";
 import { district21 } from "./district";
 
 function build(): Geometry {

@@ -3,7 +3,7 @@ import * as fs from "fs";
 import iconv from "iconv-lite";
 import path from "path";
 import * as XLSX from "xlsx";
-import { District } from "./model/district";
+import { District } from "./election/model/district";
 
 XLSX.set_fs(fs);
 

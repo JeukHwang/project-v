@@ -1,5 +1,5 @@
+import { readExcelAsJson, readJson, saveJson } from "../../util";
 import { District } from "../model/district";
-import { readExcelAsJson, readJson, saveJson } from "../util";
 import { constant21 } from "./constant";
 
 function build(): District[] {

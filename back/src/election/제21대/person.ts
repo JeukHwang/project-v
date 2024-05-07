@@ -11,8 +11,8 @@ import {
   ValidateNested,
   validateOrReject,
 } from "class-validator";
+import { map2district, readExcelAsJson, readJson, saveJson } from "../../util";
 import { Person, PersonData } from "../model/person";
-import { map2district, readExcelAsJson, readJson, saveJson } from "../util";
 import { constant21 } from "./constant";
 import { district21 } from "./district";
 
