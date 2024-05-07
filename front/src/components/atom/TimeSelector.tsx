@@ -15,17 +15,34 @@ function subtract(max: Date, min: Date) {
 export default function TimeSelector({ min, max, value, onChange }: Props) {
   const step = subtract(max, min);
   return (
-    <input
-      type="range"
-      min="0"
-      max={step}
-      value={subtract(value, min)}
-      onChange={(e) => {
-        const number = parseInt(e.target.value, 10);
-        const date = new Date(min.getTime() + number * 24 * 60 * 60 * 1000);
-        onChange(date);
+    <div
+      style={{
+        height: "40px",
+        padding: "4px 8px",
+        margin: "4px 0px",
+        display: "flex",
+        alignItems: "center",
+        gap: "8px",
+        backgroundColor: "hsl(0, 0%, 100%)",
+        borderColor: "hsl(0, 0%, 80%)",
+        borderRadius: "4px",
+        borderStyle: "solid",
+        borderWidth: "1px",
       }}
-      style={{ width: "100%" }}
-    />
+    >
+      <p style={{ whiteSpace: "nowrap" }}>{value.toLocaleDateString()}</p>
+      <input
+        style={{ width: "0", flexGrow: 1 }}
+        type="range"
+        min="0"
+        max={step}
+        value={subtract(value, min)}
+        onChange={(e) => {
+          const number = parseInt(e.target.value, 10);
+          const date = new Date(min.getTime() + number * 24 * 60 * 60 * 1000);
+          onChange(date);
+        }}
+      />
+    </div>
   );
 }
