@@ -1,5 +1,6 @@
 import { levenshtein } from "edit-distance";
 import * as fs from "fs";
+import iconv from "iconv-lite";
 import path from "path";
 import * as XLSX from "xlsx";
 import { District } from "./model/district";
@@ -89,4 +90,9 @@ export function map2district<T extends string>(
   ) as {
     [key in T]: District;
   };
+}
+
+export function readCSV(filePath: string): string[][] {
+  const csv = iconv.decode(fs.readFileSync(filePath), "euc-kr");
+  return csv.split(/\n|\r/).map((row) => row.split(","));
 }
