@@ -1,38 +1,43 @@
+import * as colorgrad from "colorgrad-js/bundler";
 import { LeafletMouseEvent } from "leaflet";
 import { useState } from "react";
-import { Marker, Popup } from "react-leaflet";
+import { Marker, Popup, Tooltip } from "react-leaflet";
+import { Person } from "../../../../data/src/model/person";
 import LeafletMap from "../atom/LeafletMap";
-import { centroid, merge, Position } from "../util/geojson";
-import { GeoMapProperties, IMPORT_DATA } from "../util/import";
+import { ATTR, randomColor, ViewType } from "../util/constant";
+import { centroid, Position } from "../util/geojson";
+import { geometry21, mergedGeometry21, person21 } from "../util/import";
 import MapGeoJSON from "./MapGeoJSON";
+const attr = ATTR.LeeJongho21;
 
-function randomColor(i: number) {
-  return `hsl(${(50 * i) % 360}, 100%, 50%)`;
+interface Props {
+  view: ViewType;
+  date: Date;
 }
 
-const electionMap = IMPORT_DATA.MAP21;
-export default function ElectionMap() {
-  const [clicked, setClicked] = useState<LeafletMouseEvent>();
-  const mergedFeatures: [GeoMapProperties, GeoJSON.MultiPolygon][] =
-    Object.values(
-      Object.groupBy(electionMap.data.features, (f) => f.properties.SIDO)
-    ).map((v) => [v![0].properties, merge(v!)]);
+interface SubProps {
+  clicked?: LeafletMouseEvent | undefined;
+  setClicked: (e: LeafletMouseEvent) => void;
+  date: Date;
+}
+
+function 지역구_구분({ setClicked }: SubProps) {
   return (
-    <LeafletMap>
-      {mergedFeatures.map(([prop, feature], i) => (
+    <>
+      {Object.entries(mergedGeometry21).map(([group, data], i) => (
         <MapGeoJSON
-          key={prop.SGG_Code}
-          data={feature}
-          attr={electionMap.attribution}
+          key={group}
+          data={data}
+          attr={attr}
           pathOptions={{ stroke: false, fillColor: randomColor(i) }}
           interactive={false}
         />
       ))}
-      {electionMap.data.features.map((feature) => (
+      {geometry21.features.map((feature) => (
         <MapGeoJSON
-          key={feature.properties.SGG_Code}
+          key={feature.properties.시도_선거구명}
           data={feature}
-          attr={electionMap.attribution}
+          attr={attr}
           pathOptions={{
             color: "gray",
             weight: 1,
@@ -44,24 +49,21 @@ export default function ElectionMap() {
           }}
         />
       ))}
-      {mergedFeatures.map(([prop, feature]) => (
+      {Object.entries(mergedGeometry21).map(([group, data]) => (
         <MapGeoJSON
-          key={prop.SGG_Code}
-          data={feature}
-          attr={electionMap.attribution}
+          key={group}
+          data={data}
+          attr={attr}
           pathOptions={{ color: "black", weight: 1, fill: false }}
           interactive={false}
         />
       ))}
-      {mergedFeatures.map(([prop, feature]) => {
-        // const exterior = feature.coordinates.map((v) => v[0]);
-        // const [lat, lng] = centroid(exterior as Position[][]);
-        const [lng, lat] = centroid(
-          feature.coordinates.map((v) => v[0]) as Position[][]
-        );
+      {Object.entries(mergedGeometry21).map(([group, data]) => {
+        const exterior = data.coordinates.map((v) => v[0]) as Position[][];
+        const [lng, lat] = centroid(exterior);
         return (
           <Marker
-            key={prop.SGG_Code}
+            key={group}
             position={{ lat, lng }}
             eventHandlers={{
               mouseover: (event) => event.target.openPopup(),
@@ -69,11 +71,74 @@ export default function ElectionMap() {
             }}
           >
             <Popup autoPan autoClose>
-              <p>선거구명: {prop.SIDO}</p>
+              <p>선거구명: {group}</p>
             </Popup>
           </Marker>
         );
       })}
+    </>
+  );
+}
+
+/** @see https://mazznoer.github.io/colorgrad-js/ */
+const age2color = colorgrad.customGradient(
+  ["green", "red", "red", "black"],
+  [40, 80, 100, 101],
+  "oklab",
+  "catmull-rom"
+);
+
+const district2person = (district: string, date: Date): Person | null => {
+  return (
+    person21.find((p) => p.의원활동at(date)?.시도_선거구명 === district) || null
+  );
+};
+
+const district2age = (district: string, date: Date) => {
+  const person = district2person(district, date);
+  return person
+    ? date.getFullYear() - person.개인정보.생년월일.날짜.getFullYear()
+    : Infinity;
+};
+
+function 당선자_나이({ setClicked, date }: SubProps) {
+  return (
+    <>
+      {geometry21.features.map((feature) => (
+        <MapGeoJSON
+          key={feature.properties.시도_선거구명}
+          data={feature}
+          attr={attr}
+          pathOptions={{
+            color: "gray",
+            weight: 1,
+            fill: true,
+            fillColor: age2color
+              .at(district2age(feature.properties.시도_선거구명, date))
+              .rgbString(),
+            fillOpacity: 0.8,
+          }}
+          onClick={(e) => {
+            setClicked(e);
+          }}
+        >
+          {district2age(feature.properties.시도_선거구명, date) !==
+            Infinity && (
+            <Tooltip sticky>
+              {district2age(feature.properties.시도_선거구명, date)}
+            </Tooltip>
+          )}
+        </MapGeoJSON>
+      ))}
+    </>
+  );
+}
+
+function CurrentMarker({ clicked, date }: SubProps) {
+  const district = clicked?.sourceTarget.feature.properties.시도_선거구명;
+  const person = district2person(district, date) ?? null;
+  return (
+    <>
       {clicked && (
         <Marker
           position={clicked.latlng}
@@ -83,13 +148,36 @@ export default function ElectionMap() {
           }}
         >
           <Popup>
-            <p>위도: {clicked.latlng.lat}</p>
-            <p>경도: {clicked.latlng.lng}</p>
-            <p>선거구명: {clicked.sourceTarget.feature.properties.SIDO_SGG}</p>
-            <p>{JSON.stringify(clicked.sourceTarget.feature.properties)}</p>
+            <p>{`위치: ${clicked.latlng.lat.toFixed(
+              3
+            )} ${clicked.latlng.lng.toFixed(3)}`}</p>
+            <p>{`선거구명: ${district}`}</p>
+            {person && <p>{`국회의원: ${person?.이름}`}</p>}
           </Popup>
         </Marker>
       )}
+    </>
+  );
+}
+
+export default function ElectionMap({ view, date }: Props) {
+  const [clicked, setClicked] = useState<LeafletMouseEvent>();
+  return (
+    <LeafletMap>
+      {view === "21대 지역구 구분" && (
+        <지역구_구분 setClicked={setClicked} date={date} />
+      )}
+      {view === "21대 지역구 당선자 나이" && (
+        <당선자_나이 setClicked={setClicked} date={date} />
+      )}
+      <CurrentMarker clicked={clicked} setClicked={setClicked} date={date} />
     </LeafletMap>
   );
 }
+
+/**
+ * @todo
+ * 클릭한 지역구 highlight
+ * hover는 tooltip
+ * click은 popup
+ */

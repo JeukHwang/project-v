@@ -1,42 +1,39 @@
-import MAP21_JSON from "../../data/raw/2020_21_Elec.json";
-import MAP22_JSON from "../../data/raw/2024_22_Elec.json";
-import { ATTR } from "./attribution";
+import DISTRICT22_JSON from "../../../../data/election/processed/21/district.json";
+import GEOMETRY22_JSON from "../../../../data/election/processed/21/geometry.json";
+import PERSON21_JSON from "../../../../data/election/processed/21/person.json";
+import { Constant } from "../../../../data/src/model/constant";
+import { District } from "../../../../data/src/model/district";
+import { Geometry } from "../../../../data/src/model/geometry";
+import { Person, PersonData } from "../../../../data/src/model/person";
+import { merge } from "./geojson";
 
-/** @description SGG means 선거구, not 시군구 */
-
-export type GeoMapProperties = {
-  SGG_Code: string;
-  SIDO_SGG: string;
-  SIDO: string;
-  SGG: string;
+export const constant21: Constant = {
+  임기: {
+    시작: new Date("2020-05-30"),
+    끝: new Date("2024-05-30"),
+  },
+  의원수: {
+    지역구: 253,
+    비례대표: 47,
+  },
 };
+export const district21 = DISTRICT22_JSON as District[];
 
-export type GeoMap = GeoJSON.FeatureCollection<
-  GeoJSON.Polygon | GeoJSON.MultiPolygon,
-  GeoMapProperties
->;
+export const geometry21 = GEOMETRY22_JSON as Geometry;
+export const mergedGeometry21: {
+  [key in District["시도"]]: GeoJSON.MultiPolygon;
+} = Object.fromEntries(
+  Object.entries(
+    Object.groupBy(geometry21.features, (f) => f.properties.시도)
+  ).map(([시도, features]) => [시도, merge(features!)])
+);
 
-const MAP21_TYPED = MAP21_JSON as GeoJSON.FeatureCollection<
-  GeoJSON.MultiPolygon,
-  { SGG_Code: number; SGG_1: string; SGG_2: string; SGG_3: string }
->;
-const MAP21: GeoMap = {
-  ...MAP21_TYPED,
-  features: MAP21_TYPED.features.map((feature) => {
-    const { SGG_Code, SGG_1: SIDO, SGG_3: SIDO_SGG } = feature.properties;
-    return {
-      ...feature,
-      properties: {
-        SGG_Code: SGG_Code.toString(),
-        SIDO_SGG,
-        SIDO,
-        SGG: SIDO_SGG.replace(SIDO + " ", ""),
-      },
-    };
-  }),
-};
-
-export const IMPORT_DATA = {
-  MAP21: { data: MAP21 as GeoMap, attribution: ATTR.LeeJongho21 },
-  MAP22: { data: MAP22_JSON as GeoMap, attribution: ATTR.LeeJongho22 },
-};
+const person21_ = PERSON21_JSON as unknown as PersonData[];
+person21_.forEach((p) => {
+  p.개인정보.생년월일.날짜 = new Date(p.개인정보.생년월일.날짜);
+  p.의원활동.forEach((v) => {
+    v.start = new Date(v.start);
+    v.end = new Date(v.end);
+  });
+});
+export const person21 = person21_.map((p) => new Person(p));

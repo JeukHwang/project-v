@@ -1,16 +1,19 @@
 import { useState } from "react";
-import OptionSelector from "../atom/OptionSelector";
-import ElectionMap from "../molecule/ElectionMap";
 
-const options = [
-  "21대 지역구 구분",
-  "21대 지역구 당선자 소속 정당",
-  "21대 지역구 매니페스토",
-  "21대 재보궐",
-].map((v) => ({ value: v, label: v }));
+import OptionSelector from "../atom/OptionSelector";
+import TimeSelector from "../atom/TimeSelector";
+import ElectionMap from "../molecule/ElectionMap";
+import { ViewType, viewTypes } from "../util/constant";
+import { constant21 } from "../util/import";
+
+const options = (viewTypes as unknown as ViewType[]).map((v) => ({
+  value: v,
+  label: v,
+}));
 
 export default function Election() {
-  const [group, setGroup] = useState<string | null>(null);
+  const [view, setView] = useState<ViewType>(viewTypes[0]);
+  const [date, setDate] = useState<Date>(new Date());
   return (
     <div
       style={{
@@ -27,7 +30,7 @@ export default function Election() {
           position: "absolute",
         }}
       >
-        <ElectionMap />
+        <ElectionMap view={view} date={date} />
       </div>
       <div
         style={{
@@ -39,7 +42,19 @@ export default function Election() {
           height: "fit-content",
         }}
       >
-        <OptionSelector options={options} onChange={setGroup} />
+        <TimeSelector
+          min={constant21.임기.시작}
+          max={constant21.임기.끝}
+          value={date}
+          onChange={setDate}
+        />
+
+        <OptionSelector
+          options={options}
+          onChange={(v) => {
+            if (v !== null) setView(v as ViewType);
+          }}
+        />
       </div>
     </div>
   );
