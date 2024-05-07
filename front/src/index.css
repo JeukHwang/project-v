@@ -44,3 +44,10 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+
+g:focus {
+  outline: none;
+}
+path:focus {
+  outline: none;
+}
