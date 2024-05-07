@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      colorgrad-js:
+        specifier: ^0.1.0
+        version: 0.1.0
       leaflet:
         specifier: ^1.9.4
         version: 1.9.4
@@ -32,6 +35,9 @@ importers:
       topojson-server:
         specifier: ^3.0.1
         version: 3.0.1
+      vite-plugin-wasm:
+        specifier: ^3.3.0
+        version: 3.3.0(vite@5.1.6(@types/node@20.12.7))
     devDependencies:
       '@types/leaflet':
         specifier: ^1.9.12
@@ -672,6 +678,9 @@ packages:
   color-name@1.1.4:
     resolution: {integrity: sha512-dOy+3AuW3a2wNbZHIuMZpTcgjGuLU/uBL/ubcZF9OXbDo8ff4O8yVp5Bf0efS8uEoYo5q4Fx7dY9OgQGXgAsQA==}
 
+  colorgrad-js@0.1.0:
+    resolution: {integrity: sha512-k4UWvV//vYSJmVvnsg+UwU9ktUPKdJJ0C//uERzk3vxwq/3uswOJdgTPq3KZS/KHajF0/Vqnfm5AFi9F+Dtq6A==}
+
   commander@2.20.3:
     resolution: {integrity: sha512-GpVkmM8vF2vQUkj2LvZmD35JxeJOLCwJ9cUkugyk2nuhbv3+mJvpLYYt+0+USMxE+oj+ey/lJEnhZw75x/OMcQ==}
 
@@ -1225,6 +1234,11 @@ packages:
     peerDependenciesMeta:
       '@types/react':
         optional: true
+
+  vite-plugin-wasm@3.3.0:
+    resolution: {integrity: sha512-tVhz6w+W9MVsOCHzxo6SSMSswCeIw4HTrXEi6qL3IRzATl83jl09JVO1djBqPSwfjgnpVHNLYcaMbaDX5WB/pg==}
+    peerDependencies:
+      vite: ^2 || ^3 || ^4 || ^5
 
   vite@5.1.6:
     resolution: {integrity: sha512-yYIAZs9nVfRJ/AiOLCA91zzhjsHUgMjB+EigzFb6W2XTLO8JixBCKCjvhKZaye+NKYHCrkv3Oh50dH9EdLU2RA==}
@@ -1809,6 +1823,8 @@ snapshots:
 
   color-name@1.1.4: {}
 
+  colorgrad-js@0.1.0: {}
+
   commander@2.20.3: {}
 
   concat-map@0.0.1: {}
@@ -2389,6 +2405,10 @@ snapshots:
       react: 18.2.0
     optionalDependencies:
       '@types/react': 18.2.65
+
+  vite-plugin-wasm@3.3.0(vite@5.1.6(@types/node@20.12.7)):
+    dependencies:
+      vite: 5.1.6(@types/node@20.12.7)
 
   vite@5.1.6(@types/node@20.12.7):
     dependencies:
