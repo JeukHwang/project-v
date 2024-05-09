@@ -14,6 +14,12 @@ importers:
       leaflet:
         specifier: ^1.9.4
         version: 1.9.4
+      leaflet-iconmaterial:
+        specifier: ^1.1.0
+        version: 1.1.0
+      material-symbols:
+        specifier: ^0.17.4
+        version: 0.17.4
       react:
         specifier: ^18.2.0
         version: 18.2.0
@@ -935,6 +941,9 @@ packages:
   keyv@4.5.4:
     resolution: {integrity: sha512-oxVHkHR/EJf2CNXnWxRLW6mg7JyCCUcG0DtEGmL2ctUo1PNTin1PUil+r/+4r5MpVgC/fn1kjsx7mjSujKqIpw==}
 
+  leaflet-iconmaterial@1.1.0:
+    resolution: {integrity: sha512-VnP6uAyc6GLxLKQSpycIzXbJd2kJWfAOz9WWbJD3AsXnG8AEJ2AoUva8GZPjgtkr9eNpaifdyGpVHr5hYMNAQA==}
+
   leaflet@1.9.4:
     resolution: {integrity: sha512-nxS1ynzJOmOlHp+iL3FyWqK89GtNL8U8rvlMOsQdTTssxZwCXh8N2NB3GDQOL+YR3XnWyZAxwQixURb+FA74PA==}
 
@@ -959,6 +968,9 @@ packages:
   lru-cache@6.0.0:
     resolution: {integrity: sha512-Jo6dJ04CmSjuznwJSS3pUeWmd/H0ffTlkXXgwZi+eq1UCmqQwCh+eLsYOYCwY991i2Fah4h1BEMCx4qThGbsiA==}
     engines: {node: '>=10'}
+
+  material-symbols@0.17.4:
+    resolution: {integrity: sha512-5zI+rSzAidMJxAIrQCVwnp4rMjFnx8aQg68lfFXtaDeksZzJ7m8eDl16y9bRNxMosuYbLKeDHDbOWHPJJTSLhQ==}
 
   memoize-one@6.0.0:
     resolution: {integrity: sha512-rkpe71W0N0c0Xz6QD0eJETuWAJGnJ9afsl1srmwPrI+yBCkge5EycXXbYRyvL29zZVUWQCY7InPRCv3GDXuZNw==}
@@ -2120,6 +2132,8 @@ snapshots:
     dependencies:
       json-buffer: 3.0.1
 
+  leaflet-iconmaterial@1.1.0: {}
+
   leaflet@1.9.4: {}
 
   levn@0.4.1:
@@ -2142,6 +2156,8 @@ snapshots:
   lru-cache@6.0.0:
     dependencies:
       yallist: 4.0.0
+
+  material-symbols@0.17.4: {}
 
   memoize-one@6.0.0: {}
 

@@ -1,5 +1,6 @@
 /** @see https://gist.github.com/seyuf/ab9c980776e4c2cb350a2d1e70976517?permalink_comment_id=4804822 */
 
+import { LatLng, LatLngTuple } from "leaflet";
 import * as topojsonClient from "topojson-client";
 import * as topojsonServer from "topojson-server";
 
@@ -70,4 +71,13 @@ export function merge<T extends GeoJSON.GeoJsonProperties>(
     ).geometries as (TopoJSON.Polygon | TopoJSON.MultiPolygon)[]
   );
   return merged;
+}
+
+/** coordinate to string */
+export function c2s(coord: Position | LatLngTuple | LatLng): string {
+  if (Array.isArray(coord)) {
+    return `${coord[0].toFixed(3)} ${coord[1].toFixed(3)}`;
+  } else {
+    return `${coord.lat.toFixed(3)} ${coord.lng.toFixed(3)}`;
+  }
 }
