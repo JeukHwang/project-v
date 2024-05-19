@@ -3,7 +3,7 @@ import { PropsWithChildren, useEffect, useState } from "react";
 import { Marker, Polyline, Tooltip, useMapEvent } from "react-leaflet";
 import { c2s } from "../util/geojson";
 import { icon2marker } from "../util/marker";
-import { findShortestPathWith1UniqueRoad } from "../util/path/find";
+import { findShortestPathWith1MultiRoad } from "../util/path/find";
 import {
   NormalLineNode,
   NormalPointNode,
@@ -16,7 +16,7 @@ import { o2t } from "../util/position";
 const clickTypes = ["1", "2"];
 type ClickTypes = (typeof clickTypes)[number];
 
-export default function PathNodeVisualizer() {
+export default function PathNode() {
   const [clickType, setClickType] = useState<ClickTypes | null>(null);
   const [startPoint, setStartPoint] = useState<LatLngTuple | null>(null);
   const [endPoint, setEndPoint] = useState<LatLngTuple | null>(null);
@@ -51,7 +51,8 @@ export default function PathNodeVisualizer() {
 
   useEffect(() => {
     if (startPoint && endPoint) {
-      setPath(findShortestPathWith1UniqueRoad(startPoint, endPoint));
+      //   findShortestPathWith1UniqueRoad;
+      setPath(findShortestPathWith1MultiRoad(startPoint, endPoint));
     } else {
       setPath(null);
     }
@@ -63,7 +64,7 @@ export default function PathNodeVisualizer() {
       {startPoint && (
         <Point
           node={{ type: "point", point: startPoint, road: false }}
-          icon="line_end_arrow"
+          icon="near_me"
           color={clickType === "1" ? "orange" : "orange"}
         />
       )}
@@ -82,7 +83,7 @@ export default function PathNodeVisualizer() {
               <Point
                 key={c2s(node.point)}
                 node={node}
-                icon={"line_end_arrow"}
+                icon={"near_me"}
                 color={clickType === "1" ? "orange" : "green"}
               >
                 <br />

@@ -1,63 +1,14 @@
-import { LatLngTuple } from "leaflet";
 import { useState } from "react";
-import { Marker, Polyline, Tooltip, useMapEvent } from "react-leaflet";
 // import ROADS from "../../../../data/highway/processed/etc.road.json";
 import LeafletMap from "../atom/LeafletMap";
 import OptionSelector from "../atom/OptionSelector";
 import TimeSelector from "../atom/TimeSelector";
+import PathNode from "../molecule/PathNode";
 import ViewNode from "../molecule/ViewNode";
-import PathNodeVisualizer from "../molecule/PathNodes";
-import { c2s } from "../util/geojson";
 import { constant21 } from "../util/import";
-import { ROADS, ROADS_NAME } from "../util/import.highway";
-import { icon2marker } from "../util/marker";
-import { findClosestPoint } from "../util/path/util";
+import { ROADS_NAME } from "../util/import.highway";
 
-const ROADNAMES_WITH_ALL = ["ALL", ...ROADS_NAME];
-
-const options = ROADNAMES_WITH_ALL.map((v) => ({
-  value: v,
-  label: v,
-}));
-
-function ClosestNode() {
-  // Find closest node in ROADS and make it as marker
-  const [current, setCurrent] = useState<LatLngTuple>();
-  const [closest, setClosest] = useState<ReturnType<typeof findClosestPoint>>();
-  useMapEvent("click", (e) => {
-    const { lat, lng } = e.latlng;
-    setCurrent([lat, lng]);
-    const closest = findClosestPoint(Object.values(ROADS).flat(), [lat, lng]);
-    setClosest(closest);
-  });
-  if (!current || !closest) return null;
-  return (
-    <>
-      <Marker position={current} icon={icon2marker({ name: "person" })}>
-        <Tooltip>
-          Current Position
-          <br />
-          Position: {c2s(current)}
-          <br />
-          Distance: {Math.floor(closest.distance)}m
-        </Tooltip>
-      </Marker>
-      <Polyline
-        positions={[current, closest.point]}
-        pathOptions={{ color: "black" }}
-      />
-      <Marker position={closest.point} icon={icon2marker({ name: "near_me" })}>
-        <Tooltip>
-          Closest Node
-          <br />
-          Position: {c2s(closest.point)}
-          <br />
-          Distance: {Math.floor(closest.distance)}m
-        </Tooltip>
-      </Marker>
-    </>
-  );
-}
+const options = ["ALL", ...ROADS_NAME].map((v) => ({ value: v, label: v }));
 
 export default function Highway() {
   const [view, setView] = useState<string>("ALL");
@@ -81,7 +32,7 @@ export default function Highway() {
       >
         <LeafletMap>
           <ViewNode view={view} />
-          <PathNodeVisualizer />
+          <PathNode />
         </LeafletMap>
       </div>
       <div

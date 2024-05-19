@@ -1,4 +1,3 @@
-// import INTESECTIONS_JSON from "../../../../../back/data/highway/processed/etc.intersection.json";
 import ROADS_JSON from "../../../../../back/data/highway/processed/etc.road.json";
 import { INTESECTIONS_OBJ_TYPE, ROADS_OBJ_TYPE } from "./type";
 
@@ -9,10 +8,9 @@ export const ROADS_OBJ = {
 
 export const ROADS_NAME = Object.keys(ROADS_OBJ);
 
-// export const INTESECTIONS_OBJ =
-//   INTESECTIONS_JSON as unknown as INTESECTIONS_OBJ_TYPE;
 export const INTESECTIONS_OBJ: INTESECTIONS_OBJ_TYPE = [
   {
+    type: "intersection",
     point1: {
       type: "point",
       road: true,

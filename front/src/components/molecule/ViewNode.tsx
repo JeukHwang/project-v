@@ -6,7 +6,7 @@ import { c2s } from "../util/geojson";
 import { icon2marker } from "../util/marker";
 import { INTESECTIONS_OBJ, ROADS_OBJ } from "../util/path/import";
 import { INTESECTIONS_OBJ_TYPE, ROADS_OBJ_TYPE } from "../util/path/type";
-import { findClosestNode, findClosestPoint } from "../util/path/util";
+import { findClosestPoint, findPathToClosestNode } from "../util/path/util";
 import { o2t } from "../util/position";
 
 export default function ViewNode({ view }: { view: string }) {
@@ -36,13 +36,13 @@ export default function ViewNode({ view }: { view: string }) {
 }
 
 function CursorNode({ point }: { point: LatLngTuple }) {
-  const node = findClosestNode(point, "ALL", true);
+  const node = findPathToClosestNode(point, "ALL", true);
   return (
     <Marker position={point}>
       <Tooltip sticky>
         Position : {c2s(point)}
         <br />
-        Distance: {node ? Math.floor(node[0].distance) : 0}m
+        Distance: {node ? Math.floor(node[1].distance) : 0}m
       </Tooltip>
     </Marker>
   );

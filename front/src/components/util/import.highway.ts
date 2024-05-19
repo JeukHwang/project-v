@@ -4,24 +4,24 @@ import ROADS_JSON from "../../../../back/data/highway/processed/etc.road.json";
 import INTESECTIONS_JSON from "../../../../back/data/highway/processed/etc.intersection.json";
 
 export type Position = [x: number, y: number];
-export type RoadPointNode = {
+type RoadPointNode = {
   type: "roadPoint";
   point: LatLngTuple;
   roadName: string;
   index: number;
 };
-export type PointNode = {
+type PointNode = {
   type: "point";
   point: LatLngTuple;
 };
-export type RoadPathNode = {
+type RoadPathNode = {
   type: "roadPath";
   roadName: string;
   points: LatLngTuple[];
   startIndex: number;
   endIndex: number;
 };
-export type Path = (PointNode | RoadPointNode | RoadPathNode)[];
+type Path = (PointNode | RoadPointNode | RoadPathNode)[];
 
 export type Intersection = {
   road1: {
