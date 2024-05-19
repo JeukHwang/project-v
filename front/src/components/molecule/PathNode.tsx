@@ -3,7 +3,7 @@ import { PropsWithChildren, useEffect, useState } from "react";
 import { Marker, Polyline, Tooltip, useMapEvent } from "react-leaflet";
 import { c2s } from "../util/geojson";
 import { icon2marker } from "../util/marker";
-import { findShortestPathWith1MultiRoad } from "../util/path/find";
+import { findShortestPathWith1Road } from "../util/path/optimize";
 import {
   NormalLineNode,
   NormalPointNode,
@@ -52,7 +52,7 @@ export default function PathNode() {
   useEffect(() => {
     if (startPoint && endPoint) {
       //   findShortestPathWith1UniqueRoad;
-      setPath(findShortestPathWith1MultiRoad(startPoint, endPoint));
+      setPath(findShortestPathWith1Road(startPoint, endPoint));
     } else {
       setPath(null);
     }

@@ -6,7 +6,7 @@ import TimeSelector from "../atom/TimeSelector";
 import PathNode from "../molecule/PathNode";
 import ViewNode from "../molecule/ViewNode";
 import { constant21 } from "../util/import";
-import { ROADS_NAME } from "../util/import.highway";
+import { ROADS_NAME } from "../util/path/import";
 
 const options = ["ALL", ...ROADS_NAME].map((v) => ({ value: v, label: v }));
 

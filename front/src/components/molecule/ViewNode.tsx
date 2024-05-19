@@ -5,8 +5,9 @@ import { randomColor } from "../util/constant";
 import { c2s } from "../util/geojson";
 import { icon2marker } from "../util/marker";
 import { INTESECTIONS_OBJ, ROADS_OBJ } from "../util/path/import";
+import { findNormalPathToClosestNode } from "../util/path/node";
 import { INTESECTIONS_OBJ_TYPE, ROADS_OBJ_TYPE } from "../util/path/type";
-import { findClosestPoint, findPathToClosestNode } from "../util/path/util";
+import { findClosestPoint } from "../util/path/util";
 import { o2t } from "../util/position";
 
 export default function ViewNode({ view }: { view: string }) {
@@ -36,13 +37,13 @@ export default function ViewNode({ view }: { view: string }) {
 }
 
 function CursorNode({ point }: { point: LatLngTuple }) {
-  const node = findPathToClosestNode(point, "ALL", true);
+  const node = findNormalPathToClosestNode(point, "ALL", true);
   return (
     <Marker position={point}>
       <Tooltip sticky>
         Position : {c2s(point)}
         <br />
-        Distance: {node ? Math.floor(node[1].distance) : 0}m
+        Distance: {Math.floor(node.distance)}m
       </Tooltip>
     </Marker>
   );
@@ -90,7 +91,9 @@ function IntersectionNode({
           position={point.point}
           icon={icon2marker({ name: "join" })}
         >
-          <Tooltip>
+          <Tooltip sticky>
+            Position : {c2s(point.point)}
+            <br />
             {point1.roadName} : {point1.index}
             <br />
             {point2.roadName} : {point2.index}

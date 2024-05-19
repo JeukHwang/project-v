@@ -7,7 +7,6 @@ export interface RoadNode {
   road: true;
   roadName: string;
 }
-
 export interface PointNode {
   type: "point";
   point: LatLngTuple;
@@ -40,8 +39,9 @@ export interface IntersectionNode {
   distance: number;
 }
 
-export interface PathNodes {
-  nodes: (NormalPointNode | RoadPointNode | NormalLineNode | RoadLineNode)[];
+export type PathNode = NormalPointNode | RoadPointNode | NormalLineNode | RoadLineNode;
+export interface PathNodes<T extends PathNode[] = PathNode[]> {
+  nodes: T;
   distance: number;
 }
 
