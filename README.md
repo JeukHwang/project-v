@@ -34,3 +34,10 @@ https://blog.naver.com/PostView.nhn?blogId=psc99999&logNo=221478951177&parentCat
 
 https://nominatim.openstreetmap.org/
 https://www.ex.co.kr/
+
+#FF0000, #00FF00, hsv(240 1 1)
+
+https://namu.wiki/w/%EC%86%8D%EB%8F%84%EC%9C%84%EB%B0%98#s-3.1
+- 속도제한은 다음과 같이 가정
+일반도로는 50km/h
+고속도로는 100km/h

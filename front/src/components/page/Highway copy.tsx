@@ -2,14 +2,15 @@ import { LatLngTuple } from "leaflet";
 import { useState } from "react";
 import { Marker, Polyline, Tooltip, useMapEvent } from "react-leaflet";
 // import ROADS from "../../../../data/highway/processed/etc.road.json";
+import SEOUL from "../../../../back/data/highway/processed/seoul.shp.convert.json";
 import LeafletMap from "../atom/LeafletMap";
 import OptionSelector from "../atom/OptionSelector";
 import TimeSelector from "../atom/TimeSelector";
-import ViewNode from "../molecule/ViewNode";
-import PathNodeVisualizer from "../molecule/PathNodes";
+import { PathFinder } from "../molecule/PathFinder";
+import { randomColor } from "../util/constant";
 import { c2s } from "../util/geojson";
 import { constant21 } from "../util/import";
-import { ROADS, ROADS_NAME } from "../util/import.highway";
+import { INTESECTIONS, ROADS, ROADS_NAME } from "../util/import.highway";
 import { icon2marker } from "../util/marker";
 import { findClosestPoint } from "../util/path/util";
 
@@ -80,8 +81,49 @@ export default function Highway() {
         }}
       >
         <LeafletMap>
-          <ViewNode view={view} />
-          <PathNodeVisualizer />
+          {(
+            (view === "ALL"
+              ? Object.entries<LatLngTuple[]>(ROADS)
+              : [[view, ROADS[view]]]) as [string, LatLngTuple[]][]
+          ).map(([k, v], i) => {
+            return (
+              <Polyline
+                key={k}
+                positions={v}
+                pathOptions={{ color: randomColor(i), weight: 5 }}
+              >
+                <Tooltip sticky>{k}</Tooltip>
+              </Polyline>
+            );
+          })}
+          {INTESECTIONS.map(({ road1, road2, position }) => (
+            <Marker
+              key={JSON.stringify([road1.name, road2.name, position])}
+              position={position}
+              icon={icon2marker({ name: "join" })}
+            >
+              <Tooltip>
+                {road1.name} {road1.index}
+                <br />
+                {road2.name} {road2.index}
+              </Tooltip>
+            </Marker>
+          ))}
+          <ClosestNode />
+          <PathFinder />
+          {(
+            SEOUL as GeoJSON.FeatureCollection<GeoJSON.Polygon, object>
+          ).features.map((f) => (
+            <Polyline
+              key={JSON.stringify(f)}
+              positions={f.geometry.coordinates as unknown as LatLngTuple[]}
+              pathOptions={{ color: "black", weight: 2 }}
+            />
+          ))}
+          {/* <GeoJSON
+            data={SEOUL as GeoJSON.FeatureCollection}
+            pathOptions={{ fill: true, fillColor: "black" }}
+          /> */}
         </LeafletMap>
       </div>
       <div
