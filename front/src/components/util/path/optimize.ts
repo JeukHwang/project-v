@@ -12,7 +12,7 @@ import {
   RoadPointNode,
 } from "./type";
 
-export function findShortestPathWith0Road(
+export function findShortestPathWithoutRoad(
   from: LatLngTuple,
   to: LatLngTuple
 ): PathNodes<[NormalPointNode, NormalLineNode, NormalPointNode]> {
@@ -26,7 +26,7 @@ export function findShortestPathWith0Road(
   return { nodes: [fromPoint, normal, toPoint], distance: normal.distance };
 }
 
-export function findShortestPathWith1Road(
+export function findShortestPathWithRoad(
   from: LatLngTuple,
   to: LatLngTuple
 ): PathNodes<
@@ -40,9 +40,20 @@ export function findShortestPathWith1Road(
     NormalPointNode
   ]
 > {
-  const fromPath = findNormalPathToClosestNode(from, "ALL", false);
-  const toPath = findNormalPathToClosestNode(to, "ALL", true);
-  const roadPath = findRoadPathFromNodes(fromPath.nodes[2], toPath.nodes[0]);
+  const fromPath = findNormalPathToClosestNode(
+    from,
+    "ALL",
+    false
+  ); /** @todo RIGHT NOW */
+  const toPath = findNormalPathToClosestNode(
+    to,
+    "ALL",
+    true
+  ); /** @todo RIGHT NOW */
+  const roadPath = findRoadPathFromNodes(
+    fromPath.nodes[2],
+    toPath.nodes[0]
+  ); /** @todo RIGHT NOW */
   roadPath.nodes.shift();
   roadPath.nodes.pop();
   return {

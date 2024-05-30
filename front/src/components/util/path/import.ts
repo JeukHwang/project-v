@@ -115,6 +115,4 @@ function processICJC() {
 // console.log(JSON.stringify(ICJC));
 
 /** @description Load */
-export const { IC, JC }: { IC: ICNode[]; JC: JCNode[] } = JSON.parse(
-  JSON.stringify(ICJC_PROCESSED)
-);
+export const { IC, JC } = ICJC_PROCESSED as { IC: ICNode[]; JC: JCNode[] };

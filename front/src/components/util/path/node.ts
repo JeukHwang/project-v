@@ -1,6 +1,7 @@
+import { IC, JC, ROADS_OBJ } from "./import";
 import { LatLngTuple } from "./leaflet";
-import { JC, ROADS_OBJ } from "./import";
 import {
+  ICNode,
   NormalLineNode,
   NormalPointNode,
   PathNodes,
@@ -9,6 +10,25 @@ import {
   RoadPointNode,
 } from "./type";
 import { distance, findClosestPoint } from "./util";
+
+const IC_POINTS = IC.map(({ point }) => point);
+export function findClosestIC(
+  point: LatLngTuple,
+  roadName = "ALL"
+): {
+  IC: ICNode;
+  index: number;
+  distance: number;
+} {
+  const doaminIC =
+    roadName === "ALL"
+      ? IC_POINTS
+      : IC.filter(({ roadName }) => roadName === roadName).map(
+          ({ point }) => point
+        );
+  const { index, distance } = findClosestPoint(doaminIC, point);
+  return { IC: IC[index], index, distance };
+}
 
 export function findRoadLineFromPoints(
   from: RoadPointNode,
@@ -91,6 +111,28 @@ export function findNormalPathToClosestNode<T extends boolean>(
       closestNode = { type: "point", road: true, roadName: rN, ...p };
     }
   }
+  const pointNode: NormalPointNode = { type: "point", road: false, point };
+  if (!inverse) {
+    const normal = findNormalLineFromPoints(pointNode, closestNode);
+    return {
+      nodes: [pointNode, normal, closestNode] as Nodes<T>,
+      distance: normal.distance,
+    };
+  } else {
+    const normal = findNormalLineFromPoints(closestNode, pointNode);
+    return {
+      nodes: [closestNode, normal, pointNode] as Nodes<T>,
+      distance: normal.distance,
+    };
+  }
+}
+
+export function findNormalPathToClosestIC<T extends boolean>(
+  point: LatLngTuple,
+  roadName: "ALL" | string,
+  inverse: T = false as T
+): PathNodes<Nodes<T>> {
+  const closestNode: RoadPointNode = findClosestIC(point, roadName).IC;
   const pointNode: NormalPointNode = { type: "point", road: false, point };
   if (!inverse) {
     const normal = findNormalLineFromPoints(pointNode, closestNode);

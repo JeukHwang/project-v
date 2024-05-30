@@ -1,7 +1,5 @@
 // import L, { LatLngTuple } from "leaflet";
-import { IC } from "./import";
 import { distanceTo, LatLngTuple } from "./leaflet";
-import { ICNode } from "./type";
 
 export function distance(...points: LatLngTuple[]): number {
   let sum = 0;
@@ -41,14 +39,4 @@ export function findClosestPoint(
     }
   }
   return closest;
-}
-
-const IC_POINTS = IC.map(({ point }) => point);
-export function findClosestIC(point: LatLngTuple): {
-  IC: ICNode;
-  index: number;
-  distance: number;
-} {
-  const { index, distance } = findClosestPoint(IC_POINTS, point);
-  return { IC: IC[index], index, distance };
 }
