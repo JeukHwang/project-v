@@ -20,6 +20,8 @@ npx shp2json ./data/highway/raw/구역의도형_전체분_서울특별시/TL_SCC
 npx dbf2json ./data/highway/raw/구역의도형_전체분_서울특별시/TL_SCCO_GEMD.dbf --encoding euc-kr > seoul.dbf.json
 ```
 
+TL_SCCO_GEMD
+
 2530 -
 ```text
 0010,��μ�,253.3000,127.622493639,36.292409254,255918.725016,410670.688684

@@ -32,6 +32,7 @@ export default function ViewNode({ view }: { view: string }) {
       {/* {clicked && <CursorNode point={point!} />} */}
       <RoadNode point={point!} roads={ROADS} />
       <IntersectionNode intersections={INTESECTIONS} />
+      <ICJCNode />
     </>
   );
 }
@@ -58,6 +59,7 @@ function RoadNode({
 }) {
   return (
     <>
+      {/* @note 다 보여주고,  */}
       {Object.entries(roads).map(([k, v], i) => {
         const { index, distance } = point
           ? findClosestPoint(v, point)
@@ -78,6 +80,59 @@ function RoadNode({
   );
 }
 
+function ICJCNode() {
+  return (
+    <>
+      {/* {JC.map(({ name, point, type }) => (
+        <Marker
+          key={JSON.stringify(point)}
+          position={point}
+          //   icon={icon2marker({ name: type === "IC" ? "join_left" : "join" })}
+        >
+          <Tooltip sticky>
+            Name: {name}
+            <br />
+            Type: {type} <br />
+            Position : {c2s(point)}
+          </Tooltip>
+        </Marker>
+      ))} */}
+      {INTESECTIONS_OBJ.map(({ point1, point2, midPoint, name }) => (
+        <div key={`${name} ${point1.roadName}-${point2.roadName}`}>
+          <Marker
+            key={JSON.stringify(midPoint.point)}
+            position={midPoint.point}
+            icon={icon2marker({ name: "join" })}
+          >
+            <Tooltip sticky>
+              Name: {name}
+              <br />
+              Position : {c2s(midPoint.point)}
+              <br />
+              {point1.roadName} : {point1.index}
+              <br />
+              {point2.roadName} : {point2.index}
+            </Tooltip>
+          </Marker>
+          {/* <Polyline
+            key={JSON.stringify(point.point)}
+            positions={[point1.point, point.point, point2.point]}
+            pathOptions={{ color: "black", weight: 5 }}
+          >
+            <Tooltip sticky>
+              Position : {c2s(point.point)}
+              <br />
+              {point1.roadName} : {point1.index}
+              <br />
+              {point2.roadName} : {point2.index}
+            </Tooltip>
+          </Polyline> */}
+        </div>
+      ))}
+    </>
+  );
+}
+
 function IntersectionNode({
   intersections,
 }: {
@@ -85,14 +140,14 @@ function IntersectionNode({
 }) {
   return (
     <>
-      {intersections.map(({ point1, point2, point }) => (
+      {intersections.map(({ point1, point2, midPoint }) => (
         <Marker
-          key={JSON.stringify(point.point)}
-          position={point.point}
+          key={JSON.stringify(midPoint.point)}
+          position={midPoint.point}
           icon={icon2marker({ name: "join" })}
         >
           <Tooltip sticky>
-            Position : {c2s(point.point)}
+            Position : {c2s(midPoint.point)}
             <br />
             {point1.roadName} : {point1.index}
             <br />

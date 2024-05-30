@@ -37,5 +37,6 @@ export const viewTypes = [
   "21대 지역구 당선자 소속 정당",
   "21대 지역구 매니페스토",
   "21대 재보궐",
+  "21대 투표율"
 ] as const;
 export type ViewType = (typeof viewTypes)[number];

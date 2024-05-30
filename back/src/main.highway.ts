@@ -72,43 +72,69 @@
 
 // load;
 
-import SEOUL_JSON from "../data/highway/processed/seoul.shp.json";
-import { Position } from "./highway/model";
-import { convert } from "./highway/transform";
+// import SEOUL_JSON from "../data/highway/processed/seoul.shp.json";
+// import { Position } from "./highway/model";
+// import { convert } from "./highway/transform";
 
-interface Property {
-  EMD_CD: string;
-  EMD_KOR_NM: string;
-  EMD_ENG_NM: string;
+// interface Property {
+//   EMD_CD: string;
+//   EMD_KOR_NM: string;
+//   EMD_ENG_NM: string;
+// }
+// const seoul = SEOUL_JSON as GeoJSON.FeatureCollection<
+//   GeoJSON.Polygon,
+//   Property
+// >;
+
+// const [x1, y1, x2, y2] = seoul.bbox!;
+// const converted_bbox = [...convert([x1, y1]), ...convert([x2, y2])];
+
+// const converted_seoul = {
+//   ...seoul,
+//   bbox: converted_bbox,
+//   features: seoul.features.map((feature) => {
+//     let coordinates;
+//     if (feature.geometry.type === "Polygon") {
+//       coordinates = feature.geometry.coordinates.map((c) =>
+//         c.map((v) => convert(v as Position) as GeoJSON.Position)
+//       );
+//     } else if (feature.geometry.type === "MultiPolygon") {
+//       coordinates = feature.geometry.coordinates.map((c) =>
+//         c.map((c2) => c2.map((v) => convert(v as Position) as GeoJSON.Position))
+//       );
+//     } else {
+//       throw new Error(feature.geometry.type);
+//     }
+//     return {
+//       ...feature,
+//       geometry: { ...feature.geometry, coordinates },
+//     };
+//   }),
+// };
+// console.log(JSON.stringify(converted_seoul, null, 2));
+
+// read csv
+import path from "path";
+import { readCSV, saveJson } from "./util";
+
+function processICJS() {
+  const csvPath = path.resolve(
+    "./data/highway/raw/ETC_고속도로 출입시설 위치정보(FILE)_1달_1개월_202404.csv"
+  );
+  const [header, ...content]: string[][] = readCSV(csvPath)
+    .filter((row) => row.length >= 6)
+    .map((row) => row.splice(0, 6));
+  const obj = content.map((row) => {
+    return Object.fromEntries(
+      [...Array(6).keys()].map((i) => {
+        const key = header[i].replace(/"/g, "");
+        const value = row[i].replace(/"/g, "");
+        return [key, value];
+      })
+    );
+  });
+
+  saveJson("../data/highway/processed/etc.icjs.json", obj);
 }
-const seoul = SEOUL_JSON as GeoJSON.FeatureCollection<
-  GeoJSON.Polygon,
-  Property
->;
 
-const [x1, y1, x2, y2] = seoul.bbox!;
-const converted_bbox = [...convert([x1, y1]), ...convert([x2, y2])];
-
-const converted_seoul = {
-  ...seoul,
-  bbox: converted_bbox,
-  features: seoul.features.map((feature) => {
-    let coordinates;
-    if (feature.geometry.type === "Polygon") {
-      coordinates = feature.geometry.coordinates.map((c) =>
-        c.map((v) => convert(v as Position) as GeoJSON.Position)
-      );
-    } else if (feature.geometry.type === "MultiPolygon") {
-      coordinates = feature.geometry.coordinates.map((c) =>
-        c.map((c2) => c2.map((v) => convert(v as Position) as GeoJSON.Position))
-      );
-    } else {
-      throw new Error(feature.geometry.type);
-    }
-    return {
-      ...feature,
-      geometry: { ...feature.geometry, coordinates },
-    };
-  }),
-};
-console.log(JSON.stringify(converted_seoul, null, 2));
+processICJS();

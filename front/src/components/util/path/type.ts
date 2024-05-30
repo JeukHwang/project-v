@@ -31,11 +31,14 @@ export interface RoadLineNode extends RoadNode, LineNode {
   indexStart: number;
   indexEnd: number;
 }
+/** @description Assert dist(point1, point2) === distance */
 export interface IntersectionNode {
   type: "intersection";
+  name: string;
   point1: RoadPointNode;
   point2: RoadPointNode;
-  point: NormalPointNode;
+  midPoint: NormalPointNode;
+  rawPoint: LatLngTuple;
   distance: number;
 }
 

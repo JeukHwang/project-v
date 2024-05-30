@@ -3,8 +3,6 @@ import { readCSV } from "../util";
 import { Intersection, Node, Position } from "./model";
 import { distanceTo, toLatLng } from "./util";
 
-export const load = null;
-
 export function buildRoads(): { [road: string]: Position[] } {
   const csvPath = path.join(
     __dirname,
@@ -12,7 +10,7 @@ export function buildRoads(): { [road: string]: Position[] } {
   );
   const content: string[][] = readCSV(csvPath);
   const [_header, ...rows] = content;
-  rows.pop(); // last row is empty
+  rows.pop(); /** Remove empty last row */
 
   const nodes: Node[] = rows.map((row) => {
     return {
@@ -23,17 +21,20 @@ export function buildRoads(): { [road: string]: Position[] } {
       좌표GRS80: [parseFloat(row[5]), parseFloat(row[6])],
     } as Node;
   });
-  const roads = [...new Set(nodes.map((d) => d.노선명))];
+  const roadNames = [...new Set(nodes.map((d) => d.노선명))];
   console.assert(nodes.length === 54259, "total node");
-  console.assert(roads.length === 53, "total road");
+  console.assert(roadNames.length === 53, "total road");
 
   const object: { [road: string]: Position[] } = Object.fromEntries(
-    roads
-      .map((d: string): [string, Position[][]] => {
+    roadNames
+      .map((roadName: string): [string, Position[][]] => {
         const roadNodes: Position[][] = [];
-        for (const node of nodes.filter((n) => n.노선명 === d)) {
+        for (const node of nodes.filter((n) => n.노선명 === roadName)) {
+          /** Accidental latitude-longitude reversal for some nodes */
           const [x, y] = node.좌표;
           const xyNode: Position = x > 100 ? [y, x] : [x, y];
+
+          /** Separate sub-segments of each rode */
           if (roadNodes.length === 0) {
             roadNodes.push([xyNode]);
             continue;
@@ -47,14 +48,14 @@ export function buildRoads(): { [road: string]: Position[] } {
             lastLine.push(xyNode);
           }
         }
-        return [d, roadNodes];
+        return [roadName, roadNodes];
       })
-      .map(([name, lines]): [string, Position[]][] => {
+      .map(([roadName, lines]): [string, Position[]][] => {
         if (lines.length === 1) {
-          return [[name, lines[0]]];
+          return [[roadName, lines[0]]];
         } else {
           return lines.map((line, i) => [
-            `${name}:${i + 1}/${lines.length}`,
+            `${roadName}:${i + 1}/${lines.length}`,
             line,
           ]);
         }
@@ -172,6 +173,10 @@ function buildPoints(roads: { [road: string]: Position[] }): Intersection[] {
 
 const roads = buildRoads();
 // console.table(Object.entries(roads).map(([r, ps]) => [r, ps.length]));
-const points = buildPoints(roads);
-console.log(Object.keys(roads).length, points.length);
-console.log(JSON.stringify(points, null, 2));
+// const points = buildPoints(roads);
+// console.log(Object.keys(roads).length, points.length);
+// console.log(JSON.stringify(points, null, 2));
+
+// pnpm start:road > ../data/highway/processed/ETC_도로중심선.json
+console.log(Object.keys(roads))
+console.log(JSON.stringify(roads, null, 2));

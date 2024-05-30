@@ -10,14 +10,17 @@ export function distance(...points: LatLngTuple[]): number {
 
 export function findLocalClosestPoints(
   points: LatLngTuple[],
-  point: LatLngTuple
+  point: LatLngTuple,
+  width: number = 1
 ): { point: LatLngTuple; index: number; distance: number }[] {
   return points
     .map((p, i) => ({ point: p, index: i, distance: distance(p, point) }))
-    .filter(
-      ({ distance }, i, data) =>
-        (i === 0 || data[i - 1].distance > distance) &&
-        (i === data.length - 1 || data[i + 1].distance > distance)
+    .filter(({ distance }, i, data) =>
+      [...Array(width).keys()].every(
+        (n) =>
+          (data[i - n]?.distance ?? Infinity) >= distance &&
+          (data[i + n]?.distance ?? Infinity) >= distance
+      )
     );
 }
 

@@ -51,21 +51,25 @@ export function findNormalLineFromPoints(
 export function findIntersectionPathFromRoadNames(
   fromRoadName: string,
   toRoadName: string
-): PathNodes<[RoadPointNode, NormalLineNode, RoadPointNode]> {
-  const intersection = INTESECTIONS_OBJ.find(
+): PathNodes<[RoadPointNode, NormalLineNode, RoadPointNode]>[] {
+  const intersection = INTESECTIONS_OBJ.filter(
     ({ point1, point2 }) =>
       (point1.roadName === fromRoadName && point2.roadName === toRoadName) ||
       (point1.roadName === toRoadName && point2.roadName === fromRoadName)
-  )!;
-  console.assert(intersection !== null, "intersection !== null");
-  const { point1, point2 } = intersection;
-  if (point1.roadName === fromRoadName) {
-    const normal = findNormalLineFromPoints(point1, point2);
-    return { nodes: [point1, normal, point2], distance: normal.distance };
-  } else {
-    const normal = findNormalLineFromPoints(point2, point1);
-    return { nodes: [point2, normal, point1], distance: normal.distance };
-  }
+  );
+  console.assert(intersection.length !== 0, "No intersection exist");
+  return intersection.map(({ point1, point2 }) => {
+    if (point1.roadName === fromRoadName) {
+      const normal = findNormalLineFromPoints(point1, point2);
+      return {
+        nodes: [point1, normal, point2],
+        distance: normal.distance,
+      }; /** @todo change into Midpoint of ICJC */
+    } else {
+      const normal = findNormalLineFromPoints(point2, point1);
+      return { nodes: [point2, normal, point1], distance: normal.distance };
+    }
+  });
 }
 
 type Nodes<T> = T extends true
@@ -117,10 +121,20 @@ export function findRoadPathFromNodes(
   const nodes: (RoadPointNode | RoadLineNode | NormalLineNode)[] = [from];
   for (let i = 0; i < rNs.length - 1; i++) {
     const lastPoint = nodes[nodes.length - 1] as RoadPointNode;
-    const path = findIntersectionPathFromRoadNames(rNs[i], rNs[i + 1]);
-    const road = findRoadLineFromPoints(lastPoint, path.nodes[0]);
-    nodes.push(road, ...path.nodes);
-    distance += road.distance + path.distance;
+    const paths = findIntersectionPathFromRoadNames(rNs[i], rNs[i + 1]);
+    paths.sort((a, b) => {
+      const aDist =
+        a.nodes[1].distance +
+        findRoadLineFromPoints(lastPoint, a.nodes[0]).distance;
+      const bDist =
+        b.nodes[1].distance +
+        findRoadLineFromPoints(lastPoint, b.nodes[0]).distance;
+      return aDist - bDist;
+    });
+    const shortestPath = paths[0];
+    const road = findRoadLineFromPoints(lastPoint, shortestPath.nodes[0]);
+    nodes.push(road, ...shortestPath.nodes);
+    distance += road.distance + shortestPath.distance;
   }
   const lastPoint = nodes[nodes.length - 1] as RoadPointNode;
   const road = findRoadLineFromPoints(lastPoint, to);
