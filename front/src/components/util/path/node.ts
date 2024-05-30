@@ -1,5 +1,5 @@
-import { LatLngTuple } from "leaflet";
-import { INTESECTIONS_OBJ, ROADS_OBJ } from "./import";
+import { LatLngTuple } from "./leaflet";
+import { JC, ROADS_OBJ } from "./import";
 import {
   NormalLineNode,
   NormalPointNode,
@@ -52,7 +52,7 @@ export function findIntersectionPathFromRoadNames(
   fromRoadName: string,
   toRoadName: string
 ): PathNodes<[RoadPointNode, NormalLineNode, RoadPointNode]>[] {
-  const intersection = INTESECTIONS_OBJ.filter(
+  const intersection = JC.filter(
     ({ point1, point2 }) =>
       (point1.roadName === fromRoadName && point2.roadName === toRoadName) ||
       (point1.roadName === toRoadName && point2.roadName === fromRoadName)

@@ -1,4 +1,4 @@
-import { LatLngTuple } from "leaflet";
+import { LatLngTuple } from "./leaflet";
 
 export interface NormalNode {
   road: false;
@@ -19,6 +19,10 @@ export interface LineNode {
   pointTo: LatLngTuple;
   points: LatLngTuple[];
 }
+export interface PlaceNode {
+  placeName: string;
+  rawPoint: LatLngTuple;
+}
 
 export interface NormalPointNode extends NormalNode, PointNode {}
 export interface RoadPointNode extends RoadNode, PointNode {
@@ -31,18 +35,21 @@ export interface RoadLineNode extends RoadNode, LineNode {
   indexStart: number;
   indexEnd: number;
 }
+export interface ICNode extends RoadPointNode, PlaceNode {}
 /** @description Assert dist(point1, point2) === distance */
-export interface IntersectionNode {
-  type: "intersection";
-  name: string;
+export interface JCNode extends PlaceNode {
+  type: "junction";
   point1: RoadPointNode;
   point2: RoadPointNode;
   midPoint: NormalPointNode;
-  rawPoint: LatLngTuple;
   distance: number;
 }
 
-export type PathNode = NormalPointNode | RoadPointNode | NormalLineNode | RoadLineNode;
+export type PathNode =
+  | NormalPointNode
+  | RoadPointNode
+  | NormalLineNode
+  | RoadLineNode;
 export interface PathNodes<T extends PathNode[] = PathNode[]> {
   nodes: T;
   distance: number;
@@ -51,4 +58,3 @@ export interface PathNodes<T extends PathNode[] = PathNode[]> {
 export type ROADS_OBJ_TYPE = {
   [road: string]: LatLngTuple[];
 };
-export type INTESECTIONS_OBJ_TYPE = IntersectionNode[];
