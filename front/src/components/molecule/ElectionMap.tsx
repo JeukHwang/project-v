@@ -88,6 +88,13 @@ const age2color = colorgrad.customGradient(
   "catmull-rom"
 );
 
+const per2color = colorgrad.customGradient(
+  ["black", "green"],
+  [0, 100],
+  "oklab",
+  "catmull-rom"
+);
+
 const district2person = (district: string, date: Date): Person | null => {
   return (
     person21.find((p) => p.의원활동at(date)?.시도_선거구명 === district) || null
@@ -134,6 +141,51 @@ function 당선자_나이({ setClicked, date }: SubProps) {
   );
 }
 
+import 지역별_투표율_json from "../../../../back/src/지역별 투표율.json";
+const 지역별_투표율 = Object.fromEntries(
+  지역별_투표율_json.map((v) => [v.시도_선거구명, v])
+);
+
+const [min투표율, max투표율] = [
+  Math.min(...Object.values(지역별_투표율).map((v) => v.투표수 / v.선거인수)),
+  Math.max(...Object.values(지역별_투표율).map((v) => v.투표수 / v.선거인수)),
+];
+
+function 투표율({ setClicked }: SubProps) {
+  return (
+    <>
+      {geometry21.features.map((feature) => {
+        const district = feature.properties.시도_선거구명;
+        const data = 지역별_투표율[district];
+        const 투표율 = data.투표수 / data.선거인수;
+        const 상대_투표율 =
+          ((투표율 - min투표율) / (max투표율 - min투표율)) * 100;
+        return (
+          <MapGeoJSON
+            key={feature.properties.시도_선거구명}
+            data={feature}
+            attr={attr}
+            pathOptions={{
+              color: "gray",
+              weight: 1,
+              fill: true,
+              fillColor: per2color.at(상대_투표율 > 70 ? 100 : 0).rgbString(),
+              fillOpacity: 0.8,
+            }}
+            onClick={(e) => {
+              setClicked(e);
+            }}
+          >
+            <Tooltip sticky>
+              {district} {투표율 * 100}
+            </Tooltip>
+          </MapGeoJSON>
+        );
+      })}
+    </>
+  );
+}
+
 function CurrentMarker({ clicked, date }: SubProps) {
   const district = clicked?.sourceTarget.feature.properties.시도_선거구명;
   const person = district2person(district, date) ?? null;
@@ -170,6 +222,7 @@ export default function ElectionMap({ view, date }: Props) {
       {view === "21대 지역구 당선자 나이" && (
         <당선자_나이 setClicked={setClicked} date={date} />
       )}
+      {view === "21대 투표율" && <투표율 setClicked={setClicked} date={date} />}
       <CurrentMarker clicked={clicked} setClicked={setClicked} date={date} />
     </LeafletMap>
   );

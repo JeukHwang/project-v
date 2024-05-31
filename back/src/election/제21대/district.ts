@@ -46,7 +46,7 @@ function build(): District[] {
   return district;
 }
 
-const path = "../election/processed/21/district.json";
+const path = "back/data/election/processed/21/district.json";
 export const district21 = {
   build: () => saveJson(path, build()),
   load: () => readJson<District[]>(path),

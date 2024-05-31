@@ -41,3 +41,46 @@ https://namu.wiki/w/%EC%86%8D%EB%8F%84%EC%9C%84%EB%B0%98#s-3.1
 - 속도제한은 다음과 같이 가정
 일반도로는 50km/h
 고속도로는 100km/h
+
+https://timjohns.ca/typescripts-hidden-feature-subtypes.html
+https://toss.tech/article/typescript-type-compatibility
+https://toss.tech/article/template-literal-types
+
+찾는 방법
+
+type system 잘 지원해주기
+
+
+{이름, 생년월일}     :   조금 고유 / 조금 실용적
+{이름, 대}           :      비고유 / 매우 실용적
+{이름, 대, 생년월일} :   매우 고유 / 조금 실용적
+{이름, index}        : 완벽한 고유 /    비실용적
+
+{이름, 대, 생년월일} => {이름, index} : 매 임기마다 고유성을 확인하고 미리 type-system 고려해서 mapping function 제공
+
+
+index의 정의
+-> 고유함을 보장하기 위한 수단
+-> index는 0부터 시작되며 다음 순으로 부여
+    첫 당선시 투표일이 이른 사람 // `대`와 유사한 역할; 보궐선거가 예외임
+    첫 당선시 득표율이 높은 사람 // 접근하기 쉬운 정보임
+    첫 당선시 득표율이 높은 사람 // 접근하기 어려운 정보이나 절대 같지 않음
+-> index가 0이면 생략 가능
+
+ 
+
+{이름, 생년월일, 대}
+-> 고유함
+-> index는 0부터 시작되며 {첫 당선시 투표일이 이른 사람 / 첫 당선시 득표율이 높은 사람}순으로 부여
+-> index가 0이면 생략 가능
+
+
+이름, 대
+-> unique성 보장 안 됨
+
+이름, 대, index (0인 경우 무시; 투표일이 이르거나, 지지한 유권자 수가 많은지에 따라서 추가됨)
+-> 추후 바뀔 일이 없음; 재보궐 등으로 추가는 가능하나 수정은 불필요
+-> 고유함
+
+
+https://www.data.go.kr/data/15112762/fileData.do

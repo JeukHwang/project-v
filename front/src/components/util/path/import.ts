@@ -5,12 +5,16 @@ import { LatLngTuple } from "./leaflet";
 import { ICNode, JCNode, ROADS_OBJ_TYPE } from "./type";
 import { distance, findClosestPoint } from "./util";
 
+for (const road of Object.keys(ROADS_JSON)) {
+  console.log(road);
+}
 export const ROADS_OBJ = Object.fromEntries(
-  Object.entries(ROADS_JSON as unknown as ROADS_OBJ_TYPE)
+  Object.entries(ROADS_JSON as unknown as ROADS_OBJ_TYPE).filter(([roadName]) =>
+    ["경부선", "중앙선:1/2", "중앙선:2/2", "중부선", "중앙선의 지선"].includes(
+      roadName
+    )
+  )
   //   .slice(0, 20)
-  //   .filter(([roadName]) =>
-  //     ["경부선", "중앙선:2/2", "중부선"].includes(roadName)
-  //   )
 );
 export const ROADS_NAME = Object.keys(ROADS_OBJ);
 

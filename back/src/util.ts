@@ -57,7 +57,10 @@ export function map2district<T extends string>(
   data: T[],
   strict: boolean = true
 ): { [key in T]: District } {
-  console.assert(district.length === data.length, "length");
+  console.assert(
+    district.length === data.length,
+    `Different length | district: ${district.length} data: ${data.length}`
+  );
   const dist = district.map((d) => d.시도_선거구명);
   const pair: [T, ReturnType<typeof findClosest>][] = data.map((d) => [
     d,
@@ -67,18 +70,19 @@ export function map2district<T extends string>(
   // 1-1 mapping
   console.assert(
     new Set(pair.map((p) => p[1].value)).size === district.length,
-    "pair"
+    "Exist district that is not mapped to data"
   );
   console.assert(
     new Set(pair.map((p) => p[0])).size === district.length,
-    "pair"
+    "Data is not unique"
   );
 
   pair.forEach(([d, { value, overlap }]) => {
     if (strict) {
       console.assert(d.length === overlap, `include ${d} ${value}`);
     } else if (d.length !== overlap) {
-      console.warn(d.length, overlap, `include ${d} ${value}`);
+      console.warn(">", d.length, d, "is overlapped with");
+      console.warn(" ", overlap, value, "district");
     }
   });
 

@@ -1,27 +1,34 @@
 {
-  "name": "data",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
-  "scripts": {
-    "start:election": "npx vite-node src/main.election.ts",
-    "start:highway": "npx vite-node src/main.highway.ts"
-  },
-  "dependencies": {
-    "@types/proj4": "^2.5.5",
-    "class-transformer": "^0.5.1",
-    "class-validator": "^0.14.1",
-    "edit-distance": "^1.0.5",
-    "iconv-lite": "^0.6.3",
-    "ol": "^9.1.0",
-    "proj4": "^2.11.0",
-    "shapefile": "^0.6.6",
-    "utm-latlng": "^1.0.8",
-    "xlsx": "^0.18.5"
-  },
-  "devDependencies": {
-    "@types/geojson": "^7946.0.14",
-    "@types/node": "^20.12.8",
-    "@types/shapefile": "^0.6.4"
-  }
+    "name": "data",
+    "private": true,
+    "version": "0.0.0",
+    "type": "module",
+    "scripts": {
+        "start:election": "npx vite-node src/main.election.ts",
+        "start:p": "npx vite-node src/puppeteer.ts",
+        "start:gemd": "npx vite-node src/gemd.ts",
+        "start:fetch": "npx vite-node src/fetch3.ts",
+        "start:highway": "npx vite-node src/main.highway.ts",
+        "start:road": "npx vite-node src/highway/road.ts",
+        "start:excel": "npx vite-node src/excel.ts"
+    },
+    "dependencies": {
+        "@types/proj4": "^2.5.5",
+        "axios": "^1.7.2",
+        "class-transformer": "^0.5.1",
+        "class-validator": "^0.14.1",
+        "edit-distance": "^1.0.5",
+        "iconv-lite": "^0.6.3",
+        "ol": "^9.1.0",
+        "proj4": "^2.11.0",
+        "puppeteer": "^22.10.0",
+        "shapefile": "^0.6.6",
+        "utm-latlng": "^1.0.8",
+        "xlsx": "^0.18.5"
+    },
+    "devDependencies": {
+        "@types/geojson": "^7946.0.14",
+        "@types/node": "^20.12.8",
+        "@types/shapefile": "^0.6.4"
+    }
 }
