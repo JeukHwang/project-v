@@ -1,10 +1,10 @@
 import { useState } from "react";
 
+import { ViewType, viewTypes } from "../../util/constant";
+import { constant21 } from "../../util/import";
 import OptionSelector from "../atom/OptionSelector";
 import TimeSelector from "../atom/TimeSelector";
 import ElectionMap from "../molecule/ElectionMap";
-import { ViewType, viewTypes } from "../util/constant";
-import { constant21 } from "../util/import";
 
 const options = (viewTypes as unknown as ViewType[]).map((v) => ({
   value: v,

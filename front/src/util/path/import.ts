@@ -1,5 +1,5 @@
-import ICJC_JSON from "../../../../../back/data/highway/processed/etc.icjs.json";
-import ROADS_JSON from "../../../../../back/data/highway/processed/ETC_도로중심선.json";
+import ICJC_JSON from "../../../../back/data/highway/processed/etc.icjs.json";
+import ROADS_JSON from "../../../../back/data/highway/processed/ETC_도로중심선.json";
 import ICJC_PROCESSED from "./icjc.json";
 import { LatLngTuple } from "./leaflet";
 import { ICNode, JCNode, ROADS_OBJ_TYPE } from "./type";

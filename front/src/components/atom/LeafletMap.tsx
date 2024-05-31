@@ -6,7 +6,7 @@
 import "leaflet/dist/leaflet.css";
 import { PropsWithChildren } from "react";
 import { MapContainer, TileLayer } from "react-leaflet";
-import { SOUTH_KOREA_POSITION, TILE_STYLE } from "../util/constant";
+import { SOUTH_KOREA_POSITION, TILE_STYLE } from "../../util/constant";
 
 const style = TILE_STYLE.CartoDB_PositronNoLabels;
 export default function LeafletMap({ children }: PropsWithChildren) {

@@ -3,10 +3,10 @@ import { LeafletMouseEvent } from "leaflet";
 import { useState } from "react";
 import { Marker, Popup, Tooltip } from "react-leaflet";
 import { Person } from "../../../../data/src/model/person";
+import { ATTR, randomColor, ViewType } from "../../util/constant";
+import { centroid, Position } from "../../util/geojson";
+import { geometry21, mergedGeometry21, person21 } from "../../util/import";
 import LeafletMap from "../atom/LeafletMap";
-import { ATTR, randomColor, ViewType } from "../util/constant";
-import { centroid, Position } from "../util/geojson";
-import { geometry21, mergedGeometry21, person21 } from "../util/import";
 import MapGeoJSON from "./MapGeoJSON";
 const attr = ATTR.LeeJongho21;
 

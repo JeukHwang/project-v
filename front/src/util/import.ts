@@ -1,10 +1,10 @@
-import DISTRICT22_JSON from "../../../../back/data/election/processed/21/district.json";
-import GEOMETRY22_JSON from "../../../../back/data/election/processed/21/geometry.json";
-import PERSON21_JSON from "../../../../back/data/election/processed/21/person.json";
-import { Constant } from "../../../../back/src/election/model/constant";
-import { District } from "../../../../back/src/election/model/district";
-import { Geometry } from "../../../../back/src/election/model/geometry";
-import { Person, PersonData } from "../../../../back/src/election/model/person";
+import DISTRICT22_JSON from "../../../back/data/election/processed/21/district.json";
+import GEOMETRY22_JSON from "../../../back/data/election/processed/21/geometry.json";
+import PERSON21_JSON from "../../../back/data/election/processed/21/person.json";
+import { Constant } from "../../../back/src/election/model/constant";
+import { District } from "../../../back/src/election/model/district";
+import { Geometry } from "../../../back/src/election/model/geometry";
+import { Person, PersonData } from "../../../back/src/election/model/person";
 import { merge } from "./geojson";
 
 export const constant21: Constant = {
