@@ -88,4 +88,18 @@ async function download(page: Page, entry: any) {
   await new Promise((resolve) => setTimeout(resolve, 4000));
 }
 
-downloadAll();
+// downloadAll();
+
+function checkDownload() {
+  const required = JSON.parse(fs.readFileSync("fetch.json", "utf-8"));
+  const finished = fs.readdirSync(
+    path.resolve("../data/raw/개표현황(읍면동별)")
+  );
+  console.assert(
+    required.length === finished.length,
+    "Not all files downloaded"
+  );
+  console.log({ required: required.length, finished: finished.length });
+}
+
+checkDownload();
