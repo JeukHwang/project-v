@@ -73,7 +73,7 @@ function RoadNode({ view, point }: { view: string; point: LatLngTuple }) {
       <Polyline
         key={k}
         positions={v}
-        pathOptions={{ color: randomColor(i), weight: 5 }}
+        pathOptions={{ color: randomColor(i), weight: 3 }}
         eventHandlers={{
           tooltipopen: () => setFocusedRoadByTooltip(k),
           tooltipclose: () => setFocusedRoadByTooltip(null),
