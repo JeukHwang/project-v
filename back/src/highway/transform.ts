@@ -13,9 +13,26 @@ proj4.defs(
 register(proj4);
 const transformer = getTransform("EPSG:5179", "EPSG:4326");
 
-export function convert(point: Position): Position {
-  const [x, y] = transformer(point);
-  return [y, x];
+/** @see https://stackoverflow.com/questions/5620696/convert-lat-long-into-geojson-object */
+export function convert<T extends Position | GeoJSON.Position>(data: T): T {
+  const [lng, lat] = transformer(data);
+  return [lng, lat];
 }
 
+export function convertA<T extends Position | GeoJSON.Position>(
+  data: T[]
+): T[] {
+  return data.map((d) => convert(d));
+}
 
+export function convertAA<T extends Position | GeoJSON.Position>(
+  data: T[][]
+): T[][] {
+  return data.map((d) => convertA(d));
+}
+
+export function convertAAA<T extends Position | GeoJSON.Position>(
+  data: T[][][]
+): T[][][] {
+  return data.map((d) => convertAA(d));
+}

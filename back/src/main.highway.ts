@@ -115,7 +115,8 @@
 
 // read csv
 import path from "path";
-import { readCSV, saveJson } from "./util";
+import { convert, convertAA, convertAAA } from "./highway/transform";
+import { readCSV, readJson, saveJson } from "./util";
 
 function processICJS() {
   const csvPath = path.resolve(
@@ -137,4 +138,72 @@ function processICJS() {
   saveJson("../data/highway/processed/etc.icjs.json", obj);
 }
 
-processICJS();
+// processICJS();
+
+const districts = [
+  "강원특별자치도",
+  "경기도",
+  "경상남도",
+  "경상북도",
+  "광주광역시",
+  "대구광역시",
+  "대전광역시",
+  "부산광역시",
+  "서울특별시",
+  "세종특별자치시",
+  "울산광역시",
+  "인천광역시",
+  "전라남도",
+  "전북특별자치도",
+  "제주특별자치도",
+  "충청남도",
+  "충청북도",
+];
+console.assert(districts.length === 17);
+
+function printShpjsonScript() {
+  for (const district of districts) {
+    console.log(
+      `npx shp2json "../data/raw/구역의도형_240505/전체분_비압축/${district}/TL_SCCO_GEMD.shp" --encoding euc-kr > ../data/processed/구역의도형_240505/${district}.shp.json`
+    );
+  }
+}
+
+// printShpjsonScript();
+
+function convertFiles() {
+  for (const district of districts) {
+    const { bbox, features, ...others } = readJson(
+      `../../data/processed/구역의도형_240505/${district}.shp.json`
+    ) as GeoJSON.FeatureCollection<GeoJSON.Polygon | GeoJSON.MultiPolygon, {}>;
+    const converted_json = {
+      ...others,
+      bbox: bbox
+        ? [...convert([bbox[0], bbox[1]]), ...convert([bbox[2], bbox[3]])]
+        : null,
+      features: features.map((feature) => {
+        const { geometry, ...others2 } = feature;
+        if (geometry.type === "Polygon") {
+          return {
+            ...others2,
+            geometry: {
+              ...geometry,
+              coordinates: convertAA(geometry.coordinates),
+            },
+          };
+        } else if (geometry.type === "MultiPolygon") {
+          return {
+            ...others2,
+            geometry: {
+              ...geometry,
+              coordinates: convertAAA(geometry.coordinates),
+            },
+          };
+        }
+      }),
+    };
+    saveJson(`../../data/processed/구역의도형_240505/${district}.shp.converted.json`, converted_json);
+  }
+}
+
+// convertFiles();
