@@ -10,7 +10,8 @@
         "start:fetch": "npx vite-node src/fetch3.ts",
         "start:highway": "npx vite-node src/main.highway.ts",
         "start:road": "npx vite-node src/highway/road.ts",
-        "start:excel": "npx vite-node src/excel.ts"
+        "start:excel": "npx vite-node src/excel.ts",
+        "r": "npx vite-node src/road.maker.ts"
     },
     "dependencies": {
         "@types/proj4": "^2.5.5",

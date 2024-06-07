@@ -70,29 +70,32 @@ const readyToGo = Object.fromEntries(
 //   { features: DistrictGeoJSON["features"]; centroids: Position[] }
 // >;
 
-export default function District() {
+export default function District({ showDistrict }: { showDistrict: boolean }) {
   return districts.map((d) => {
     const { features, centroids } = readyToGo[d];
-    return features.map((f, i) => (
-      <div key={f.properties.EMD_CD}>
-        <Marker position={centroids[i]}>
-          <Popup>
-            {d} {f.properties.EMD_KOR_NM}
-          </Popup>
-        </Marker>
-        <MapGeoJSON
-          data={f}
-          attr={""}
-          pathOptions={{
-            stroke: false,
-            color: "black",
-            weight: 1,
-            fill: true,
-            fillColor: "black",
-            fillOpacity: 0.2,
-          }}
-        />
-      </div>
-    ));
+    return (
+      showDistrict &&
+      features.map((f, i) => (
+        <div key={f.properties.EMD_CD}>
+          <Marker position={centroids[i]}>
+            <Popup>
+              {d} {f.properties.EMD_KOR_NM}
+            </Popup>
+          </Marker>
+          <MapGeoJSON
+            data={f}
+            attr={""}
+            pathOptions={{
+              stroke: false,
+              color: "black",
+              weight: 1,
+              fill: true,
+              fillColor: "black",
+              fillOpacity: 0.2,
+            }}
+          />
+        </div>
+      ))
+    );
   });
 }

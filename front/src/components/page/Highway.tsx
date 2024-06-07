@@ -1,18 +1,23 @@
 import { useState } from "react";
 // import ROADS from "../../../../data/highway/processed/etc.road.json";
 import { ROADS_NAME } from "../../util/path/import";
+import Checkbox from "../atom/CheckBox";
 import LeafletMap from "../atom/LeafletMap";
 import OptionSelector from "../atom/OptionSelector";
 import TimeSelector from "../atom/TimeSelector";
 import PathNode from "../molecule/PathNode";
 import ViewNode from "../molecule/ViewNode";
-// import District from "../molecule/District";
+import District from "../molecule/District";
 
 const options = ["ALL", ...ROADS_NAME].map((v) => ({ value: v, label: v }));
 
 export default function Highway() {
   const [view, setView] = useState<string>("ALL");
   const [date, setDate] = useState<Date>(new Date());
+
+  const [showIC, setShowIC] = useState<boolean>(false);
+  const [showJC, setShowJC] = useState<boolean>(true);
+  const [showDistrict, setShowDistrict] = useState<boolean>(false);
 
   return (
     <div
@@ -31,9 +36,9 @@ export default function Highway() {
         }}
       >
         <LeafletMap>
-          <ViewNode view={view} />
+          <ViewNode view={view} showIC={showIC} showJC={showJC} showDistrict={showDistrict}  />
           <PathNode />
-          {/* <District /> */}
+          <District showDistrict={showDistrict} />
         </LeafletMap>
       </div>
       <div
@@ -46,6 +51,15 @@ export default function Highway() {
           height: "fit-content",
         }}
       >
+        <Checkbox checked={showIC} onChange={(v) => setShowIC(v)}>
+          Show IC
+        </Checkbox>
+        <Checkbox checked={showJC} onChange={(v) => setShowJC(v)}>
+          Show JC
+        </Checkbox>
+        {/* <Checkbox checked={showDistrict} onChange={(v) => setShowDistrict(v)}>
+          Show District
+        </Checkbox> */}
         <TimeSelector
           min={new Date(1968, 1, 1)}
           max={new Date()}

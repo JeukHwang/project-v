@@ -29,30 +29,34 @@ function processICJC() {
   console.assert(
     [...names].every((name) => name.endsWith("IC") || name.endsWith("JCT"))
   );
-  for (const rawName of names) {
-    const places = ICJC_JSON.filter(({ "IC/JC명": n }) => n === rawName);
-    const type = rawName.endsWith("IC") ? "IC" : "JC";
-    const name = type === "JC" ? rawName.slice(0, -1) : rawName;
-    const point: LatLngTuple = [
-      places.reduce((s, { Y좌표값: y }) => s + parseFloat(y), 0) /
-        places.length,
-      places.reduce((s, { X좌표값: x }) => s + parseFloat(x), 0) /
-        places.length,
-    ];
-    ICJC.push({
-      type,
+  const ICJC_JSON_CANDIDATE = ICJC_JSON.map(
+    ({ "IC/JC명": name, Y좌표값: y, X좌표값: x }) => ({
       name,
-      point,
-    });
-  }
-  console.assert(ICJC.length === names.size);
-
-  for (const { name, point } of ICJC_CANDIDATE) {
-    if (name.endsWith(" 나들목")) {
-      const newName = name.split("나들목")[0] + "IC";
+      point: [parseFloat(y), parseFloat(x)],
+    })
+  ) as { name: string; point: LatLngTuple }[];
+  for (const { name, point } of [...ICJC_JSON_CANDIDATE, ...ICJC_CANDIDATE]) {
+    if (name.includes("나들목") || name.includes("IC")) {
+      const newName =
+        name
+          .replaceAll(" ", "")
+          .replaceAll("나들목", "")
+          .replaceAll("IC", "")
+          .trim() + "IC";
       ICJC.push({ type: "IC", name: newName, point });
-    } else if (name.endsWith(" 갈림목")) {
-      const newName = name.split("갈림목")[0] + "JC";
+    } else if (
+      name.includes("갈림목") ||
+      name.includes("분기점") ||
+      name.includes("JC")
+    ) {
+      const newName =
+        name
+          .replaceAll(" ", "")
+          .replaceAll("갈림목", "")
+          .replaceAll("분기점", "")
+          .replaceAll("JCT", "")
+          .replaceAll("JC", "")
+          .trim() + "JC";
       ICJC.push({ type: "JC", name: newName, point });
     } else {
       console.error(name, "invalid ICJC candidate");
@@ -78,6 +82,19 @@ function processICJC() {
     }
   }
   ICJC = NEW_ICJC;
+  console.assert(
+    NEW_ICJC.length === finalNames.size,
+    NEW_ICJC.length,
+    finalNames.size
+  );
+  console.assert(
+    NEW_ICJC.every(({ name }) => !name.includes(" ")),
+    JSON.stringify(
+      NEW_ICJC.filter(({ name }) => name.includes(" ")).map(({ name }) => name),
+      null,
+      2
+    )
+  );
 
   const IC_JSON = ICJC.filter(({ type }) => type === "IC");
   const JC_JSON = ICJC.filter(({ type }) => type === "JC");
@@ -152,6 +169,7 @@ function processICJC() {
 }
 
 /** @description Build */
+/** Command : pnpm start > ../data/highway/icjc_v3.json */
 // const ICJC = processICJC();
 // console.log(JSON.stringify(ICJC));
 // export const { IC, JC } = ICJC;

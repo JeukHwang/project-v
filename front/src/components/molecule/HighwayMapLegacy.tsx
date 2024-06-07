@@ -17,7 +17,7 @@ const CartoDB_DarkMatterNoLabels = {
 
 interface Props {
   date: Date;
-  group: string | null;
+  group: string;
 }
 export default function HighwayMapLegacy({ date, group }: Props) {
   return (
@@ -33,7 +33,10 @@ export default function HighwayMapLegacy({ date, group }: Props) {
         attribution={CartoDB_DarkMatterNoLabels.attribution}
         url={CartoDB_DarkMatterNoLabels.url}
       />
-      {group === null ? (
+      {[...ROADS.values()].map((value) => (
+        <Polyline pathOptions={{ color: "gray" }} positions={value} />
+      ))}
+      {group === "ALL" ? (
         [...ROADS_PARSED.keys()].map((group) => (
           <Road group={group} date={date} />
         ))
@@ -42,9 +45,6 @@ export default function HighwayMapLegacy({ date, group }: Props) {
           <Road group={group} date={date} marker />
         </>
       )}
-      {[...ROADS.values()].map((value) => (
-        <Polyline pathOptions={{ color: "gray" }} positions={value} />
-      ))}
     </MapContainer>
   );
 }

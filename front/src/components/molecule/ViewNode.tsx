@@ -1,6 +1,6 @@
 import { LatLngTuple } from "leaflet";
 import { useEffect, useMemo, useState } from "react";
-import { Marker, Polyline, Tooltip, useMapEvent } from "react-leaflet";
+import { Marker, Polyline, Popup, Tooltip, useMapEvent } from "react-leaflet";
 import { randomColor } from "../../util/constant";
 import { c2s } from "../../util/geojson";
 import { icon2marker } from "../../util/marker";
@@ -9,7 +9,16 @@ import { findNormalPathToClosestNode } from "../../util/path/node";
 import { findClosestPoint } from "../../util/path/util";
 import { o2t } from "../../util/position";
 
-export default function ViewNode({ view }: { view: string }) {
+export default function ViewNode({
+  view,
+  showIC,
+  showJC,
+}: {
+  view: string;
+  showIC: boolean;
+  showJC: boolean;
+  showDistrict: boolean;
+}) {
   //   const [clicked, setClicked] = useState<boolean>(false);
   const [point, setPoint] = useState<LatLngTuple>();
   //   window.addEventListener("mousedown", () => setClicked(true));
@@ -21,7 +30,14 @@ export default function ViewNode({ view }: { view: string }) {
     <>
       {/* {clicked && <CursorNode point={point!} />} */}
       <RoadNode view={view} point={point!} />
-      <ICJCNode view={view} />
+      <ICJCNode view={view} showIC={showIC} showJC={showJC} />
+      {/* {ICJC_CANDIDATE.map(({ name, point }) => (
+        <Marker position={point} key={name}>
+          <Popup>
+            {name} {point}
+          </Popup>
+        </Marker>
+      ))} */}
     </>
   );
 }
@@ -93,7 +109,15 @@ function RoadNode({ view, point }: { view: string; point: LatLngTuple }) {
   });
 }
 
-function ICJCNode({ view }: { view: string }) {
+function ICJCNode({
+  view,
+  showIC,
+  showJC,
+}: {
+  view: string;
+  showIC: boolean;
+  showJC: boolean;
+}) {
   const viewIC = IC.filter(
     ({ roadName }) => view === "ALL" || view === roadName
   );
@@ -103,36 +127,38 @@ function ICJCNode({ view }: { view: string }) {
   );
   return (
     <>
-      {viewIC.map(({ rawPoint, point, placeName, roadName, index }) => (
-        <Marker
-          key={`${placeName}-${roadName}-${rawPoint[0]}-${rawPoint[1]}`}
-          position={point}
-          icon={icon2marker({ name: "exit_to_app" })}
-        >
-          <Tooltip>
-            {`Position : ${c2s(point)}`}
-            <br />
-            {`Name : ${placeName}`}
-            <br />
-            {`Road : ${roadName}(${index})`}
-          </Tooltip>
-        </Marker>
-      ))}
-      {viewJC.map(({ rawPoint, midPoint, placeName, point1, point2 }) => (
-        <Marker
-          key={`${placeName}-${point1.roadName}-${point2.roadName}-${rawPoint[0]}-${rawPoint[1]}`}
-          position={midPoint.point}
-          icon={icon2marker({ name: "join" })}
-        >
-          <Tooltip>
-            {`Position : ${c2s(midPoint.point)}`}
-            <br />
-            {`Name : ${placeName}`}
-            <br />
-            {`Road : ${point1.roadName}(${point1.index}) - ${point2.roadName}(${point2.index})`}
-          </Tooltip>
-        </Marker>
-      ))}
+      {showIC &&
+        viewIC.map(({ rawPoint, point, placeName, roadName, index }) => (
+          <Marker
+            key={`${placeName}-${roadName}-${rawPoint[0]}-${rawPoint[1]}`}
+            position={point}
+            icon={icon2marker({ name: "exit_to_app" })}
+          >
+            <Popup>
+              {`Position : ${c2s(point)}`}
+              <br />
+              {`Name : ${placeName}`}
+              <br />
+              {`Road : ${roadName}(${index})`}
+            </Popup>
+          </Marker>
+        ))}
+      {showJC &&
+        viewJC.map(({ rawPoint, midPoint, placeName, point1, point2 }) => (
+          <Marker
+            key={`${placeName}-${point1.roadName}-${point2.roadName}-${rawPoint[0]}-${rawPoint[1]}`}
+            position={midPoint.point}
+            icon={icon2marker({ name: "join" })}
+          >
+            <Popup>
+              {`Position : ${c2s(midPoint.point)}`}
+              <br />
+              {`Name : ${placeName}`}
+              <br />
+              {`Road : ${point1.roadName}(${point1.index}) - ${point2.roadName}(${point2.index})`}
+            </Popup>
+          </Marker>
+        ))}
     </>
   );
 }
