@@ -1,24 +1,30 @@
 import ICJC_JSON from "../../../../back/data/highway/processed/etc.icjs.json";
 import ROADS_JSON from "../../../../back/data/highway/processed/ETC_도로중심선.json";
-import ICJC_PROCESSED from "../../../../data/highway/icjc.json";
+// import ICJC_PROCESSED_v1 from "../../../../data/highway/icjc.json";
+import ICJC_PROCESSED from "../../../../data/highway/icjc_v3.json";
+import { ICJC_CANDIDATE } from "../icjs.data";
+
+// console.log(ICJC_PROCESSED_v1.IC.length, ICJC_PROCESSED_v1.JC.length);
+// console.log(ICJC_PROCESSED.IC.length, ICJC_PROCESSED.JC.length);
+
 import { LatLngTuple } from "./leaflet";
 import { ICNode, JCNode, ROADS_OBJ_TYPE } from "./type";
 import { distance, findClosestPoint } from "./util";
 
 export const ROADS_OBJ = Object.fromEntries(
   Object.entries(ROADS_JSON as unknown as ROADS_OBJ_TYPE)
-//   .filter(([roadName]) =>
-//     ["경부선", "중앙선:1/2", "중앙선:2/2", "중부선", "중앙선의 지선"].includes(
-//       roadName
-//     )
-//   )
+  //   .filter(([roadName]) =>
+  //     ["경부선", "중앙선:1/2", "중앙선:2/2", "중부선", "중앙선의 지선"].includes(
+  //       roadName
+  //     )
+  //   )
   //   .slice(0, 20)
 );
 export const ROADS_NAME = Object.keys(ROADS_OBJ);
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 function processICJC() {
-  const ICJC: { type: "IC" | "JC"; name: string; point: LatLngTuple }[] = [];
+  let ICJC: { type: "IC" | "JC"; name: string; point: LatLngTuple }[] = [];
   const names = new Set(ICJC_JSON.map(({ "IC/JC명": name }) => name));
   console.assert(
     [...names].every((name) => name.endsWith("IC") || name.endsWith("JCT"))
@@ -40,10 +46,43 @@ function processICJC() {
     });
   }
   console.assert(ICJC.length === names.size);
+
+  for (const { name, point } of ICJC_CANDIDATE) {
+    if (name.endsWith(" 나들목")) {
+      const newName = name.split("나들목")[0] + "IC";
+      ICJC.push({ type: "IC", name: newName, point });
+    } else if (name.endsWith(" 갈림목")) {
+      const newName = name.split("갈림목")[0] + "JC";
+      ICJC.push({ type: "JC", name: newName, point });
+    } else {
+      console.error(name, "invalid ICJC candidate");
+    }
+  }
+  const NEW_ICJC = [];
+  const finalNames = new Set(ICJC.map(({ name: n }) => n));
+  for (const name of finalNames) {
+    const all = ICJC.filter(({ name: n }) => n === name);
+    // remove all of them from ICJC if there are multiple points
+    if (all.length > 1) {
+      const point = all.reduce(
+        (s, { point }) => [s[0] + point[0], s[1] + point[1]],
+        [0, 0]
+      );
+      NEW_ICJC.push({
+        type: all[0].type,
+        name,
+        point: [point[0] / all.length, point[1] / all.length] as LatLngTuple,
+      });
+    } else {
+      NEW_ICJC.push(all[0]);
+    }
+  }
+  ICJC = NEW_ICJC;
+
   const IC_JSON = ICJC.filter(({ type }) => type === "IC");
   const JC_JSON = ICJC.filter(({ type }) => type === "JC");
 
-  const LIMIT_DISTANCE_WITH_RAW_IC = 200;
+  const LIMIT_DISTANCE_WITH_RAW_IC = 500;
   const IC: ICNode[] = [];
   for (let i = 0; i < ROADS_NAME.length; i++) {
     const name = ROADS_NAME[i];
@@ -64,7 +103,7 @@ function processICJC() {
     });
   }
 
-  const LIMIT_DISTANCE_WITH_RAW_JC = 200;
+  const LIMIT_DISTANCE_WITH_RAW_JC = 500;
   const JC: JCNode[] = [];
   for (let i = 0; i < ROADS_NAME.length - 1; i++) {
     for (let j = i + 1; j < ROADS_NAME.length; j++) {
@@ -115,6 +154,11 @@ function processICJC() {
 /** @description Build */
 // const ICJC = processICJC();
 // console.log(JSON.stringify(ICJC));
+// export const { IC, JC } = ICJC;
 
 /** @description Load */
-export const { IC, JC } = ICJC_PROCESSED as { ROADS_NAME: string[]; IC: ICNode[]; JC: JCNode[] };
+export const { IC, JC } = ICJC_PROCESSED as {
+  ROADS_NAME: string[];
+  IC: ICNode[];
+  JC: JCNode[];
+};
