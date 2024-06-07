@@ -1,13 +1,10 @@
 import ICJC_JSON from "../../../../back/data/highway/processed/etc.icjs.json";
 import ROADS_JSON from "../../../../back/data/highway/processed/ETC_도로중심선.json";
-import ICJC_PROCESSED from "./icjc.json";
+import ICJC_PROCESSED from "../../../../data/highway/icjc.json";
 import { LatLngTuple } from "./leaflet";
 import { ICNode, JCNode, ROADS_OBJ_TYPE } from "./type";
 import { distance, findClosestPoint } from "./util";
 
-for (const road of Object.keys(ROADS_JSON)) {
-  console.log(road);
-}
 export const ROADS_OBJ = Object.fromEntries(
   Object.entries(ROADS_JSON as unknown as ROADS_OBJ_TYPE)
 //   .filter(([roadName]) =>
@@ -112,7 +109,7 @@ function processICJC() {
       });
     }
   }
-  return { IC, JC };
+  return { ROADS_NAME, IC, JC };
 }
 
 /** @description Build */
@@ -120,4 +117,4 @@ function processICJC() {
 // console.log(JSON.stringify(ICJC));
 
 /** @description Load */
-export const { IC, JC } = ICJC_PROCESSED as { IC: ICNode[]; JC: JCNode[] };
+export const { IC, JC } = ICJC_PROCESSED as { ROADS_NAME: string[]; IC: ICNode[]; JC: JCNode[] };

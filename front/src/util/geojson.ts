@@ -3,6 +3,7 @@
 import { LatLng, LatLngTuple } from "leaflet";
 import * as topojsonClient from "topojson-client";
 import * as topojsonServer from "topojson-server";
+import * as topojsonSimplify from "topojson-simplify";
 
 /** @description Compatible with `GeoJSON.Position` */
 export type Position = [lat: number, lng: number];
@@ -36,6 +37,7 @@ export function centroid(rings: Ring[]): Position {
   return rings.reduce(
     ([pos, weight]: [Position, number], ring: Ring): [Position, number] => {
       const a = area(ring);
+      if (a === 0) return [pos, weight];
       const p = centroidSingle(ring, a);
       return [
         [
@@ -80,4 +82,37 @@ export function c2s(coord: Position | LatLngTuple | LatLng): string {
   } else {
     return `${coord.lat.toFixed(3)} ${coord.lng.toFixed(3)}`;
   }
+}
+
+export function flip<T extends [number, number]>([x, y]: T): T {
+  return [y, x] as T;
+}
+
+/** @todo Type...??? */
+/** @see 적도 경도 1도 <-> 100km / 1e-3 <-> 100m / 1e-6 <-> (100m)^2 */
+export function simplified<T extends GeoJSON.GeoJsonProperties>(
+  features: GeoJSON.Feature<GeoJSON.Polygon | GeoJSON.MultiPolygon, T>[],
+): GeoJSON.Feature<GeoJSON.Geometry, TopoJSON.MultiPolygon>[] {
+  const collections: GeoJSON.FeatureCollection<
+    GeoJSON.Polygon | GeoJSON.MultiPolygon,
+    T
+  > = {
+    type: "FeatureCollection",
+    features,
+  };
+  const topology = topojsonServer.topology({
+    collections,
+  }) as TopoJSON.Topology<Exclude<GeoJSON.GeoJsonProperties, null>>;
+  const filtered = topojsonSimplify.filter(
+    topology,
+    topojsonSimplify.filterWeight(topology, 1e-5)
+  );
+  const presimplified = topojsonSimplify.presimplify(filtered);
+  const simplified = topojsonSimplify.simplify(presimplified, 1e-5);
+  const geojson = topojsonClient.feature(
+    simplified,
+    simplified.objects
+      .collections as TopoJSON.GeometryCollection<TopoJSON.MultiPolygon>
+  );
+  return geojson.features;
 }

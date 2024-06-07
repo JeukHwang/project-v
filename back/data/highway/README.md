@@ -14,11 +14,21 @@ https://github.com/vuski/admdongkor
 ```sh
 npx shp2json ./highway/raw/구역의도형_전체분_서울특별시/TL_SCCO_GEMD.shp --encoding euc-kr > test3.json
 npx shp2json ./highway/raw/국토교통부_일반국도_도로중심선_20230906/road.shp --encoding euc-kr > test4.json
-npx shp2json ./highway/raw/국토교통부_일반국도_도로중심선_20230906/road.shp --encoding euc-kr -n > test4.shp.json
-npx dbf2json ./highway/raw/국토교통부_일반국도_도로중심선_20230906/road.dbf --encoding euc-kr -n > test4.dbf.json
+npx shp2json ./data/raw/국토교통부_일반국도_도로중심선_20230906/road.shp --encoding euc-kr -n > test4.shp.json
+npx dbf2json ./data/raw/국토교통부_일반국도_도로중심선_20230906/road.dbf --encoding euc-kr -n > test4.dbf.json
 npx shp2json ./data/highway/raw/구역의도형_전체분_서울특별시/TL_SCCO_GEMD.shp --encoding euc-kr > seoul.shp.json
 npx dbf2json ./data/highway/raw/구역의도형_전체분_서울특별시/TL_SCCO_GEMD.dbf --encoding euc-kr > seoul.dbf.json
 ```
+
+"~/back"에서 시작
+
+npx shp2json "../data/raw/국토교통부_일반국도 도로중심선_20230906/04.국도중신선_(EPSG_3857).shp" --encoding euc-kr -n > test4.shp.json
+npx dbf2json "../data/raw/국토교통부_일반국도 도로중심선_20230906/04.국도중신선_(EPSG_3857).dbf" --encoding euc-kr -n > test4.dbf.json
+
+npx shp2json "../data/raw/emd_20230729/emd.shp" --encoding euc-kr -n > emd.shp.json
+npx shp2json "../data/raw/구역의도형_240505/전체분_비압축/강원특별자치도/TL_SCCO_GEMD.shp" --encoding euc-kr -n > emd2.shp.json
+
+https://blog.harampark.com/blog/python-map-visualization/
 
 TL_SCCO_GEMD
 

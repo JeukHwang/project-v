@@ -24,7 +24,7 @@ export default function MapGeoJSON({
       attribution={attr}
       pathOptions={pathOptions}
       interactive={interactive}
-      eventHandlers={{ click: onClick }}
+      eventHandlers={onClick ? { click: onClick } : undefined}
     >
       {children}
     </GeoJSON>
