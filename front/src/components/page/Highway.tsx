@@ -1,12 +1,12 @@
 import { useState } from "react";
 // import ROADS from "../../../../data/highway/processed/etc.road.json";
-import { constant21 } from "../../util/import";
 import { ROADS_NAME } from "../../util/path/import";
 import LeafletMap from "../atom/LeafletMap";
 import OptionSelector from "../atom/OptionSelector";
 import TimeSelector from "../atom/TimeSelector";
 import PathNode from "../molecule/PathNode";
 import ViewNode from "../molecule/ViewNode";
+// import District from "../molecule/District";
 
 const options = ["ALL", ...ROADS_NAME].map((v) => ({ value: v, label: v }));
 
@@ -33,6 +33,7 @@ export default function Highway() {
         <LeafletMap>
           <ViewNode view={view} />
           <PathNode />
+          {/* <District /> */}
         </LeafletMap>
       </div>
       <div
@@ -46,8 +47,8 @@ export default function Highway() {
         }}
       >
         <TimeSelector
-          min={constant21.임기.시작}
-          max={constant21.임기.끝}
+          min={new Date(1968, 1, 1)}
+          max={new Date()}
           value={date}
           onChange={setDate}
         />
