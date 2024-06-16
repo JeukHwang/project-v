@@ -2,7 +2,7 @@ import * as colorgrad from "colorgrad-js/bundler";
 import { LeafletMouseEvent } from "leaflet";
 import { useState } from "react";
 import { Marker, Popup, Tooltip } from "react-leaflet";
-import { Person } from "../../../../data/src/model/person";
+import { Person } from "../../../../back/src/election/model/person";
 import { ATTR, randomColor, ViewType } from "../../util/constant";
 import { centroid, Position } from "../../util/geojson";
 import { geometry21, mergedGeometry21, person21 } from "../../util/import";
