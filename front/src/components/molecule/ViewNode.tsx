@@ -128,37 +128,47 @@ function ICJCNode({
   return (
     <>
       {showIC &&
-        viewIC.map(({ rawPoint, point, placeName, roadName, index }) => (
-          <Marker
-            key={`${placeName}-${roadName}-${rawPoint[0]}-${rawPoint[1]}`}
-            position={point}
-            icon={icon2marker({ name: "exit_to_app" })}
-          >
-            <Popup>
-              {`Position : ${c2s(point)}`}
-              <br />
-              {`Name : ${placeName}`}
-              <br />
-              {`Road : ${roadName}(${index})`}
-            </Popup>
-          </Marker>
-        ))}
+        viewIC.map(
+          ({
+            rawPosition: rawPoint,
+            position: point,
+            placeName,
+            roadName,
+            index,
+          }) => (
+            <Marker
+              key={`${placeName}-${roadName}-${rawPoint[0]}-${rawPoint[1]}`}
+              position={point}
+              icon={icon2marker({ name: "exit_to_app" })}
+            >
+              <Popup>
+                {`Position : ${c2s(point)}`}
+                <br />
+                {`Name : ${placeName}`}
+                <br />
+                {`Road : ${roadName}(${index})`}
+              </Popup>
+            </Marker>
+          )
+        )}
       {showJC &&
-        viewJC.map(({ rawPoint, midPoint, placeName, point1, point2 }) => (
-          <Marker
-            key={`${placeName}-${point1.roadName}-${point2.roadName}-${rawPoint[0]}-${rawPoint[1]}`}
-            position={midPoint.point}
-            icon={icon2marker({ name: "join" })}
-          >
-            <Popup>
-              {`Position : ${c2s(midPoint.point)}`}
-              <br />
-              {`Name : ${placeName}`}
-              <br />
-              {`Road : ${point1.roadName}(${point1.index}) - ${point2.roadName}(${point2.index})`}
-            </Popup>
-          </Marker>
-        ))}
+        viewJC.map(
+          ({ rawPosition: rawPoint, midPoint, placeName, point1, point2 }) => (
+            <Marker
+              key={`${placeName}-${point1.roadName}-${point2.roadName}-${rawPoint[0]}-${rawPoint[1]}`}
+              position={midPoint.point}
+              icon={icon2marker({ name: "join" })}
+            >
+              <Popup>
+                {`Position : ${c2s(midPoint.point)}`}
+                <br />
+                {`Name : ${placeName}`}
+                <br />
+                {`Road : ${point1.roadName}(${point1.index}) - ${point2.roadName}(${point2.index})`}
+              </Popup>
+            </Marker>
+          )
+        )}
     </>
   );
 }

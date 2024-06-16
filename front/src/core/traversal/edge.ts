@@ -1,24 +1,46 @@
-import { distanceTo } from "../../core/lib/leaflet";
-import {
-  ICNode,
-  JCNode,
-  NormalLineNode,
-  PathNodes,
-  RoadLineNode,
-  RoadPointNode,
-} from "../../core/node/type";
-import { IC, JC, ROADS_NAME } from "./import";
-import { distance } from "./util";
+import { ROADS_NAME } from "../../util/highway.legacy";
+import { distanceTo } from "../lib/leaflet";
+import { IC, JC } from "../node/import";
+import { ICNode, JCNode, RoadLineNode, RoadPointNode } from "../node/type";
+import { ICUtil, JCUtil } from "../node/util";
+import { ROAD } from "../road/import";
+import { length } from "../util";
+import { Edge } from "./util";
 
-const EDGES: {
-  [road: string]: [
-    from: ICNode | JCNode,
-    to: ICNode | JCNode,
-    distance: number
-  ][];
-} = {};
+// 지금은, IC, JC가 모두 되고 있는데... 그냥 
+// 도로 하나 기준으로 IC, JC 모든 점을 나열할 수 있어야 하는 것이 중요함
+// 
+const edge = new Edge();
+
+for (const roadName of ROAD.name) {
+  const icNodes = ICUtil.filter(roadName);
+  const jcNodes = JCUtil.filter(roadName).map((jc) =>
+    JCUtil.realign(jc, roadName, "from")
+  );
+
+  for (let i = 0; i < icNodes.length - 1; i++) {
+    for (let j = i + 1; j < icNodes.length; j++) {
+      const d = distanceTo(icNodes[i].position, icNodes[j].position);
+      edge.update(icNodes[i], icNodes[j], d);
+    }
+  }
+
+  for (const ic of icNodes) {
+    for (const jc of jcNodes) {
+      const d = length(ic.position, jc.fromNode.position);
+      edge.update(ic, jc, d);
+    }
+  }
+
+
+for (let i = 0; i < jcNodes.length - 1; i++) {
+  for (let j = i + 1; j < jcNodes.length; j++) {
+    const d = distanceTo(jcNodes[i].fromNode.position, jcNodes[j].position);
+    edge.update(jcNodes[i], jcNodes[j], d);
+  }
+}
 for (const road of ROADS_NAME) {
-  const roadIC = IC.filter(({ roadName }) => roadName === road);
+  const roadIC = ICUtil.filter(road);
   const roadJC = JC.filter(
     ({ point1, point2 }) => point1.roadName === road || point2.roadName === road
   );

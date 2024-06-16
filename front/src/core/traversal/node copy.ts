@@ -1,4 +1,4 @@
-import { distanceTo } from "../../core/lib/leaflet";
+import { distanceTo } from "../lib/leaflet";
 import {
   ICNode,
   JCNode,
@@ -6,9 +6,9 @@ import {
   PathNodes,
   RoadLineNode,
   RoadPointNode,
-} from "../../core/node/type";
+} from "../node/type";
 import { IC, JC, ROADS_NAME } from "./import";
-import { distance } from "./util";
+import { distance } from "../util";
 
 const EDGES: {
   [road: string]: [

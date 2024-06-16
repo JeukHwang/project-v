@@ -1,30 +1,52 @@
 import ICJC_JSON from "../../../../back/data/highway/processed/etc.icjs.json";
-import ROADS_JSON from "../../../../back/data/highway/processed/ETC_도로중심선.json";
-// import ICJC_PROCESSED_v1 from "../../../../data/highway/icjc.json";
-import ICJC_PROCESSED from "../../../../data/highway/icjc_v3.json";
-import { ICJC_CANDIDATE } from "../icjs.data";
+import { ROADS_NAME } from "../../util/highway.legacy";
+import { ICJC_CANDIDATE } from "../../util/icjs.data";
+import { ROADS_OBJ } from "../../util/path/import";
 
-// console.log(ICJC_PROCESSED_v1.IC.length, ICJC_PROCESSED_v1.JC.length);
-// console.log(ICJC_PROCESSED.IC.length, ICJC_PROCESSED.JC.length);
+import { distance, findClosestPoint } from "../../util/path/util";
+import { LatLngTuple } from "../lib/leaflet";
+import { ICNode, JCNode, PlaceName } from "./type";
 
-import { LatLngTuple } from "./leaflet";
-import { ICNode, JCNode, ROADS_OBJ_TYPE } from "./type";
-import { distance, findClosestPoint } from "./util";
-
-export const ROADS_OBJ = Object.fromEntries(
-  Object.entries(ROADS_JSON as unknown as ROADS_OBJ_TYPE)
-  //   .filter(([roadName]) =>
-  //     ["경부선", "중앙선:1/2", "중앙선:2/2", "중부선", "중앙선의 지선"].includes(
-  //       roadName
-  //     )
-  //   )
-  //   .slice(0, 20)
-);
-export const ROADS_NAME = Object.keys(ROADS_OBJ);
+function parseToTypeAndName(name: string): { type: "IC" | "JC"; name: PlaceName } {
+  if (name.includes("나들목") || name.includes("IC")) {
+    return {
+      type: "IC",
+      name:
+        name
+          .replaceAll(" ", "")
+          .replaceAll("나들목", "")
+          .replaceAll("IC", "")
+          .trim() + "IC",
+    };
+  } else if (
+    name.includes("갈림목") ||
+    name.includes("분기점") ||
+    name.includes("JC")
+  ) {
+    return {
+      type: "JC",
+      name:
+        name
+          .replaceAll(" ", "")
+          .replaceAll("갈림목", "")
+          .replaceAll("분기점", "")
+          .replaceAll("JCT", "")
+          .replaceAll("JC", "")
+          .trim() + "JC",
+    };
+  } else {
+    console.error(name, "invalid ICJC candidate");
+    return;
+  }
+}
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-function processICJC() {
-  let ICJC: { type: "IC" | "JC"; name: string; point: LatLngTuple }[] = [];
+function build(): {
+  ROADS_NAME: string[];
+  IC: ICNode[];
+  JC: JCNode[];
+} {
+  let ICJC: { type: "IC" | "JC"; name: PlaceName; point: LatLngTuple }[] = [];
   const names = new Set(ICJC_JSON.map(({ "IC/JC명": name }) => name));
   console.assert(
     [...names].every((name) => name.endsWith("IC") || name.endsWith("JCT"))
@@ -36,31 +58,8 @@ function processICJC() {
     })
   ) as { name: string; point: LatLngTuple }[];
   for (const { name, point } of [...ICJC_JSON_CANDIDATE, ...ICJC_CANDIDATE]) {
-    if (name.includes("나들목") || name.includes("IC")) {
-      const newName =
-        name
-          .replaceAll(" ", "")
-          .replaceAll("나들목", "")
-          .replaceAll("IC", "")
-          .trim() + "IC";
-      ICJC.push({ type: "IC", name: newName, point });
-    } else if (
-      name.includes("갈림목") ||
-      name.includes("분기점") ||
-      name.includes("JC")
-    ) {
-      const newName =
-        name
-          .replaceAll(" ", "")
-          .replaceAll("갈림목", "")
-          .replaceAll("분기점", "")
-          .replaceAll("JCT", "")
-          .replaceAll("JC", "")
-          .trim() + "JC";
-      ICJC.push({ type: "JC", name: newName, point });
-    } else {
-      console.error(name, "invalid ICJC candidate");
-    }
+    const { type, name: newName } = parseToTypeAndName(name);
+    ICJC.push({ type, name: newName, point });
   }
   const NEW_ICJC = [];
   const finalNames = new Set(ICJC.map(({ name: n }) => n));
@@ -109,11 +108,11 @@ function processICJC() {
       if (Ip.distance < LIMIT_DISTANCE_WITH_RAW_IC) {
         IC.push({
           type: "point",
-          rawPoint,
+          rawPosition: rawPoint,
           placeName,
           road: true,
           roadName: name,
-          point: Ip.point,
+          position: Ip.point,
           index: Ip.index,
         });
       }
@@ -136,7 +135,7 @@ function processICJC() {
           JC.push({
             type: "junction",
             placeName: name,
-            rawPoint: point,
+            rawPosition: point,
             point1: {
               type: "point",
               road: true,
@@ -169,14 +168,5 @@ function processICJC() {
 }
 
 /** @description Build */
-/** Command : pnpm start > ../data/highway/icjc_v3.json */
-// const ICJC = processICJC();
-// console.log(JSON.stringify(ICJC));
-// export const { IC, JC } = ICJC;
-
-/** @description Load */
-export const { IC, JC } = ICJC_PROCESSED as {
-  ROADS_NAME: string[];
-  IC: ICNode[];
-  JC: JCNode[];
-};
+/** Command : pnpm start > ../data/highway/icjc_vN.json */
+console.log(JSON.stringify(build(), null, 2));

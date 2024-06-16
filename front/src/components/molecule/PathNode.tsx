@@ -1,16 +1,16 @@
 import { LatLngTuple } from "leaflet";
 import { PropsWithChildren, useEffect, useState } from "react";
 import { Marker, Polyline, Tooltip, useMapEvent } from "react-leaflet";
-import { c2s } from "../../util/geojson";
-import { icon2marker } from "../../util/marker";
-import { findShortestPathWithRoad } from "../../util/path/optimize";
 import {
   NormalLineNode,
   NormalPointNode,
   PathNodes,
   RoadLineNode,
   RoadPointNode,
-} from "../../util/path/type";
+} from "../../core/node/type";
+import { c2s } from "../../util/geojson";
+import { icon2marker } from "../../util/marker";
+import { findShortestPathWithRoad } from "../../util/path/optimize";
 import { o2t } from "../../util/position";
 
 const clickTypes = ["1", "2"];
@@ -63,14 +63,14 @@ export default function PathNode() {
     <>
       {startPoint && (
         <Point
-          node={{ type: "point", point: startPoint, road: false }}
+          node={{ type: "point", position: startPoint, road: false }}
           icon="near_me"
           color={clickType === "1" ? "orange" : "orange"}
         />
       )}
       {endPoint && (
         <Point
-          node={{ type: "point", point: endPoint, road: false }}
+          node={{ type: "point", position: endPoint, road: false }}
           icon="target"
           color={clickType === "2" ? "orange" : "red"}
         />
@@ -81,7 +81,7 @@ export default function PathNode() {
             const node = p as NormalPointNode;
             return (
               <Point
-                key={c2s(node.point)}
+                key={c2s(node.position)}
                 node={node}
                 icon={"near_me"}
                 color={clickType === "1" ? "orange" : "green"}
@@ -94,7 +94,7 @@ export default function PathNode() {
             const node = p as NormalPointNode;
             return (
               <Point
-                key={c2s(node.point)}
+                key={c2s(node.position)}
                 node={node}
                 icon={"target"}
                 color={clickType === "2" ? "orange" : "green"}
@@ -145,9 +145,9 @@ function Point({
   color?: string;
 }>) {
   return (
-    <Marker position={node.point} icon={icon2marker({ name: icon, color })}>
+    <Marker position={node.position} icon={icon2marker({ name: icon, color })}>
       <Tooltip>
-        Point: {c2s(node.point)}
+        Point: {c2s(node.position)}
         {node.road && (
           <>
             <br />

@@ -1,30 +1,12 @@
-import { LatLngTuple } from "./leaflet";
-import {
-  findNormalLineFromPoints,
-  findNormalPathToClosestNode,
-  findRoadPathFromNodes,
-} from "./node";
+import { LatLngTuple } from "../../core/lib/leaflet";
 import {
   NormalLineNode,
   NormalPointNode,
   PathNode,
   PathNodes,
   RoadPointNode,
-} from "./type";
-
-export function findShortestPathWithoutRoad(
-  from: LatLngTuple,
-  to: LatLngTuple
-): PathNodes<[NormalPointNode, NormalLineNode, NormalPointNode]> {
-  const fromPoint: NormalPointNode = {
-    type: "point",
-    road: false,
-    point: from,
-  };
-  const toPoint: NormalPointNode = { type: "point", road: false, point: to };
-  const normal = findNormalLineFromPoints(fromPoint, toPoint);
-  return { nodes: [fromPoint, normal, toPoint], distance: normal.distance };
-}
+} from "../../core/node/type";
+import { findNormalPathToClosestNode, findRoadPathFromNodes } from "./node";
 
 export function findShortestPathWithRoad(
   from: LatLngTuple,

@@ -3,7 +3,7 @@ export type LatLngTuple = [number, number, number?];
 /**
  * @description
  * Fork of distanceTo function in leaflet
- * Search `Earth.distance` in the [file](../../../../node_modules/leaflet/dist/leaflet-src.esm.js) */
+ * Search `Earth.distance` in the [file](../../../node_modules/leaflet/dist/leaflet-src.esm.js) */
 export function distanceTo(
   latlngTuple1: LatLngTuple,
   latlngTuple2: LatLngTuple
