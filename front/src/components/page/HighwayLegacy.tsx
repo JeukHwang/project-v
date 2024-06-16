@@ -41,8 +41,8 @@ export default function HighwayLegacy() {
         }}
       >
         <TimeSelector
-          min={constant21.임기.시작}
-          max={constant21.임기.끝}
+          min={new Date(1950, 1, 1)}
+          max={new Date()}
           value={date}
           onChange={setDate}
         />
