@@ -1,15 +1,15 @@
 import { useState } from "react";
 // import ROADS from "../../../../data/highway/processed/etc.road.json";
-import { ROADS_NAME } from "../../util/path/import";
+import { ROAD } from "../../core/road/import";
 import Checkbox from "../atom/CheckBox";
 import LeafletMap from "../atom/LeafletMap";
 import OptionSelector from "../atom/OptionSelector";
 import TimeSelector from "../atom/TimeSelector";
+import District from "../molecule/District";
 import PathNode from "../molecule/PathNode";
 import ViewNode from "../molecule/ViewNode";
-import District from "../molecule/District";
 
-const options = ["ALL", ...ROADS_NAME].map((v) => ({ value: v, label: v }));
+const options = ["ALL", ...ROAD.name].map((v) => ({ value: v, label: v }));
 
 export default function Highway() {
   const [view, setView] = useState<string>("ALL");
@@ -36,7 +36,12 @@ export default function Highway() {
         }}
       >
         <LeafletMap>
-          <ViewNode view={view} showIC={showIC} showJC={showJC} showDistrict={showDistrict}  />
+          <ViewNode
+            view={view}
+            showIC={showIC}
+            showJC={showJC}
+            showDistrict={showDistrict}
+          />
           <PathNode />
           <District showDistrict={showDistrict} />
         </LeafletMap>

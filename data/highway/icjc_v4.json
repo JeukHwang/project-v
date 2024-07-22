@@ -1,0 +1,8526 @@
+{
+  "IC": [
+    {
+      "type": "point",
+      "position": [
+        35.252099139,
+        129.098845669
+      ],
+      "roadName": "경부선",
+      "index": 8,
+      "placeName": "구서 IC",
+      "rawPosition": [
+        35.25163893333333,
+        129.0989384
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.378517789,
+        129.051714451
+      ],
+      "roadName": "경부선",
+      "index": 179,
+      "placeName": "양산 IC",
+      "rawPosition": [
+        35.378218,
+        129.053314
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.499586076,
+        129.095502729
+      ],
+      "roadName": "경부선",
+      "index": 320,
+      "placeName": "통도사 IC",
+      "rawPosition": [
+        35.498747,
+        129.097021
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.554706814,
+        129.124485258
+      ],
+      "roadName": "경부선",
+      "index": 387,
+      "placeName": "서울산 IC",
+      "rawPosition": [
+        35.553861,
+        129.126636
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.805916793,
+        129.18628975
+      ],
+      "roadName": "경부선",
+      "index": 680,
+      "placeName": "경주 IC",
+      "rawPosition": [
+        35.806331,
+        129.187987
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.842742434,
+        129.085959527
+      ],
+      "roadName": "경부선",
+      "index": 785,
+      "placeName": "건천 IC",
+      "rawPosition": [
+        35.843278,
+        129.087849
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.922372585,
+        128.951153664
+      ],
+      "roadName": "경부선",
+      "index": 964,
+      "placeName": "영천 IC",
+      "rawPosition": [
+        35.921589,
+        128.951168
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.876945858,
+        128.787669666
+      ],
+      "roadName": "경부선",
+      "index": 1129,
+      "placeName": "경산 IC",
+      "rawPosition": [
+        35.878149,
+        128.788225
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.908705754,
+        128.578869232
+      ],
+      "roadName": "경부선",
+      "index": 1341,
+      "placeName": "북대구 IC",
+      "rawPosition": [
+        35.906979,
+        128.579858
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        36.069976498,
+        128.370652582
+      ],
+      "roadName": "경부선",
+      "index": 1672,
+      "placeName": "남구미 IC",
+      "rawPosition": [
+        36.068138,
+        128.370149
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        36.107533175,
+        128.361246388
+      ],
+      "roadName": "경부선",
+      "index": 1721,
+      "placeName": "구미 IC",
+      "rawPosition": [
+        36.107744,
+        128.362376
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        36.133826746,
+        128.094654416
+      ],
+      "roadName": "경부선",
+      "index": 2003,
+      "placeName": "김천 IC",
+      "rawPosition": [
+        36.1345525,
+        128.09456949999998
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        36.200368744,
+        128.001689433
+      ],
+      "roadName": "경부선",
+      "index": 2127,
+      "placeName": "추풍령 IC",
+      "rawPosition": [
+        36.200098499999996,
+        128.0032925
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        36.222235531,
+        127.907474206
+      ],
+      "roadName": "경부선",
+      "index": 2224,
+      "placeName": "황간 IC",
+      "rawPosition": [
+        36.220617,
+        127.908085
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        36.269335496,
+        127.833385688
+      ],
+      "roadName": "경부선",
+      "index": 2325,
+      "placeName": "영동 IC",
+      "rawPosition": [
+        36.270274,
+        127.834783
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        36.279701421,
+        127.672931748
+      ],
+      "roadName": "경부선",
+      "index": 2478,
+      "placeName": "금강 IC",
+      "rawPosition": [
+        36.279278,
+        127.673348
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        36.31668526,
+        127.558214127
+      ],
+      "roadName": "경부선",
+      "index": 2593,
+      "placeName": "옥천 IC",
+      "rawPosition": [
+        36.317789,
+        127.559532
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        36.363754443,
+        127.450820411
+      ],
+      "roadName": "경부선",
+      "index": 2716,
+      "placeName": "대전 IC",
+      "rawPosition": [
+        36.36406815,
+        127.4515997
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        36.440553734,
+        127.419884213
+      ],
+      "roadName": "통영대전선/중부선",
+      "index": 2289,
+      "placeName": "신탄진 IC",
+      "rawPosition": [
+        36.4408,
+        127.420961
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        36.534678743,
+        127.430444649
+      ],
+      "roadName": "통영대전선/중부선",
+      "index": 2400,
+      "placeName": "남청주 IC",
+      "rawPosition": [
+        36.534315,
+        127.432157
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        36.626220266,
+        127.383358376
+      ],
+      "roadName": "경부선",
+      "index": 3046,
+      "placeName": "청주 IC",
+      "rawPosition": [
+        36.626784,
+        127.385014
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        36.758741908,
+        127.218395945
+      ],
+      "roadName": "경부선",
+      "index": 3293,
+      "placeName": "목천 IC",
+      "rawPosition": [
+        36.75879,
+        127.219247
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        36.827761765,
+        127.169802381
+      ],
+      "roadName": "경부선",
+      "index": 3398,
+      "placeName": "천안 IC",
+      "rawPosition": [
+        36.82749835,
+        127.1708552
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        36.993480205,
+        127.154499682
+      ],
+      "roadName": "경부선",
+      "index": 3594,
+      "placeName": "안성 IC",
+      "rawPosition": [
+        36.994219,
+        127.156069
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.143811228,
+        127.084067466
+      ],
+      "roadName": "경부선",
+      "index": 3777,
+      "placeName": "오산 IC",
+      "rawPosition": [
+        37.144321500000004,
+        127.08489525
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.223197866,
+        127.101721831
+      ],
+      "roadName": "경부선",
+      "index": 3868,
+      "placeName": "기흥 IC",
+      "rawPosition": [
+        37.223075,
+        127.102657
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.265989122,
+        127.103802422
+      ],
+      "roadName": "경부선",
+      "index": 3917,
+      "placeName": "수원신갈 IC",
+      "rawPosition": [
+        37.266266,
+        127.105614
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.409265074,
+        127.091082985
+      ],
+      "roadName": "경부선",
+      "index": 4079,
+      "placeName": "대왕판교 IC",
+      "rawPosition": [
+        37.409462,
+        127.091972
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.462537524,
+        127.040833456
+      ],
+      "roadName": "경부선",
+      "index": 4154,
+      "placeName": "양재 IC",
+      "rawPosition": [
+        37.463229,
+        127.042014
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.976523866,
+        128.433229962
+      ],
+      "roadName": "경부선",
+      "index": 1532,
+      "placeName": "왜관 IC",
+      "rawPosition": [
+        35.977351,
+        128.43469
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.397393006,
+        127.100688604
+      ],
+      "roadName": "경부선",
+      "index": 4063,
+      "placeName": "판교 IC",
+      "rawPosition": [
+        37.397562,
+        127.101818
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.286077697,
+        129.101972317
+      ],
+      "roadName": "경부선",
+      "index": 49,
+      "placeName": "노포 IC",
+      "rawPosition": [
+        35.285107,
+        129.10072
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.956103539,
+        128.455093122
+      ],
+      "roadName": "경부선",
+      "index": 1500,
+      "placeName": "칠곡물류 IC",
+      "rawPosition": [
+        35.956801,
+        128.457305
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.217721617,
+        127.097815276
+      ],
+      "roadName": "경부선",
+      "index": 3861,
+      "placeName": "기흥동탄 IC",
+      "rawPosition": [
+        37.216953,
+        127.099472
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        36.136053469,
+        128.176417135
+      ],
+      "roadName": "경부선",
+      "index": 1923,
+      "placeName": "동김천 IC",
+      "rawPosition": [
+        36.134976,
+        128.17756
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        36.897802281,
+        127.189155381
+      ],
+      "roadName": "경부선",
+      "index": 3479,
+      "placeName": "북천안 IC",
+      "rawPosition": [
+        36.897397,
+        127.191351
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.106347884,
+        127.11615098
+      ],
+      "roadName": "경부선",
+      "index": 3725,
+      "placeName": "남사진위 IC",
+      "rawPosition": [
+        37.106594,
+        127.116617
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        36.142934258,
+        128.302781663
+      ],
+      "roadName": "경부선",
+      "index": 1792,
+      "placeName": "북구미 IC",
+      "rawPosition": [
+        36.143558,
+        128.302709
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        36.656314454,
+        127.371799508
+      ],
+      "roadName": "경부선",
+      "index": 3081,
+      "placeName": "옥산하이패스 IC",
+      "rawPosition": [
+        36.656813,
+        127.372626
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.712477408,
+        129.191155132
+      ],
+      "roadName": "경부선",
+      "index": 573,
+      "placeName": "활천 IC",
+      "rawPosition": [
+        35.7121455,
+        129.191391
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        34.752918445,
+        126.530241431
+      ],
+      "roadName": "남해선(영암순천)",
+      "index": 5,
+      "placeName": "서영암 IC",
+      "rawPosition": [
+        34.752981,
+        126.5309832
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        34.69718025,
+        126.716885002
+      ],
+      "roadName": "남해선(영암순천)",
+      "index": 197,
+      "placeName": "강진무위사 IC",
+      "rawPosition": [
+        34.698139,
+        126.7173
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        34.708384368,
+        126.906611049
+      ],
+      "roadName": "남해선(영암순천)",
+      "index": 383,
+      "placeName": "장흥 IC",
+      "rawPosition": [
+        34.7079425,
+        126.906736
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        34.813948871,
+        127.104954274
+      ],
+      "roadName": "남해선(영암순천)",
+      "index": 610,
+      "placeName": "보성 IC",
+      "rawPosition": [
+        34.813545,
+        127.1054845
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        34.834910262,
+        127.298548344
+      ],
+      "roadName": "남해선(영암순천)",
+      "index": 797,
+      "placeName": "벌교 IC",
+      "rawPosition": [
+        34.8342625,
+        127.29837549999999
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        34.897439001,
+        127.48122578
+      ],
+      "roadName": "남해선(영암순천)",
+      "index": 1003,
+      "placeName": "순천만 IC",
+      "rawPosition": [
+        34.896991,
+        127.4812165
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        34.73637546,
+        126.574001042
+      ],
+      "roadName": "남해선(영암순천)",
+      "index": 52,
+      "placeName": "학산 IC",
+      "rawPosition": [
+        34.736691,
+        126.574528
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        34.82428453,
+        127.343635618
+      ],
+      "roadName": "남해선(영암순천)",
+      "index": 842,
+      "placeName": "고흥 IC",
+      "rawPosition": [
+        34.826999,
+        127.342841
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        34.904254265,
+        127.52888803
+      ],
+      "roadName": "남해선(영암순천)",
+      "index": 1048,
+      "placeName": "도롱 IC",
+      "rawPosition": [
+        34.905184,
+        127.528668
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.542244888,
+        127.710765664
+      ],
+      "roadName": "광주대구선",
+      "index": 865,
+      "placeName": "서함양하이패스 IC",
+      "rawPosition": [
+        35.544174,
+        127.710808
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.003180882,
+        126.393088311
+      ],
+      "roadName": "무안광주선",
+      "index": 0,
+      "placeName": "무안공항 IC",
+      "rawPosition": [
+        35.003671,
+        126.390487
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.014494778,
+        126.435093267
+      ],
+      "roadName": "무안광주선",
+      "index": 41,
+      "placeName": "북무안 IC",
+      "rawPosition": [
+        35.01425,
+        126.435812
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.102378281,
+        126.697314403
+      ],
+      "roadName": "무안광주선",
+      "index": 305,
+      "placeName": "나주 IC",
+      "rawPosition": [
+        35.1033005,
+        126.6971438
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.067183718,
+        126.597555279
+      ],
+      "roadName": "무안광주선",
+      "index": 204,
+      "placeName": "문평 IC",
+      "rawPosition": [
+        35.068208,
+        126.597922
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.050943757,
+        126.545767912
+      ],
+      "roadName": "무안광주선",
+      "index": 152,
+      "placeName": "동함평 IC",
+      "rawPosition": [
+        35.051868,
+        126.545062
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.159212614,
+        126.779161302
+      ],
+      "roadName": "무안광주선",
+      "index": 407,
+      "placeName": "운수 IC",
+      "rawPosition": [
+        35.1593744,
+        126.77906809999999
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.119326259,
+        126.733549048
+      ],
+      "roadName": "무안광주선",
+      "index": 344,
+      "placeName": "서광산 IC",
+      "rawPosition": [
+        35.118296,
+        126.734146
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.527362275,
+        129.007467151
+      ],
+      "roadName": "밀양울산선",
+      "index": 212,
+      "placeName": "배내골 IC",
+      "rawPosition": [
+        35.527982,
+        129.006676
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        34.840696679,
+        126.425694716
+      ],
+      "roadName": "서해안선",
+      "index": 4,
+      "placeName": "목포 IC",
+      "rawPosition": [
+        34.841913,
+        126.425966
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        34.858255389,
+        126.481566151
+      ],
+      "roadName": "서해안선",
+      "index": 63,
+      "placeName": "일로 IC",
+      "rawPosition": [
+        34.857817999999995,
+        126.48150899999999
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.018133495,
+        126.460689507
+      ],
+      "roadName": "무안광주선",
+      "index": 65,
+      "placeName": "무안 IC",
+      "rawPosition": [
+        35.006653549999996,
+        126.4675207
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.100051502,
+        126.481594511
+      ],
+      "roadName": "서해안선",
+      "index": 339,
+      "placeName": "함평 IC",
+      "rawPosition": [
+        35.099671,
+        126.4819385
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.299568605,
+        126.558058887
+      ],
+      "roadName": "서해안선",
+      "index": 582,
+      "placeName": "영광 IC",
+      "rawPosition": [
+        35.299786499999996,
+        126.55873
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.441116299,
+        126.664424546
+      ],
+      "roadName": "서해안선",
+      "index": 771,
+      "placeName": "고창 IC",
+      "rawPosition": [
+        35.440911,
+        126.664976
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.508395135,
+        126.683269318
+      ],
+      "roadName": "서해안선",
+      "index": 848,
+      "placeName": "선운산 IC",
+      "rawPosition": [
+        35.508414,
+        126.684341
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.595625316,
+        126.696686738
+      ],
+      "roadName": "서해안선",
+      "index": 946,
+      "placeName": "줄포 IC",
+      "rawPosition": [
+        35.595948,
+        126.697816
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.731948273,
+        126.774352548
+      ],
+      "roadName": "서해안선",
+      "index": 1117,
+      "placeName": "부안 IC",
+      "rawPosition": [
+        35.731603,
+        126.775052
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.836020759,
+        126.839821504
+      ],
+      "roadName": "서해안선",
+      "index": 1250,
+      "placeName": "서김제 IC",
+      "rawPosition": [
+        35.835575,
+        126.840665
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.94700606,
+        126.834345525
+      ],
+      "roadName": "서해안선",
+      "index": 1376,
+      "placeName": "동군산 IC",
+      "rawPosition": [
+        35.94703,
+        126.835651
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        36.008988189,
+        126.799469187
+      ],
+      "roadName": "서해안선",
+      "index": 1457,
+      "placeName": "군산 IC",
+      "rawPosition": [
+        36.009324199999995,
+        126.79933805
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        36.09875211,
+        126.689984703
+      ],
+      "roadName": "서해안선",
+      "index": 1609,
+      "placeName": "서천 IC",
+      "rawPosition": [
+        36.09927765,
+        126.68986365
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        36.169143474,
+        126.600791542
+      ],
+      "roadName": "서해안선",
+      "index": 1730,
+      "placeName": "춘장대 IC",
+      "rawPosition": [
+        36.169227,
+        126.601782
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        36.332974688,
+        126.575521311
+      ],
+      "roadName": "서해안선",
+      "index": 1935,
+      "placeName": "대천 IC",
+      "rawPosition": [
+        36.333293,
+        126.576103
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        36.497151458,
+        126.584945
+      ],
+      "roadName": "서해안선",
+      "index": 2131,
+      "placeName": "광천 IC",
+      "rawPosition": [
+        36.496876,
+        126.586451
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        36.592142992,
+        126.560152336
+      ],
+      "roadName": "서해안선",
+      "index": 2241,
+      "placeName": "홍성 IC",
+      "rawPosition": [
+        36.592036,
+        126.561726
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        36.713492145,
+        126.562560596
+      ],
+      "roadName": "서해안선",
+      "index": 2379,
+      "placeName": "해미 IC",
+      "rawPosition": [
+        36.713818,
+        126.564163
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        36.808789889,
+        126.572570326
+      ],
+      "roadName": "서해안선",
+      "index": 2487,
+      "placeName": "서산 IC",
+      "rawPosition": [
+        36.80818,
+        126.573123
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        36.894400475,
+        126.709335352
+      ],
+      "roadName": "서해안선",
+      "index": 2647,
+      "placeName": "당진 IC",
+      "rawPosition": [
+        36.893758,
+        126.710095
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        36.932967834,
+        126.776772967
+      ],
+      "roadName": "서해안선",
+      "index": 2722,
+      "placeName": "송악 IC",
+      "rawPosition": [
+        36.931971,
+        126.777242
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.000147482,
+        126.868995051
+      ],
+      "roadName": "서해안선",
+      "index": 2854,
+      "placeName": "서평택 IC",
+      "rawPosition": [
+        37.00013,
+        126.86963515
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.124042814,
+        126.882090842
+      ],
+      "roadName": "서해안선",
+      "index": 2995,
+      "placeName": "발안 IC",
+      "rawPosition": [
+        37.124645,
+        126.883322
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.242240349,
+        126.882056282
+      ],
+      "roadName": "서해안선",
+      "index": 3129,
+      "placeName": "비봉 IC",
+      "rawPosition": [
+        37.242385,
+        126.883347
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.279282331,
+        126.898003245
+      ],
+      "roadName": "서해안선",
+      "index": 3173,
+      "placeName": "매송 IC",
+      "rawPosition": [
+        37.279274,
+        126.899805
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.396953025,
+        126.87165772
+      ],
+      "roadName": "서해안선",
+      "index": 3321,
+      "placeName": "목감 IC",
+      "rawPosition": [
+        37.396386,
+        126.873127
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.461863353,
+        126.889351727
+      ],
+      "roadName": "서해안선",
+      "index": 3404,
+      "placeName": "금천 IC",
+      "rawPosition": [
+        37.4617171,
+        126.8896844
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.405013792,
+        126.881263303
+      ],
+      "roadName": "서해안선",
+      "index": 3334,
+      "placeName": "광명역 IC",
+      "rawPosition": [
+        37.404257,
+        126.881624
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        36.238190073,
+        126.561301926
+      ],
+      "roadName": "서해안선",
+      "index": 1815,
+      "placeName": "무창포 IC",
+      "rawPosition": [
+        36.238946,
+        126.563063
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.240318227,
+        126.508293701
+      ],
+      "roadName": "서해안선",
+      "index": 501,
+      "placeName": "불갑산하이패스 IC",
+      "rawPosition": [
+        35.240731,
+        126.508155
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.552072445,
+        129.260683474
+      ],
+      "roadName": "울산선",
+      "index": 140,
+      "placeName": "울산 IC",
+      "rawPosition": [
+        35.5522455,
+        129.2607715
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.556592636,
+        129.252434627
+      ],
+      "roadName": "울산선",
+      "index": 131,
+      "placeName": "장검 IC",
+      "rawPosition": [
+        35.556461,
+        129.252337
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.058851232,
+        126.988573944
+      ],
+      "roadName": "평택화성선",
+      "index": 58,
+      "placeName": "어연 IC",
+      "rawPosition": [
+        37.057822,
+        126.989983
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.184334368,
+        126.971321963
+      ],
+      "roadName": "봉담동탄선",
+      "index": 114,
+      "placeName": "정남 IC",
+      "rawPosition": [
+        37.184785,
+        126.972172
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.130182199,
+        127.000642468
+      ],
+      "roadName": "평택화성선",
+      "index": 140,
+      "placeName": "향남 IC",
+      "rawPosition": [
+        37.129666,
+        127.002153
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.228900597,
+        126.956740864
+      ],
+      "roadName": "봉담동탄선",
+      "index": 167,
+      "placeName": "봉담 IC",
+      "rawPosition": [
+        37.229025,
+        126.957968
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.01627008,
+        126.985799334
+      ],
+      "roadName": "평택화성선",
+      "index": 10,
+      "placeName": "오성 IC",
+      "rawPosition": [
+        37.016436,
+        126.987115
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.014818479,
+        127.373515923
+      ],
+      "roadName": "논산천안선/호남선",
+      "index": 101,
+      "placeName": "승주 IC",
+      "rawPosition": [
+        35.015398,
+        127.373319
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.067501235,
+        127.270369458
+      ],
+      "roadName": "논산천안선/호남선",
+      "index": 218,
+      "placeName": "주암 IC",
+      "rawPosition": [
+        35.067676,
+        127.271957
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.128342218,
+        127.247263631
+      ],
+      "roadName": "논산천안선/호남선",
+      "index": 292,
+      "placeName": "석곡 IC",
+      "rawPosition": [
+        35.128195,
+        127.247905
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.226345346,
+        127.222813904
+      ],
+      "roadName": "논산천안선/호남선",
+      "index": 412,
+      "placeName": "곡성 IC",
+      "rawPosition": [
+        35.227088,
+        127.22277
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.25874607,
+        127.115137732
+      ],
+      "roadName": "논산천안선/호남선",
+      "index": 524,
+      "placeName": "옥과 IC",
+      "rawPosition": [
+        35.259558,
+        127.115462
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.23320323,
+        127.00279206
+      ],
+      "roadName": "논산천안선/호남선",
+      "index": 638,
+      "placeName": "창평 IC",
+      "rawPosition": [
+        35.234082,
+        127.001898
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.184199194,
+        126.927508414
+      ],
+      "roadName": "논산천안선/호남선",
+      "index": 739,
+      "placeName": "동광주 IC",
+      "rawPosition": [
+        35.184196,
+        126.928936
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.184351636,
+        126.897441622
+      ],
+      "roadName": "논산천안선/호남선",
+      "index": 768,
+      "placeName": "용봉 IC",
+      "rawPosition": [
+        35.184854,
+        126.897974
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.184860779,
+        126.883136971
+      ],
+      "roadName": "논산천안선/호남선",
+      "index": 781,
+      "placeName": "서광주 IC",
+      "rawPosition": [
+        35.185908,
+        126.88322
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.216989001,
+        126.827967427
+      ],
+      "roadName": "논산천안선/호남선",
+      "index": 847,
+      "placeName": "광산 IC",
+      "rawPosition": [
+        35.217228,
+        126.829558
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.284369675,
+        126.787780418
+      ],
+      "roadName": "논산천안선/호남선",
+      "index": 937,
+      "placeName": "장성 IC",
+      "rawPosition": [
+        35.285572,
+        126.789396
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.428185253,
+        126.803432742
+      ],
+      "roadName": "논산천안선/호남선",
+      "index": 1106,
+      "placeName": "백양사 IC",
+      "rawPosition": [
+        35.427893,
+        126.804569
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.510008896,
+        126.802263648
+      ],
+      "roadName": "논산천안선/호남선",
+      "index": 1203,
+      "placeName": "내장산 IC",
+      "rawPosition": [
+        35.509628,
+        126.802644
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.580930755,
+        126.833180128
+      ],
+      "roadName": "논산천안선/호남선",
+      "index": 1288,
+      "placeName": "정읍 IC",
+      "rawPosition": [
+        35.580557999999996,
+        126.834475
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.661539715,
+        126.92782956
+      ],
+      "roadName": "논산천안선/호남선",
+      "index": 1416,
+      "placeName": "태인 IC",
+      "rawPosition": [
+        35.660241,
+        126.928297
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.736533287,
+        126.988914951
+      ],
+      "roadName": "논산천안선/호남선",
+      "index": 1521,
+      "placeName": "금산사 IC",
+      "rawPosition": [
+        35.736366,
+        126.98969600000001
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.775713416,
+        127.002435575
+      ],
+      "roadName": "논산천안선/호남선",
+      "index": 1568,
+      "placeName": "김제 IC",
+      "rawPosition": [
+        35.775265,
+        127.0029235
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.827679316,
+        127.034109771
+      ],
+      "roadName": "논산천안선/호남선",
+      "index": 1634,
+      "placeName": "서전주 IC",
+      "rawPosition": [
+        35.827817499999995,
+        127.034945
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.878044434,
+        127.055170067
+      ],
+      "roadName": "논산천안선/호남선",
+      "index": 1694,
+      "placeName": "전주 IC",
+      "rawPosition": [
+        35.8781108,
+        127.05566756666667
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.925702275,
+        127.079383492
+      ],
+      "roadName": "논산천안선/호남선",
+      "index": 1756,
+      "placeName": "삼례 IC",
+      "rawPosition": [
+        35.9252115,
+        127.07968650000001
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.992069956,
+        127.113741375
+      ],
+      "roadName": "논산천안선/호남선",
+      "index": 1839,
+      "placeName": "익산 IC",
+      "rawPosition": [
+        35.991932,
+        127.115648
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.192916094,
+        126.86561372
+      ],
+      "roadName": "논산천안선/호남선",
+      "index": 800,
+      "placeName": "동림 IC",
+      "rawPosition": [
+        35.19464,
+        126.865562
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.192142711,
+        126.929347007
+      ],
+      "roadName": "논산천안선/호남선",
+      "index": 730,
+      "placeName": "문흥 IC",
+      "rawPosition": [
+        35.192498,
+        126.93652349999999
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        34.843424877,
+        126.464086901
+      ],
+      "roadName": "서해안선",
+      "index": 40,
+      "placeName": "죽림 IC",
+      "rawPosition": [
+        34.843253,
+        126.463619
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.847396155,
+        127.189184328
+      ],
+      "roadName": "순천완주선",
+      "index": 1134,
+      "placeName": "동전주 IC",
+      "rawPosition": [
+        35.847334,
+        127.191059
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.758876538,
+        127.218847798
+      ],
+      "roadName": "순천완주선",
+      "index": 1029,
+      "placeName": "상관 IC",
+      "rawPosition": [
+        35.759052,
+        127.219857
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.55280332,
+        127.320660521
+      ],
+      "roadName": "순천완주선",
+      "index": 758,
+      "placeName": "오수 IC",
+      "rawPosition": [
+        35.552347,
+        127.321861
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.631036071,
+        127.315415883
+      ],
+      "roadName": "순천완주선",
+      "index": 856,
+      "placeName": "임실 IC",
+      "rawPosition": [
+        35.631977,
+        127.316656
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.361950578,
+        127.336867176
+      ],
+      "roadName": "순천완주선",
+      "index": 527,
+      "placeName": "서남원 IC",
+      "rawPosition": [
+        35.362474,
+        127.337466
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.249250513,
+        127.419875563
+      ],
+      "roadName": "순천완주선",
+      "index": 377,
+      "placeName": "구례화엄사 IC",
+      "rawPosition": [
+        35.250065,
+        127.420695
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.146309434,
+        127.456971351
+      ],
+      "roadName": "순천완주선",
+      "index": 250,
+      "placeName": "황전 IC",
+      "rawPosition": [
+        35.146801,
+        127.458033
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        34.949204461,
+        127.552563947
+      ],
+      "roadName": "순천완주선",
+      "index": 6,
+      "placeName": "동순천 IC",
+      "rawPosition": [
+        34.94897145,
+        127.55357105
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.439682189,
+        127.31242014
+      ],
+      "roadName": "순천완주선",
+      "index": 622,
+      "placeName": "북남원 IC",
+      "rawPosition": [
+        35.439432,
+        127.313825
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        36.375908376,
+        128.297016296
+      ],
+      "roadName": "청주상주선",
+      "index": 853,
+      "placeName": "동상주 IC",
+      "rawPosition": [
+        36.375026,
+        128.29656
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        36.401003254,
+        128.410277886
+      ],
+      "roadName": "상주영덕선",
+      "index": 135,
+      "placeName": "서의성 IC",
+      "rawPosition": [
+        36.40011,
+        128.410897
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        36.419001671,
+        128.686552282
+      ],
+      "roadName": "상주영덕선",
+      "index": 397,
+      "placeName": "북의성 IC",
+      "rawPosition": [
+        36.417669,
+        128.686711
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        36.455179037,
+        129.026359885
+      ],
+      "roadName": "상주영덕선",
+      "index": 719,
+      "placeName": "청송 IC",
+      "rawPosition": [
+        36.456075,
+        129.026638
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        36.493955627,
+        129.122829183
+      ],
+      "roadName": "상주영덕선",
+      "index": 818,
+      "placeName": "동청송영양 IC",
+      "rawPosition": [
+        36.492909,
+        129.123188
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        36.381404556,
+        129.363305054
+      ],
+      "roadName": "청주상주선",
+      "index": 1907,
+      "placeName": "영덕 IC",
+      "rawPosition": [
+        36.384577699999994,
+        129.36951685
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        36.43661779,
+        128.889705939
+      ],
+      "roadName": "청주상주선",
+      "index": 1416,
+      "placeName": "동안동 IC",
+      "rawPosition": [
+        36.437281,
+        128.889329
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.291898659,
+        127.377788591
+      ],
+      "roadName": "제2중부선",
+      "index": 60,
+      "placeName": "신둔(이천)하이패스 IC",
+      "rawPosition": [
+        37.29391,
+        127.380747
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.048730662,
+        126.919084668
+      ],
+      "roadName": "평택제천선",
+      "index": 28,
+      "placeName": "청북 IC",
+      "rawPosition": [
+        37.047407,
+        126.919096
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.034480567,
+        127.109151907
+      ],
+      "roadName": "평택제천선",
+      "index": 210,
+      "placeName": "송탄 IC",
+      "rawPosition": [
+        37.035184,
+        127.109435
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.033191606,
+        127.160942536
+      ],
+      "roadName": "평택제천선",
+      "index": 258,
+      "placeName": "서안성 IC",
+      "rawPosition": [
+        37.033552,
+        127.161887
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        36.974886912,
+        127.246342321
+      ],
+      "roadName": "평택제천선",
+      "index": 361,
+      "placeName": "남안성 IC",
+      "rawPosition": [
+        36.97522705,
+        127.2464338
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        36.945433756,
+        127.451276769
+      ],
+      "roadName": "평택제천선",
+      "index": 558,
+      "placeName": "북진천 IC",
+      "rawPosition": [
+        36.946391,
+        127.451719
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        36.954912437,
+        127.552889665
+      ],
+      "roadName": "평택제천선",
+      "index": 652,
+      "placeName": "금왕꽃동네 IC",
+      "rawPosition": [
+        36.955898,
+        127.553091
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        36.989628538,
+        127.620101089
+      ],
+      "roadName": "평택제천선",
+      "index": 725,
+      "placeName": "음성 IC",
+      "rawPosition": [
+        36.989132,
+        127.620388
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.009966569,
+        127.671122602
+      ],
+      "roadName": "평택제천선",
+      "index": 777,
+      "placeName": "서충주 IC",
+      "rawPosition": [
+        37.01097,
+        127.670975
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.063966815,
+        127.923566939
+      ],
+      "roadName": "평택제천선",
+      "index": 1034,
+      "placeName": "동충주 IC",
+      "rawPosition": [
+        37.06346445,
+        127.92300835
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.025465261,
+        127.035296947
+      ],
+      "roadName": "평택제천선",
+      "index": 140,
+      "placeName": "평택고덕 IC",
+      "rawPosition": [
+        37.026835,
+        127.035171
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.329175381,
+        128.505110494
+      ],
+      "roadName": "중부내륙선",
+      "index": 88,
+      "placeName": "칠서 IC",
+      "rawPosition": [
+        35.329457,
+        128.506037
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.399533363,
+        128.482408759
+      ],
+      "roadName": "중부내륙선",
+      "index": 177,
+      "placeName": "남지 IC",
+      "rawPosition": [
+        35.399817,
+        128.483547
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.45537051,
+        128.511210151
+      ],
+      "roadName": "중부내륙선",
+      "index": 246,
+      "placeName": "영산 IC",
+      "rawPosition": [
+        35.455208,
+        128.513091
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.544034625,
+        128.47632837
+      ],
+      "roadName": "중부내륙선",
+      "index": 361,
+      "placeName": "창녕 IC",
+      "rawPosition": [
+        35.544467,
+        128.477572
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        36.240181999,
+        128.261014589
+      ],
+      "roadName": "중부내륙선",
+      "index": 1234,
+      "placeName": "선산 IC",
+      "rawPosition": [
+        36.240311,
+        128.26293
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        36.422512495,
+        128.21331141
+      ],
+      "roadName": "중부내륙선",
+      "index": 1463,
+      "placeName": "상주 IC",
+      "rawPosition": [
+        36.422457,
+        128.215714
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        36.980103054,
+        127.846212478
+      ],
+      "roadName": "중부내륙선",
+      "index": 2248,
+      "placeName": "충주 IC",
+      "rawPosition": [
+        36.980086,
+        127.848511
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.037422073,
+        127.797336766
+      ],
+      "roadName": "평택제천선",
+      "index": 905,
+      "placeName": "북충주 IC",
+      "rawPosition": [
+        37.038751,
+        127.796956
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.124593004,
+        127.66976537
+      ],
+      "roadName": "중부내륙선",
+      "index": 2512,
+      "placeName": "감곡 IC",
+      "rawPosition": [
+        37.125898,
+        127.670597
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        36.531264926,
+        128.169148353
+      ],
+      "roadName": "중부내륙선",
+      "index": 1594,
+      "placeName": "북상주 IC",
+      "rawPosition": [
+        36.53185205,
+        128.1695392
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        36.584980496,
+        128.153451073
+      ],
+      "roadName": "중부내륙선",
+      "index": 1666,
+      "placeName": "점촌함창 IC",
+      "rawPosition": [
+        36.584599,
+        128.154422
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        36.699189117,
+        128.111181807
+      ],
+      "roadName": "중부내륙선",
+      "index": 1807,
+      "placeName": "문경새재 IC",
+      "rawPosition": [
+        36.699033,
+        128.112659
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        36.759266686,
+        127.991981481
+      ],
+      "roadName": "중부내륙선",
+      "index": 1949,
+      "placeName": "연풍 IC",
+      "rawPosition": [
+        36.760442,
+        127.993276
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        36.867431413,
+        127.922681673
+      ],
+      "roadName": "중부내륙선",
+      "index": 2092,
+      "placeName": "괴산 IC",
+      "rawPosition": [
+        36.868984,
+        127.922955
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.842921065,
+        128.324314117
+      ],
+      "roadName": "중부내륙선",
+      "index": 738,
+      "placeName": "남성주 IC",
+      "rawPosition": [
+        35.843467,
+        128.325667
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.91962781,
+        128.248763335
+      ],
+      "roadName": "중부내륙선",
+      "index": 857,
+      "placeName": "성주 IC",
+      "rawPosition": [
+        35.920815,
+        128.250299
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        36.058290094,
+        128.268286298
+      ],
+      "roadName": "중부내륙선",
+      "index": 1022,
+      "placeName": "남김천 IC",
+      "rawPosition": [
+        36.058553,
+        128.269594
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.3051204,
+        127.582384906
+      ],
+      "roadName": "중부내륙선",
+      "index": 2740,
+      "placeName": "서여주 IC",
+      "rawPosition": [
+        37.305462,
+        127.584096
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.372332902,
+        127.526567496
+      ],
+      "roadName": "중부내륙선",
+      "index": 2832,
+      "placeName": "북여주 IC",
+      "rawPosition": [
+        37.372785,
+        127.528452
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.253167759,
+        127.58806064
+      ],
+      "roadName": "중부내륙선",
+      "index": 2681,
+      "placeName": "남여주 IC",
+      "rawPosition": [
+        37.253639,
+        127.589034
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.522345903,
+        127.446310792
+      ],
+      "roadName": "중부내륙선",
+      "index": 3019,
+      "placeName": "양평 IC",
+      "rawPosition": [
+        37.522525099999996,
+        127.4468236
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.280099815,
+        128.513941853
+      ],
+      "roadName": "중부내륙선",
+      "index": 26,
+      "placeName": "칠원 IC",
+      "rawPosition": [
+        35.280663,
+        128.51432
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.020239121,
+        127.840982066
+      ],
+      "roadName": "중부내륙선",
+      "index": 2295,
+      "placeName": "충주하이패스 IC",
+      "rawPosition": [
+        37.019155,
+        127.839742
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.481879376,
+        127.466379388
+      ],
+      "roadName": "중부내륙선",
+      "index": 2969,
+      "placeName": "남양평 IC",
+      "rawPosition": [
+        37.483334,
+        127.468327
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.351157258,
+        126.803036276
+      ],
+      "roadName": "영동선",
+      "index": 127,
+      "placeName": "서안산 IC",
+      "rawPosition": [
+        37.351676,
+        126.803298
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.348288345,
+        126.839379348
+      ],
+      "roadName": "영동선",
+      "index": 160,
+      "placeName": "안산 IC",
+      "rawPosition": [
+        37.347693,
+        126.839516
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.32587532,
+        126.922210079
+      ],
+      "roadName": "영동선",
+      "index": 244,
+      "placeName": "군포 IC",
+      "rawPosition": [
+        37.326605,
+        126.9219995
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.328819475,
+        126.937213613
+      ],
+      "roadName": "영동선",
+      "index": 258,
+      "placeName": "동군포 IC",
+      "rawPosition": [
+        37.3292565,
+        126.9373985
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.323764751,
+        126.960764376
+      ],
+      "roadName": "영동선",
+      "index": 280,
+      "placeName": "부곡 IC",
+      "rawPosition": [
+        37.3238125,
+        126.96133549999999
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.318224209,
+        126.991837237
+      ],
+      "roadName": "영동선",
+      "index": 309,
+      "placeName": "북수원 IC",
+      "rawPosition": [
+        37.3186845,
+        126.99151549999999
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.299583063,
+        127.050398388
+      ],
+      "roadName": "영동선",
+      "index": 369,
+      "placeName": "동수원 IC",
+      "rawPosition": [
+        37.3001565,
+        127.05051900000001
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.280757904,
+        127.172194878
+      ],
+      "roadName": "영동선",
+      "index": 482,
+      "placeName": "마성 IC",
+      "rawPosition": [
+        37.283789,
+        127.17641599999999
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.256366776,
+        127.210624159
+      ],
+      "roadName": "영동선",
+      "index": 526,
+      "placeName": "용인 IC",
+      "rawPosition": [
+        37.257273,
+        127.210854
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.239496093,
+        127.294716091
+      ],
+      "roadName": "영동선",
+      "index": 605,
+      "placeName": "양지 IC",
+      "rawPosition": [
+        37.238671,
+        127.295604
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.241474397,
+        127.364803228
+      ],
+      "roadName": "영동선",
+      "index": 675,
+      "placeName": "덕평 IC",
+      "rawPosition": [
+        37.242153,
+        127.365249
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.245187917,
+        127.49727737
+      ],
+      "roadName": "영동선",
+      "index": 797,
+      "placeName": "이천 IC",
+      "rawPosition": [
+        37.246055,
+        127.497147
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.252908152,
+        127.653960819
+      ],
+      "roadName": "영동선",
+      "index": 945,
+      "placeName": "여주 IC",
+      "rawPosition": [
+        37.252144,
+        127.65425
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.311785294,
+        127.826390686
+      ],
+      "roadName": "영동선",
+      "index": 1144,
+      "placeName": "문막 IC",
+      "rawPosition": [
+        37.311143,
+        127.82732
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.400926003,
+        127.950367376
+      ],
+      "roadName": "영동선",
+      "index": 1302,
+      "placeName": "원주 IC",
+      "rawPosition": [
+        37.401755,
+        127.95034
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.446905576,
+        128.06575209
+      ],
+      "roadName": "영동선",
+      "index": 1428,
+      "placeName": "새말 IC",
+      "rawPosition": [
+        37.4473411,
+        128.06599075
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.492966197,
+        128.206294752
+      ],
+      "roadName": "영동선",
+      "index": 1601,
+      "placeName": "둔내 IC",
+      "rawPosition": [
+        37.492616,
+        128.2064775
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.561315752,
+        128.366072626
+      ],
+      "roadName": "영동선",
+      "index": 1769,
+      "placeName": "면온 IC",
+      "rawPosition": [
+        37.56211,
+        128.366235
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.590746211,
+        128.414076854
+      ],
+      "roadName": "영동선",
+      "index": 1826,
+      "placeName": "평창 IC",
+      "rawPosition": [
+        37.5903515,
+        128.414302
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.630489842,
+        128.489396951
+      ],
+      "roadName": "영동선",
+      "index": 1917,
+      "placeName": "속사 IC",
+      "rawPosition": [
+        37.630301,
+        128.48998999999998
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.65237501,
+        128.562752615
+      ],
+      "roadName": "영동선",
+      "index": 1989,
+      "placeName": "진부 IC",
+      "rawPosition": [
+        37.6519315,
+        128.5628345
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.678828133,
+        128.694768215
+      ],
+      "roadName": "영동선",
+      "index": 2117,
+      "placeName": "대관령 IC",
+      "rawPosition": [
+        37.677862,
+        128.695426
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.522800115,
+        128.275491066
+      ],
+      "roadName": "영동선",
+      "index": 1674,
+      "placeName": "동둔내(삽교)하이패스 IC",
+      "rawPosition": [
+        37.52334,
+        128.27505
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.936580743,
+        128.535864466
+      ],
+      "roadName": "중앙선:2/2",
+      "index": 222,
+      "placeName": "칠곡 IC",
+      "rawPosition": [
+        35.936316,
+        128.537107
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        36.047275664,
+        128.51682356
+      ],
+      "roadName": "중앙선:2/2",
+      "index": 359,
+      "placeName": "다부 IC",
+      "rawPosition": [
+        36.047081,
+        128.518303
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        36.097349582,
+        128.533775454
+      ],
+      "roadName": "중앙선:2/2",
+      "index": 424,
+      "placeName": "가산 IC",
+      "rawPosition": [
+        36.097527,
+        128.535221
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        36.198481088,
+        128.558819432
+      ],
+      "roadName": "중앙선:2/2",
+      "index": 542,
+      "placeName": "군위 IC",
+      "rawPosition": [
+        36.198102,
+        128.560251
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        36.291202394,
+        128.58068773
+      ],
+      "roadName": "중앙선:2/2",
+      "index": 652,
+      "placeName": "의성 IC",
+      "rawPosition": [
+        36.291267,
+        128.582776
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        36.473485735,
+        128.621887091
+      ],
+      "roadName": "중앙선:2/2",
+      "index": 879,
+      "placeName": "남안동 IC",
+      "rawPosition": [
+        36.473787,
+        128.622803
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        36.58824653,
+        128.628041396
+      ],
+      "roadName": "중앙선:2/2",
+      "index": 1029,
+      "placeName": "서안동 IC",
+      "rawPosition": [
+        36.589568,
+        128.629156
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        36.66872123,
+        128.5425893
+      ],
+      "roadName": "중앙선:2/2",
+      "index": 1164,
+      "placeName": "예천 IC",
+      "rawPosition": [
+        36.668,
+        128.543859
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        36.76774713,
+        128.571959264
+      ],
+      "roadName": "중앙선:2/2",
+      "index": 1282,
+      "placeName": "영주 IC",
+      "rawPosition": [
+        36.768053,
+        128.572839
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        36.851716023,
+        128.531672475
+      ],
+      "roadName": "중앙선:2/2",
+      "index": 1385,
+      "placeName": "풍기 IC",
+      "rawPosition": [
+        36.8520157,
+        128.53273415
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        36.917965617,
+        128.36419228
+      ],
+      "roadName": "중앙선:2/2",
+      "index": 1556,
+      "placeName": "단양 IC",
+      "rawPosition": [
+        36.9167,
+        128.363919
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.013899028,
+        128.289195575
+      ],
+      "roadName": "중앙선:2/2",
+      "index": 1697,
+      "placeName": "북단양 IC",
+      "rawPosition": [
+        37.014683,
+        128.290003
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.075204879,
+        128.182818871
+      ],
+      "roadName": "중앙선:2/2",
+      "index": 1821,
+      "placeName": "남제천 IC",
+      "rawPosition": [
+        37.076022,
+        128.184992
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.134590312,
+        128.141312491
+      ],
+      "roadName": "중앙선:2/2",
+      "index": 1903,
+      "placeName": "제천 IC",
+      "rawPosition": [
+        37.134873,
+        128.142716
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.224333787,
+        128.088804531
+      ],
+      "roadName": "중앙선:2/2",
+      "index": 2024,
+      "placeName": "신림 IC",
+      "rawPosition": [
+        37.224818,
+        128.089289
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.324328142,
+        127.929852686
+      ],
+      "roadName": "중앙선:2/2",
+      "index": 2212,
+      "placeName": "남원주 IC",
+      "rawPosition": [
+        37.325278,
+        127.931398
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.420591045,
+        127.923125543
+      ],
+      "roadName": "중앙선:2/2",
+      "index": 2342,
+      "placeName": "북원주 IC",
+      "rawPosition": [
+        37.419848,
+        127.9232505
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.504860407,
+        127.969821457
+      ],
+      "roadName": "중앙선:2/2",
+      "index": 2449,
+      "placeName": "횡성 IC",
+      "rawPosition": [
+        37.504617499999995,
+        127.9706575
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.676911884,
+        127.858068073
+      ],
+      "roadName": "중앙선:2/2",
+      "index": 2703,
+      "placeName": "홍천 IC",
+      "rawPosition": [
+        37.677527833333336,
+        127.85854926666667
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.841620495,
+        127.768431492
+      ],
+      "roadName": "중앙선:2/2",
+      "index": 2945,
+      "placeName": "춘천 IC",
+      "rawPosition": [
+        37.841998133333334,
+        127.76811053333334
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.758548954,
+        127.965948842
+      ],
+      "roadName": "서울양양선",
+      "index": 785,
+      "placeName": "동홍천 IC",
+      "rawPosition": [
+        37.758813733333334,
+        127.96654306666666
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.595887598,
+        127.213736944
+      ],
+      "roadName": "서울양양선",
+      "index": 46,
+      "placeName": "덕소삼패 IC",
+      "rawPosition": [
+        37.594811,
+        127.214237
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.631539644,
+        127.312836706
+      ],
+      "roadName": "서울양양선",
+      "index": 150,
+      "placeName": "화도 IC",
+      "rawPosition": [
+        37.632498,
+        127.312813
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.634411261,
+        127.370659624
+      ],
+      "roadName": "서울양양선",
+      "index": 202,
+      "placeName": "서종 IC",
+      "rawPosition": [
+        37.635152,
+        127.370279
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.670126727,
+        127.496003339
+      ],
+      "roadName": "서울양양선",
+      "index": 331,
+      "placeName": "설악 IC",
+      "rawPosition": [
+        37.669807,
+        127.496499
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.73443801,
+        127.624147784
+      ],
+      "roadName": "서울양양선",
+      "index": 472,
+      "placeName": "강촌 IC",
+      "rawPosition": [
+        37.733733,
+        127.624887
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.752942389,
+        127.726849043
+      ],
+      "roadName": "서울양양선",
+      "index": 566,
+      "placeName": "남춘천 IC",
+      "rawPosition": [
+        37.752069,
+        127.727131
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.758062437,
+        127.780296407
+      ],
+      "roadName": "서울양양선",
+      "index": 615,
+      "placeName": "조양 IC",
+      "rawPosition": [
+        37.758587,
+        127.780939
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.582007404,
+        127.191492525
+      ],
+      "roadName": "서울양양선",
+      "index": 21,
+      "placeName": "미사 IC",
+      "rawPosition": [
+        37.581497,
+        127.192074
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.578360418,
+        127.177542475
+      ],
+      "roadName": "서울양양선",
+      "index": 8,
+      "placeName": "선동 IC",
+      "rawPosition": [
+        37.577939,
+        127.177507
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.57357742,
+        127.164938765
+      ],
+      "roadName": "수도권제1순환선",
+      "index": 249,
+      "placeName": "강일 IC",
+      "rawPosition": [
+        37.573796933333334,
+        127.16574866666666
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.788983469,
+        128.141598118
+      ],
+      "roadName": "서울양양선",
+      "index": 954,
+      "placeName": "내촌 IC",
+      "rawPosition": [
+        37.789751499999994,
+        128.141202
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.913082503,
+        128.286396121
+      ],
+      "roadName": "서울양양선",
+      "index": 1156,
+      "placeName": "인제 IC",
+      "rawPosition": [
+        37.91271,
+        128.28704
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.995983067,
+        128.533558191
+      ],
+      "roadName": "서울양양선",
+      "index": 1409,
+      "placeName": "서양양 IC",
+      "rawPosition": [
+        37.995704,
+        128.534313
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.751044396,
+        128.839169082
+      ],
+      "roadName": "동해선",
+      "index": 590,
+      "placeName": "강릉 IC",
+      "rawPosition": [
+        37.750786,
+        128.840468
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.914422623,
+        128.790228557
+      ],
+      "roadName": "동해선",
+      "index": 779,
+      "placeName": "남양양 IC",
+      "rawPosition": [
+        37.9145077,
+        128.79080645
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.584862249,
+        129.092629811
+      ],
+      "roadName": "동해선",
+      "index": 262,
+      "placeName": "망상 IC",
+      "rawPosition": [
+        37.585212,
+        129.093628
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.619248179,
+        129.037481848
+      ],
+      "roadName": "동해선",
+      "index": 328,
+      "placeName": "옥계 IC",
+      "rawPosition": [
+        37.620422,
+        129.038909
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.834245267,
+        128.814411925
+      ],
+      "roadName": "동해선",
+      "index": 686,
+      "placeName": "북강릉 IC",
+      "rawPosition": [
+        37.834382,
+        128.815614
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.513770355,
+        129.095714027
+      ],
+      "roadName": "동해선",
+      "index": 181,
+      "placeName": "동해 IC",
+      "rawPosition": [
+        37.514117049999996,
+        129.096329
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.693393436,
+        128.892470014
+      ],
+      "roadName": "동해선",
+      "index": 505,
+      "placeName": "남강릉 IC",
+      "rawPosition": [
+        37.69405,
+        128.893478
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        38.024441983,
+        128.695536175
+      ],
+      "roadName": "동해선",
+      "index": 931,
+      "placeName": "하조대 IC",
+      "rawPosition": [
+        38.0246152,
+        128.69616305
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        38.073758096,
+        128.591127817
+      ],
+      "roadName": "동해선",
+      "index": 1040,
+      "placeName": "양양 IC",
+      "rawPosition": [
+        38.07434915,
+        128.59293605
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        38.154529645,
+        128.586031104
+      ],
+      "roadName": "동해선",
+      "index": 1133,
+      "placeName": "북양양 IC",
+      "rawPosition": [
+        38.154506999999995,
+        128.5864215
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        38.201641999,
+        128.522533511
+      ],
+      "roadName": "동해선",
+      "index": 1220,
+      "placeName": "속초 IC",
+      "rawPosition": [
+        38.20180946666667,
+        128.52271146666666
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.393420183,
+        129.203559244
+      ],
+      "roadName": "동해선",
+      "index": 0,
+      "placeName": "근덕 IC",
+      "rawPosition": [
+        37.39293505,
+        129.209713355203
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.450727733,
+        129.129594802
+      ],
+      "roadName": "동해선",
+      "index": 94,
+      "placeName": "삼척 IC",
+      "rawPosition": [
+        37.451892,
+        129.130316
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.659192543,
+        127.117226404
+      ],
+      "roadName": "수도권제1순환선",
+      "index": 356,
+      "placeName": "별내 IC",
+      "rawPosition": [
+        37.659375,
+        127.11797
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.549370198,
+        127.179280635
+      ],
+      "roadName": "수도권제1순환선",
+      "index": 219,
+      "placeName": "상일 IC",
+      "rawPosition": [
+        37.5495715,
+        127.17989349999999
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.512481371,
+        127.151961875
+      ],
+      "roadName": "수도권제1순환선",
+      "index": 144,
+      "placeName": "서하남 IC",
+      "rawPosition": [
+        37.5120835,
+        127.152492
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.474824142,
+        127.128742053
+      ],
+      "roadName": "수도권제1순환선",
+      "index": 96,
+      "placeName": "송파 IC",
+      "rawPosition": [
+        37.474709,
+        127.1289875
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.583477887,
+        127.157106419
+      ],
+      "roadName": "수도권제1순환선",
+      "index": 262,
+      "placeName": "토평 IC",
+      "rawPosition": [
+        37.5837805,
+        127.15748450000001
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.61470694,
+        127.141842328
+      ],
+      "roadName": "수도권제1순환선",
+      "index": 301,
+      "placeName": "구리 IC",
+      "rawPosition": [
+        37.6150425,
+        127.1425585
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.600957728,
+        127.153972608
+      ],
+      "roadName": "수도권제1순환선",
+      "index": 282,
+      "placeName": "남양주 IC",
+      "rawPosition": [
+        37.601209499999996,
+        127.15431799999999
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.428548235,
+        127.123450834
+      ],
+      "roadName": "수도권제1순환선",
+      "index": 43,
+      "placeName": "성남 IC",
+      "rawPosition": [
+        37.428126,
+        127.124254
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.641299682,
+        127.132298779
+      ],
+      "roadName": "수도권제1순환선",
+      "index": 332,
+      "placeName": "퇴계원 IC",
+      "rawPosition": [
+        37.64123773333333,
+        127.1328572
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.380018599,
+        126.959413547
+      ],
+      "roadName": "수도권제1순환선",
+      "index": 1152,
+      "placeName": "평촌 IC",
+      "rawPosition": [
+        37.3800933,
+        126.95981845
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.37583199,
+        126.931123659
+      ],
+      "roadName": "수도권제1순환선",
+      "index": 1125,
+      "placeName": "산본 IC",
+      "rawPosition": [
+        37.377091,
+        126.930865
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.455225994,
+        126.798398326
+      ],
+      "roadName": "수도권제1순환선",
+      "index": 951,
+      "placeName": "시흥 IC",
+      "rawPosition": [
+        37.455728,
+        126.79949
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        36.592116368,
+        127.114938272
+      ],
+      "roadName": "논산천안선",
+      "index": 595,
+      "placeName": "장수 IC",
+      "rawPosition": [
+        36.591246299999995,
+        127.17420225000001
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.488233824,
+        126.746895676
+      ],
+      "roadName": "수도권제1순환선",
+      "index": 883,
+      "placeName": "송내 IC",
+      "rawPosition": [
+        37.488217,
+        126.747678
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.507856944,
+        126.748404681
+      ],
+      "roadName": "수도권제1순환선",
+      "index": 861,
+      "placeName": "중동 IC",
+      "rawPosition": [
+        37.507369,
+        126.748989
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.545118028,
+        126.748412611
+      ],
+      "roadName": "수도권제1순환선",
+      "index": 819,
+      "placeName": "계양 IC",
+      "rawPosition": [
+        37.545429,
+        126.7505
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.598173487,
+        126.776912486
+      ],
+      "roadName": "수도권제1순환선",
+      "index": 751,
+      "placeName": "김포 IC",
+      "rawPosition": [
+        37.597069,
+        126.778369
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.618882158,
+        126.79982573
+      ],
+      "roadName": "수도권제1순환선",
+      "index": 720,
+      "placeName": "자유로 IC",
+      "rawPosition": [
+        37.618172,
+        126.801858
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.63234133,
+        126.80438056
+      ],
+      "roadName": "수도권제1순환선",
+      "index": 704,
+      "placeName": "일산 IC",
+      "rawPosition": [
+        37.632476133333334,
+        126.80491813333333
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.23546012,
+        128.563211085
+      ],
+      "roadName": "남해제1지선",
+      "index": 98,
+      "placeName": "서마산 IC",
+      "rawPosition": [
+        35.235023,
+        128.562855
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.252498643,
+        128.596532241
+      ],
+      "roadName": "남해제1지선",
+      "index": 135,
+      "placeName": "동마산 IC",
+      "rawPosition": [
+        35.251132,
+        128.596884
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.196626144,
+        128.809101556
+      ],
+      "roadName": "남해제2지선",
+      "index": 34,
+      "placeName": "장유 IC",
+      "rawPosition": [
+        35.1977985,
+        128.810049
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.165333667,
+        128.894013602
+      ],
+      "roadName": "남해제2지선",
+      "index": 129,
+      "placeName": "가락 IC",
+      "rawPosition": [
+        35.16642,
+        128.8940595
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.156117373,
+        128.951057837
+      ],
+      "roadName": "남해제2지선",
+      "index": 182,
+      "placeName": "서부산 IC",
+      "rawPosition": [
+        35.1550595,
+        128.95100050000002
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.462625283,
+        126.672484041
+      ],
+      "roadName": "경인선",
+      "index": 38,
+      "placeName": "도화 IC",
+      "rawPosition": [
+        37.462061,
+        126.672625
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.484957509,
+        126.674946575
+      ],
+      "roadName": "경인선",
+      "index": 63,
+      "placeName": "가좌 IC",
+      "rawPosition": [
+        37.484929,
+        126.675401
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.523338997,
+        126.686382064
+      ],
+      "roadName": "경인선",
+      "index": 110,
+      "placeName": "서인천 IC",
+      "rawPosition": [
+        37.522228999999996,
+        126.6868421
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.52379808,
+        126.722574289
+      ],
+      "roadName": "경인선",
+      "index": 142,
+      "placeName": "부평 IC",
+      "rawPosition": [
+        37.524491,
+        126.72298
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.524177599,
+        126.778005012
+      ],
+      "roadName": "경인선",
+      "index": 191,
+      "placeName": "부천 IC",
+      "rawPosition": [
+        37.524907,
+        126.778256
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        36.299015033,
+        126.853653255
+      ],
+      "roadName": "서천공주선",
+      "index": 319,
+      "placeName": "부여 IC",
+      "rawPosition": [
+        36.298451,
+        126.85436
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        36.456652538,
+        127.059829028
+      ],
+      "roadName": "서천공주선",
+      "index": 580,
+      "placeName": "서공주 IC",
+      "rawPosition": [
+        36.456092,
+        127.060761
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        36.375173993,
+        126.952882236
+      ],
+      "roadName": "서천공주선",
+      "index": 443,
+      "placeName": "청양 IC",
+      "rawPosition": [
+        36.37441,
+        126.95335
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        36.240162023,
+        126.790307598
+      ],
+      "roadName": "서천공주선",
+      "index": 229,
+      "placeName": "서부여 IC",
+      "rawPosition": [
+        36.240238,
+        126.791342
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        36.042830336,
+        126.784283204
+      ],
+      "roadName": "서천공주선",
+      "index": 1,
+      "placeName": "동서천 IC",
+      "rawPosition": [
+        36.0431204,
+        126.78427965
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        36.122245715,
+        127.134348791
+      ],
+      "roadName": "호남선의 지선",
+      "index": 55,
+      "placeName": "논산 IC",
+      "rawPosition": [
+        36.121308,
+        127.134867
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        36.252019712,
+        127.279962306
+      ],
+      "roadName": "호남선의 지선",
+      "index": 279,
+      "placeName": "계룡 IC",
+      "rawPosition": [
+        36.25179,
+        127.281775
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        36.363798153,
+        127.331067755
+      ],
+      "roadName": "호남선의 지선",
+      "index": 428,
+      "placeName": "유성 IC",
+      "rawPosition": [
+        36.363582,
+        127.332729
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        36.411553577,
+        127.381944598
+      ],
+      "roadName": "호남선의 지선",
+      "index": 504,
+      "placeName": "북대전 IC",
+      "rawPosition": [
+        36.412675,
+        127.381929
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        36.159244865,
+        127.218114422
+      ],
+      "roadName": "호남선의 지선",
+      "index": 153,
+      "placeName": "양촌 IC",
+      "rawPosition": [
+        36.158575,
+        127.218341
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        36.291705876,
+        127.328775097
+      ],
+      "roadName": "대전남부순환선",
+      "index": 12,
+      "placeName": "서대전 IC",
+      "rawPosition": [
+        36.2923265,
+        127.3285765
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        36.283711332,
+        127.379673912
+      ],
+      "roadName": "대전남부순환선",
+      "index": 59,
+      "placeName": "안영 IC",
+      "rawPosition": [
+        36.284701,
+        127.379291
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.183950268,
+        127.059291168
+      ],
+      "roadName": "봉담동탄선",
+      "index": 30,
+      "placeName": "북오산 IC",
+      "rawPosition": [
+        37.182843,
+        127.059048
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.673625567,
+        128.436194807
+      ],
+      "roadName": "중부내륙선",
+      "index": 522,
+      "placeName": "현풍 IC",
+      "rawPosition": [
+        35.672377,
+        128.440289
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.768101769,
+        128.474761113
+      ],
+      "roadName": "중부내륙선의 지선",
+      "index": 125,
+      "placeName": "달성 IC",
+      "rawPosition": [
+        35.768287,
+        128.475923
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.837791195,
+        128.527823431
+      ],
+      "roadName": "중부내륙선의 지선",
+      "index": 233,
+      "placeName": "남대구 IC",
+      "rawPosition": [
+        35.837951,
+        128.528911
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.850011497,
+        128.521871216
+      ],
+      "roadName": "중부내륙선의 지선",
+      "index": 248,
+      "placeName": "성서 IC",
+      "rawPosition": [
+        35.850379,
+        128.523674
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.876696369,
+        128.531511006
+      ],
+      "roadName": "중부내륙선의 지선",
+      "index": 281,
+      "placeName": "서대구 IC",
+      "rawPosition": [
+        35.876976,
+        128.532898
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.800478832,
+        128.479720501
+      ],
+      "roadName": "중부내륙선의 지선",
+      "index": 173,
+      "placeName": "화원 IC",
+      "rawPosition": [
+        35.801333,
+        128.480078
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.703648235,
+        128.43701533
+      ],
+      "roadName": "중부내륙선의 지선",
+      "index": 32,
+      "placeName": "북현풍하이패스 IC",
+      "rawPosition": [
+        35.70372,
+        128.436309
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.814317953,
+        128.505157725
+      ],
+      "roadName": "중부내륙선의 지선",
+      "index": 201,
+      "placeName": "유천 IC",
+      "rawPosition": [
+        35.81398,
+        128.505676
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.184788845,
+        126.747842548
+      ],
+      "roadName": "광주외곽순환선",
+      "index": 0,
+      "placeName": "남광산 IC",
+      "rawPosition": [
+        35.182948999999994,
+        126.746447
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.22613591,
+        126.791208655
+      ],
+      "roadName": "광주외곽순환선",
+      "index": 62,
+      "placeName": "남장성 IC",
+      "rawPosition": [
+        35.225736,
+        126.791861
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.307239519,
+        129.011894484
+      ],
+      "roadName": "중앙선의 지선",
+      "index": 132,
+      "placeName": "물금 IC",
+      "rawPosition": [
+        35.307105,
+        129.012692
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.324948541,
+        129.024893357
+      ],
+      "roadName": "중앙선의 지선",
+      "index": 156,
+      "placeName": "남양산 IC",
+      "rawPosition": [
+        35.324745199999995,
+        129.02537080000002
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.193149649,
+        128.98238564
+      ],
+      "roadName": "중앙선:1/2",
+      "index": 0,
+      "placeName": "삼락 IC",
+      "rawPosition": [
+        35.193400999999994,
+        128.98261200000002
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.305243986,
+        128.895948394
+      ],
+      "roadName": "부산외곽순환선",
+      "index": 172,
+      "placeName": "광재 IC",
+      "rawPosition": [
+        35.306007,
+        128.896381
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.283468531,
+        129.113278563
+      ],
+      "roadName": "부산외곽순환선",
+      "index": 391,
+      "placeName": "금정 IC",
+      "rawPosition": [
+        35.284043,
+        129.113324
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.283201091,
+        129.151806177
+      ],
+      "roadName": "부산외곽순환선",
+      "index": 427,
+      "placeName": "기장철마 IC",
+      "rawPosition": [
+        35.285016,
+        129.152482
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.270936193,
+        129.002392287
+      ],
+      "roadName": "부산외곽순환선",
+      "index": 280,
+      "placeName": "김해가야하이패스 IC",
+      "rawPosition": [
+        35.268353,
+        129.002445
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.270936193,
+        129.002392287
+      ],
+      "roadName": "부산외곽순환선",
+      "index": 280,
+      "placeName": "김해금관가야 IC",
+      "rawPosition": [
+        35.270519,
+        129.002479
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.299924585,
+        128.768168471
+      ],
+      "roadName": "부산외곽순환선",
+      "index": 52,
+      "placeName": "진영 IC",
+      "rawPosition": [
+        35.299178,
+        128.768489
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.295635067,
+        128.811355766
+      ],
+      "roadName": "부산외곽순환선",
+      "index": 92,
+      "placeName": "한림 IC",
+      "rawPosition": [
+        35.295885,
+        128.811787
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.266890148,
+        127.103797747
+      ],
+      "roadName": "경부선",
+      "index": 3918,
+      "placeName": "수원 IC",
+      "rawPosition": [
+        37.2668015,
+        127.1036946
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.458181523,
+        127.044978536
+      ],
+      "roadName": "경부선",
+      "index": 4147,
+      "placeName": "신양재 IC",
+      "rawPosition": [
+        37.4584531,
+        127.0446863
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        34.912394274,
+        127.544113157
+      ],
+      "roadName": "남해선(영암순천)",
+      "index": 1065,
+      "placeName": "해룡 IC",
+      "rawPosition": [
+        34.9116896,
+        127.5447489
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.003165018,
+        127.482453653
+      ],
+      "roadName": "논산천안선/호남선",
+      "index": 0,
+      "placeName": "서순천 IC",
+      "rawPosition": [
+        35.0032217,
+        127.4825792
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.215315547,
+        129.004662506
+      ],
+      "roadName": "남해선(순천부산)",
+      "index": 1664,
+      "placeName": "덕천 IC",
+      "rawPosition": [
+        35.2130296,
+        129.0302883
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.152554601,
+        128.971452934
+      ],
+      "roadName": "남해제2지선",
+      "index": 201,
+      "placeName": "사상 IC",
+      "rawPosition": [
+        35.1524353,
+        128.9718018
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.176652467,
+        128.825696303
+      ],
+      "roadName": "남해제2지선",
+      "index": 62,
+      "placeName": "신항 IC",
+      "rawPosition": [
+        35.0942042,
+        128.7652902
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.515111513,
+        128.794713567
+      ],
+      "roadName": "밀양울산선",
+      "index": 5,
+      "placeName": "밀양 IC",
+      "rawPosition": [
+        35.5166748,
+        128.7961598
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.501551418,
+        129.254864884
+      ],
+      "roadName": "밀양울산선",
+      "index": 446,
+      "placeName": "울주 IC",
+      "rawPosition": [
+        35.5016124,
+        129.2544672
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.909180776,
+        128.651811666
+      ],
+      "roadName": "대구포항선",
+      "index": 0,
+      "placeName": "팔공산 IC",
+      "rawPosition": [
+        35.9073353,
+        128.6409554
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        36.043246003,
+        129.311367027
+      ],
+      "roadName": "대구포항선",
+      "index": 696,
+      "placeName": "포항 IC",
+      "rawPosition": [
+        36.0433732,
+        129.310872
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        36.812185096,
+        127.165627784
+      ],
+      "roadName": "경부선",
+      "index": 3380,
+      "placeName": "아산 IC",
+      "rawPosition": [
+        36.8215332,
+        126.9760948
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        34.866982107,
+        128.439726564
+      ],
+      "roadName": "통영대전선/중부선",
+      "index": 3,
+      "placeName": "통영 IC",
+      "rawPosition": [
+        34.8669038,
+        128.4394626
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.184231829,
+        128.040604377
+      ],
+      "roadName": "통영대전선/중부선",
+      "index": 555,
+      "placeName": "서진주 IC",
+      "rawPosition": [
+        35.1838406,
+        128.040585
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.532961557,
+        127.748268813
+      ],
+      "roadName": "광주대구선",
+      "index": 901,
+      "placeName": "함양 IC",
+      "rawPosition": [
+        35.5336213,
+        127.7478511
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.98036693,
+        127.643409982
+      ],
+      "roadName": "통영대전선/중부선",
+      "index": 1660,
+      "placeName": "무주 IC",
+      "rawPosition": [
+        35.9805742,
+        127.6431862
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.615387836,
+        129.282490523
+      ],
+      "roadName": "부산포항선",
+      "index": 550,
+      "placeName": "범서 IC",
+      "rawPosition": [
+        35.6150096,
+        129.2824773
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.730051049,
+        129.309238811
+      ],
+      "roadName": "부산포항선",
+      "index": 693,
+      "placeName": "남경주 IC",
+      "rawPosition": [
+        35.7301486,
+        129.3095127
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.785282884,
+        129.425728121
+      ],
+      "roadName": "부산포항선",
+      "index": 818,
+      "placeName": "동경주 IC",
+      "rawPosition": [
+        35.7850795,
+        129.4255851
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.943381372,
+        129.388327171
+      ],
+      "roadName": "부산포항선",
+      "index": 1005,
+      "placeName": "남포항 IC",
+      "rawPosition": [
+        35.9433887,
+        129.3883598
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.446323517,
+        126.632150899
+      ],
+      "roadName": "제2경인선(인천안양)",
+      "index": 0,
+      "placeName": "능해 IC",
+      "rawPosition": [
+        37.4463,
+        126.63204
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.429803106,
+        126.915258164
+      ],
+      "roadName": "제2경인선(인천안양)",
+      "index": 266,
+      "placeName": "삼막 IC",
+      "rawPosition": [
+        37.4289442,
+        126.9160925
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.424001083,
+        126.906827972
+      ],
+      "roadName": "제2경인선(인천안양)",
+      "index": 255,
+      "placeName": "석수 IC",
+      "rawPosition": [
+        37.4239253,
+        126.9066837
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.422239583,
+        127.12337608
+      ],
+      "roadName": "수도권제1순환선",
+      "index": 36,
+      "placeName": "여수대로 IC",
+      "rawPosition": [
+        37.4221708,
+        127.1164881
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.471543891,
+        126.485723628
+      ],
+      "roadName": "인천국제공항선",
+      "index": 0,
+      "placeName": "신불 IC",
+      "rawPosition": [
+        37.4605096,
+        126.4889046
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.524994799,
+        126.831610913
+      ],
+      "roadName": "경인선",
+      "index": 239,
+      "placeName": "신월 IC",
+      "rawPosition": [
+        37.5248972,
+        126.8314189
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.251191791,
+        126.969796546
+      ],
+      "roadName": "광주대구선",
+      "index": 32,
+      "placeName": "담양 IC",
+      "rawPosition": [
+        35.2512935,
+        126.9696063
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.827864227,
+        128.492225727
+      ],
+      "roadName": "대구외곽순환선:1/2",
+      "index": 0,
+      "placeName": "달서 IC",
+      "rawPosition": [
+        35.8269069,
+        128.4923077
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.957793116,
+        128.55233852
+      ],
+      "roadName": "대구외곽순환선:1/2",
+      "index": 201,
+      "placeName": "동명동호 IC",
+      "rawPosition": [
+        35.9575527,
+        128.5520992
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.932849523,
+        128.598581531
+      ],
+      "roadName": "대구외곽순환선:2/2",
+      "index": 0,
+      "placeName": "서변 IC",
+      "rawPosition": [
+        35.9331667,
+        128.5958101
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.578620512,
+        127.136699108
+      ],
+      "roadName": "구리포천선",
+      "index": 4,
+      "placeName": "남구리 IC",
+      "rawPosition": [
+        37.5785257,
+        127.1371136
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.879114507,
+        127.217321192
+      ],
+      "roadName": "구리포천선",
+      "index": 406,
+      "placeName": "포천 IC",
+      "rawPosition": [
+        37.8791044,
+        127.2173323
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.911096556,
+        127.21874928
+      ],
+      "roadName": "구리포천선",
+      "index": 445,
+      "placeName": "신북 IC",
+      "rawPosition": [
+        37.9110744,
+        127.2188418
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.889045612,
+        128.689158603
+      ],
+      "roadName": "경부선",
+      "index": 1227,
+      "placeName": "동대구 IC",
+      "rawPosition": [
+        35.8890363,
+        128.6890159
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.199025845,
+        129.204017133
+      ],
+      "roadName": "부산포항선",
+      "index": 40,
+      "placeName": "동부산 IC",
+      "rawPosition": [
+        35.19938635,
+        129.20571245
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.291912325,
+        127.084909768
+      ],
+      "roadName": "영동선",
+      "index": 401,
+      "placeName": "흥덕 IC",
+      "rawPosition": [
+        37.2786185,
+        127.0795969
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.524994799,
+        126.831610913
+      ],
+      "roadName": "경인선",
+      "index": 239,
+      "placeName": "헌릉 IC",
+      "rawPosition": [
+        37.5248972,
+        126.8314189
+      ],
+      "pointType": "IC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.192909998,
+        127.012152819
+      ],
+      "roadName": "오산화성선",
+      "index": 21,
+      "placeName": "안녕 IC",
+      "rawPosition": [
+        37.1926367,
+        127.0120717
+      ],
+      "pointType": "IC"
+    }
+  ],
+  "JC": [
+    {
+      "type": "point",
+      "position": [
+        35.332469786,
+        129.042040055
+      ],
+      "roadName": "경부선",
+      "index": 125,
+      "placeName": "양산 JC",
+      "rawPosition": [
+        35.33134995,
+        129.03919474999998
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.566505097,
+        129.129952508
+      ],
+      "roadName": "경부선",
+      "index": 401,
+      "placeName": "언양 JC",
+      "rawPosition": [
+        35.566076625,
+        129.131974775
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        36.345258718,
+        127.481649783
+      ],
+      "roadName": "경부선",
+      "index": 2680,
+      "placeName": "비룡 JC",
+      "rawPosition": [
+        36.3438744,
+        127.48198155
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        36.404977524,
+        127.419461514
+      ],
+      "roadName": "경부선",
+      "index": 2775,
+      "placeName": "회덕 JC",
+      "rawPosition": [
+        36.4048636,
+        127.41872649999999
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        36.598842088,
+        127.418905371
+      ],
+      "roadName": "경부선",
+      "index": 3001,
+      "placeName": "남이 JC",
+      "rawPosition": [
+        36.601305499999995,
+        127.4211651
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        36.773493708,
+        127.178156497
+      ],
+      "roadName": "경부선",
+      "index": 3335,
+      "placeName": "천안 JC",
+      "rawPosition": [
+        36.77390486666667,
+        127.17873893333332
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.036543487,
+        127.138768047
+      ],
+      "roadName": "경부선",
+      "index": 3644,
+      "placeName": "안성 JC",
+      "rawPosition": [
+        37.036496099999994,
+        127.13796883333333
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.290316775,
+        127.103676158
+      ],
+      "roadName": "경부선",
+      "index": 3944,
+      "placeName": "신갈 JC",
+      "rawPosition": [
+        37.2905953,
+        127.10421696666667
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.405077508,
+        127.095368176
+      ],
+      "roadName": "경부선",
+      "index": 4073,
+      "placeName": "판교 JC",
+      "rawPosition": [
+        37.406139233333334,
+        127.09732643333332
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.415587797,
+        127.084717525
+      ],
+      "roadName": "경부선",
+      "index": 4088,
+      "placeName": "금토 JC",
+      "rawPosition": [
+        37.41547,
+        127.085428
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.921232971,
+        129.003691619
+      ],
+      "roadName": "경부선",
+      "index": 909,
+      "placeName": "영천 JC",
+      "rawPosition": [
+        35.922520266666666,
+        129.00629793333334
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.887947781,
+        128.69091111
+      ],
+      "roadName": "경부선",
+      "index": 1225,
+      "placeName": "동대구 JC",
+      "rawPosition": [
+        35.88825515,
+        128.69168144999998
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.177994144,
+        127.096010464
+      ],
+      "roadName": "경부선",
+      "index": 3817,
+      "placeName": "동탄 JC",
+      "rawPosition": [
+        37.17799376666667,
+        127.09525653333333
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        36.160785156,
+        128.263114186
+      ],
+      "roadName": "경부선",
+      "index": 1833,
+      "placeName": "김천 JC",
+      "rawPosition": [
+        36.16286746666666,
+        128.2645934666667
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.89261827,
+        128.528574683
+      ],
+      "roadName": "경부선",
+      "index": 1391,
+      "placeName": "금호 JC",
+      "rawPosition": [
+        35.893314600000004,
+        128.52823139999998
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.289259392,
+        129.096642215
+      ],
+      "roadName": "경부선",
+      "index": 55,
+      "placeName": "노포 JC",
+      "rawPosition": [
+        35.290031299999995,
+        129.09677605000002
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        36.563414298,
+        127.431076483
+      ],
+      "roadName": "경부선",
+      "index": 2959,
+      "placeName": "청주 JC",
+      "rawPosition": [
+        36.5641077,
+        127.4344201
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        36.71318804,
+        127.348921833
+      ],
+      "roadName": "경부선",
+      "index": 3155,
+      "placeName": "옥산 JC",
+      "rawPosition": [
+        36.7145499,
+        127.3523328
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.907765317,
+        128.491454826
+      ],
+      "roadName": "경부선",
+      "index": 1434,
+      "placeName": "칠곡 JC",
+      "rawPosition": [
+        35.9068801,
+        128.4877524
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        34.991152205,
+        127.539280381
+      ],
+      "roadName": "남해선(순천부산)",
+      "index": 60,
+      "placeName": "순천분기 JC",
+      "rawPosition": [
+        34.992674,
+        127.539084
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.283388664,
+        128.510483956
+      ],
+      "roadName": "남해선(순천부산)",
+      "index": 1160,
+      "placeName": "칠원 JC",
+      "rawPosition": [
+        35.283429,
+        128.51049
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.219222775,
+        128.974001291
+      ],
+      "roadName": "남해선(순천부산)",
+      "index": 1635,
+      "placeName": "대저 JC",
+      "rawPosition": [
+        35.219217,
+        128.97428
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.271464047,
+        128.473605217
+      ],
+      "roadName": "남해선(순천부산)",
+      "index": 1123,
+      "placeName": "산인 JC",
+      "rawPosition": [
+        35.271834266666666,
+        128.4738598666667
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.275001037,
+        128.646854826
+      ],
+      "roadName": "남해선(순천부산)",
+      "index": 1289,
+      "placeName": "창원 JC",
+      "rawPosition": [
+        35.27514746666666,
+        128.64658853333333
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.220967082,
+        128.794846319
+      ],
+      "roadName": "남해선(순천부산)",
+      "index": 1467,
+      "placeName": "냉정 JC",
+      "rawPosition": [
+        35.218819499999995,
+        128.7944931
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.224423585,
+        128.916559069
+      ],
+      "roadName": "남해선(순천부산)",
+      "index": 1580,
+      "placeName": "김해 JC",
+      "rawPosition": [
+        35.224706749999996,
+        128.9170715
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.278904116,
+        128.721157375
+      ],
+      "roadName": "남해선(순천부산)",
+      "index": 1359,
+      "placeName": "진영 JC",
+      "rawPosition": [
+        35.28176475,
+        128.72136445
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.229177752,
+        128.774531879
+      ],
+      "roadName": "남해선(순천부산)",
+      "index": 1444,
+      "placeName": "진례 JC",
+      "rawPosition": [
+        35.2265751,
+        128.7739692
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        34.991152205,
+        127.539280381
+      ],
+      "roadName": "남해선(순천부산)",
+      "index": 60,
+      "placeName": "순천 JC",
+      "rawPosition": [
+        34.9909061,
+        127.5390815
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.13800783,
+        128.098040421
+      ],
+      "roadName": "남해선(순천부산)",
+      "index": 685,
+      "placeName": "진주 JC",
+      "rawPosition": [
+        35.137672,
+        128.0995051
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.003165018,
+        127.482453652
+      ],
+      "roadName": "남해선(순천부산)",
+      "index": 0,
+      "placeName": "서순천 JC",
+      "rawPosition": [
+        35.0032217,
+        127.4825792
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.029865993,
+        126.487504019
+      ],
+      "roadName": "무안광주선",
+      "index": 93,
+      "placeName": "함평 JC",
+      "rawPosition": [
+        35.0305971,
+        126.48680635
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.225062024,
+        126.960135971
+      ],
+      "roadName": "광주대구선",
+      "index": 0,
+      "placeName": "고서 JC",
+      "rawPosition": [
+        35.225277,
+        126.96010505
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.405560772,
+        127.30863032
+      ],
+      "roadName": "광주대구선",
+      "index": 425,
+      "placeName": "남원분기 JC",
+      "rawPosition": [
+        35.407668,
+        127.308101
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.758162195,
+        128.374015222
+      ],
+      "roadName": "광주대구선",
+      "index": 1616,
+      "placeName": "고령 JC",
+      "rawPosition": [
+        35.759619,
+        128.373011
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.792503009,
+        128.463470332
+      ],
+      "roadName": "광주대구선",
+      "index": 1712,
+      "placeName": "옥포 JC",
+      "rawPosition": [
+        35.7951001,
+        128.464228
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.403153281,
+        127.29919697
+      ],
+      "roadName": "광주대구선",
+      "index": 416,
+      "placeName": "남원 JC",
+      "rawPosition": [
+        35.4033054,
+        127.2997181
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.535536056,
+        127.771530491
+      ],
+      "roadName": "광주대구선",
+      "index": 923,
+      "placeName": "함양 JC",
+      "rawPosition": [
+        35.535396,
+        127.7711876
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.515574016,
+        128.793767411
+      ],
+      "roadName": "밀양울산선",
+      "index": 4,
+      "placeName": "밀양 JC",
+      "rawPosition": [
+        35.519366,
+        128.796403
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.501371357,
+        129.255944856
+      ],
+      "roadName": "밀양울산선",
+      "index": 447,
+      "placeName": "울주 JC",
+      "rawPosition": [
+        35.502711,
+        129.256762
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.514380557,
+        129.112987246
+      ],
+      "roadName": "밀양울산선",
+      "index": 313,
+      "placeName": "서울주 JC",
+      "rawPosition": [
+        35.513324,
+        129.112288
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.513199537,
+        129.119441782
+      ],
+      "roadName": "밀양울산선",
+      "index": 319,
+      "placeName": "함경주 JC",
+      "rawPosition": [
+        35.5132875,
+        129.1194665
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.030140228,
+        126.485386489
+      ],
+      "roadName": "서해안선",
+      "index": 261,
+      "placeName": "함평 JC",
+      "rawPosition": [
+        35.0305971,
+        126.48680635
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.05430485,
+        126.88854009
+      ],
+      "roadName": "서해안선",
+      "index": 2917,
+      "placeName": "서평택 JC",
+      "rawPosition": [
+        37.054464499999995,
+        126.88902392499999
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.309020261,
+        126.894683878
+      ],
+      "roadName": "서해안선",
+      "index": 3208,
+      "placeName": "팔곡 JC",
+      "rawPosition": [
+        37.309577,
+        126.895175
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.344044346,
+        126.860457195
+      ],
+      "roadName": "서해안선",
+      "index": 3260,
+      "placeName": "안산 JC",
+      "rawPosition": [
+        37.3443768,
+        126.8610898
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.369634082,
+        126.869223451
+      ],
+      "roadName": "서해안선",
+      "index": 3290,
+      "placeName": "조남 JC",
+      "rawPosition": [
+        37.3692905,
+        126.86978099999999
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.422799184,
+        126.894687319
+      ],
+      "roadName": "서해안선",
+      "index": 3358,
+      "placeName": "일직 JC",
+      "rawPosition": [
+        37.423154100000005,
+        126.8953925
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        36.862028947,
+        126.649892786
+      ],
+      "roadName": "서해안선",
+      "index": 2581,
+      "placeName": "당진 JC",
+      "rawPosition": [
+        36.8643103,
+        126.6489403
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        36.058135,
+        126.773579016
+      ],
+      "roadName": "서해안선",
+      "index": 1519,
+      "placeName": "동서천 JC",
+      "rawPosition": [
+        36.059218,
+        126.773736
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        34.847639528,
+        126.469716764
+      ],
+      "roadName": "서해안선",
+      "index": 47,
+      "placeName": "죽림 JC",
+      "rawPosition": [
+        34.8473668,
+        126.4692948
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.415353748,
+        126.651488982
+      ],
+      "roadName": "서해안선",
+      "index": 740,
+      "placeName": "고창 JC",
+      "rawPosition": [
+        35.41497555,
+        126.65267245000001
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.564647135,
+        129.134098247
+      ],
+      "roadName": "울산선",
+      "index": 0,
+      "placeName": "언양 JC",
+      "rawPosition": [
+        35.566076625,
+        129.131974775
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.556133952,
+        129.253378509
+      ],
+      "roadName": "울산선",
+      "index": 132,
+      "placeName": "울산 JC",
+      "rawPosition": [
+        35.55384062500001,
+        129.25195086074078
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.176528507,
+        126.998436795
+      ],
+      "roadName": "평택화성선",
+      "index": 193,
+      "placeName": "서오산 JC",
+      "rawPosition": [
+        37.17841865,
+        127.00047864999999
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.940356281,
+        127.092773862
+      ],
+      "roadName": "완주장수선",
+      "index": 4,
+      "placeName": "익산 JC",
+      "rawPosition": [
+        35.941233600000004,
+        127.09343185
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.88611323,
+        127.168201279
+      ],
+      "roadName": "완주장수선",
+      "index": 97,
+      "placeName": "완주 JC",
+      "rawPosition": [
+        35.886411325,
+        127.168261675
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.727829414,
+        127.604175237
+      ],
+      "roadName": "완주장수선",
+      "index": 609,
+      "placeName": "장수 JC",
+      "rawPosition": [
+        35.72659625,
+        127.60789775
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.806337598,
+        127.253107517
+      ],
+      "roadName": "완주장수선",
+      "index": 243,
+      "placeName": "의암 JC",
+      "rawPosition": [
+        35.80707,
+        127.25391
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.224197794,
+        126.959629917
+      ],
+      "roadName": "논산천안선/호남선",
+      "index": 681,
+      "placeName": "고서 JC",
+      "rawPosition": [
+        35.225277,
+        126.96010505
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        36.078097789,
+        127.10185525
+      ],
+      "roadName": "논산천안선/호남선",
+      "index": 1938,
+      "placeName": "논산 JC",
+      "rawPosition": [
+        36.07826864,
+        127.10242606
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.330135208,
+        126.804717584
+      ],
+      "roadName": "논산천안선/호남선",
+      "index": 990,
+      "placeName": "장성 JC",
+      "rawPosition": [
+        35.328407799999994,
+        126.80662315000001
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.202415356,
+        126.840292224
+      ],
+      "roadName": "논산천안선/호남선",
+      "index": 827,
+      "placeName": "산월 JC",
+      "rawPosition": [
+        35.203327,
+        126.842161
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.246490713,
+        127.034901321
+      ],
+      "roadName": "논산천안선/호남선",
+      "index": 604,
+      "placeName": "대덕 JC",
+      "rawPosition": [
+        35.246539,
+        127.03542
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.943781246,
+        127.091122669
+      ],
+      "roadName": "논산천안선/호남선",
+      "index": 1780,
+      "placeName": "익산 JC",
+      "rawPosition": [
+        35.941233600000004,
+        127.09343185
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.193944838,
+        126.929324982
+      ],
+      "roadName": "논산천안선/호남선",
+      "index": 728,
+      "placeName": "문흥 JC",
+      "rawPosition": [
+        35.194085,
+        126.93059
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.2605281,
+        126.799778363
+      ],
+      "roadName": "논산천안선/호남선",
+      "index": 907,
+      "placeName": "남장성 JC",
+      "rawPosition": [
+        35.2601545,
+        126.798793
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.003165018,
+        127.482453653
+      ],
+      "roadName": "논산천안선/호남선",
+      "index": 0,
+      "placeName": "서순천 JC",
+      "rawPosition": [
+        35.0032217,
+        127.4825792
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.224197794,
+        126.959629917
+      ],
+      "roadName": "호남선",
+      "index": 681,
+      "placeName": "고서 JC",
+      "rawPosition": [
+        35.225277,
+        126.96010505
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        36.078097789,
+        127.10185525
+      ],
+      "roadName": "호남선",
+      "index": 1938,
+      "placeName": "논산 JC",
+      "rawPosition": [
+        36.07826864,
+        127.10242606
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.330135208,
+        126.804717584
+      ],
+      "roadName": "호남선",
+      "index": 990,
+      "placeName": "장성 JC",
+      "rawPosition": [
+        35.328407799999994,
+        126.80662315000001
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.202415356,
+        126.840292224
+      ],
+      "roadName": "호남선",
+      "index": 827,
+      "placeName": "산월 JC",
+      "rawPosition": [
+        35.203327,
+        126.842161
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.246490713,
+        127.034901321
+      ],
+      "roadName": "호남선",
+      "index": 604,
+      "placeName": "대덕 JC",
+      "rawPosition": [
+        35.246539,
+        127.03542
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.943781246,
+        127.091122669
+      ],
+      "roadName": "호남선",
+      "index": 1780,
+      "placeName": "익산 JC",
+      "rawPosition": [
+        35.941233600000004,
+        127.09343185
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.193944838,
+        126.929324982
+      ],
+      "roadName": "호남선",
+      "index": 728,
+      "placeName": "문흥 JC",
+      "rawPosition": [
+        35.194085,
+        126.93059
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.2605281,
+        126.799778363
+      ],
+      "roadName": "호남선",
+      "index": 907,
+      "placeName": "남장성 JC",
+      "rawPosition": [
+        35.2601545,
+        126.798793
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.003165018,
+        127.482453653
+      ],
+      "roadName": "호남선",
+      "index": 0,
+      "placeName": "서순천 JC",
+      "rawPosition": [
+        35.0032217,
+        127.4825792
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        36.081864439,
+        127.102605672
+      ],
+      "roadName": "논산천안선",
+      "index": 0,
+      "placeName": "논산 JC",
+      "rawPosition": [
+        36.07826864,
+        127.10242606
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        36.48281669,
+        127.090400161
+      ],
+      "roadName": "논산천안선",
+      "index": 467,
+      "placeName": "공주 JC",
+      "rawPosition": [
+        36.4828701,
+        127.0904874
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.886109624,
+        127.168587687
+      ],
+      "roadName": "순천완주선",
+      "index": 1183,
+      "placeName": "완주 JC",
+      "rawPosition": [
+        35.886411325,
+        127.168261675
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.40728798,
+        127.306708309
+      ],
+      "roadName": "순천완주선",
+      "index": 585,
+      "placeName": "남원분기 JC",
+      "rawPosition": [
+        35.407668,
+        127.308101
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        34.991585757,
+        127.538317511
+      ],
+      "roadName": "순천완주선",
+      "index": 57,
+      "placeName": "순천분기 JC",
+      "rawPosition": [
+        34.992674,
+        127.539084
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        34.990933139,
+        127.539072931
+      ],
+      "roadName": "순천완주선",
+      "index": 56,
+      "placeName": "순천 JC",
+      "rawPosition": [
+        34.9909061,
+        127.5390815
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.812558574,
+        127.138663756
+      ],
+      "roadName": "구리포천선",
+      "index": 300,
+      "placeName": "소흘 JC",
+      "rawPosition": [
+        37.8121492,
+        127.1384126
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.814950784,
+        127.142708804
+      ],
+      "roadName": "양주지선",
+      "index": 5,
+      "placeName": "소흘 JC",
+      "rawPosition": [
+        37.8121492,
+        127.1384126
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        36.374701458,
+        128.271828893
+      ],
+      "roadName": "상주영덕선",
+      "index": 4,
+      "placeName": "상주 JC",
+      "rawPosition": [
+        36.37501965,
+        128.27195269999999
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        36.432706859,
+        128.622895281
+      ],
+      "roadName": "상주영덕선",
+      "index": 337,
+      "placeName": "안동 JC",
+      "rawPosition": [
+        36.43283285,
+        128.62249125
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        36.374955751,
+        128.27225611
+      ],
+      "roadName": "청주상주선",
+      "index": 831,
+      "placeName": "상주 JC",
+      "rawPosition": [
+        36.37501965,
+        128.27195269999999
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        36.432706859,
+        128.62289528
+      ],
+      "roadName": "청주상주선",
+      "index": 1163,
+      "placeName": "안동 JC",
+      "rawPosition": [
+        36.43283285,
+        128.62249125
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        36.564129923,
+        127.433916095
+      ],
+      "roadName": "청주상주선",
+      "index": 3,
+      "placeName": "청주 JC",
+      "rawPosition": [
+        36.5641077,
+        127.4344201
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        36.36705725,
+        128.244505965
+      ],
+      "roadName": "청주상주선",
+      "index": 804,
+      "placeName": "낙동 JC",
+      "rawPosition": [
+        36.3670396,
+        128.2447143
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        36.485708385,
+        127.062849493
+      ],
+      "roadName": "당진대전선",
+      "index": 604,
+      "placeName": "서공주 JC",
+      "rawPosition": [
+        36.483638150000004,
+        127.06364690000001
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        36.390270821,
+        127.337630565
+      ],
+      "roadName": "당진대전선",
+      "index": 916,
+      "placeName": "유성 JC",
+      "rawPosition": [
+        36.3903078,
+        127.3375874
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        36.485716047,
+        127.090553357
+      ],
+      "roadName": "당진대전선",
+      "index": 629,
+      "placeName": "공주 JC",
+      "rawPosition": [
+        36.4828701,
+        127.0904874
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        36.343546263,
+        127.482429068
+      ],
+      "roadName": "통영대전선/중부선",
+      "index": 2150,
+      "placeName": "비룡 JC",
+      "rawPosition": [
+        36.3438744,
+        127.48198155
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        36.404453562,
+        127.41925136
+      ],
+      "roadName": "통영대전선/중부선",
+      "index": 2247,
+      "placeName": "회덕 JC",
+      "rawPosition": [
+        36.4048636,
+        127.41872649999999
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        36.601429145,
+        127.420569807
+      ],
+      "roadName": "통영대전선/중부선",
+      "index": 2476,
+      "placeName": "남이 JC",
+      "rawPosition": [
+        36.601305499999995,
+        127.4211651
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.259938072,
+        127.409872952
+      ],
+      "roadName": "통영대전선/중부선",
+      "index": 3266,
+      "placeName": "마장 JC",
+      "rawPosition": [
+        37.2605703,
+        127.4100818
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.478594721,
+        127.24431915
+      ],
+      "roadName": "통영대전선/중부선",
+      "index": 3564,
+      "placeName": "산곡 JC",
+      "rawPosition": [
+        37.47897005,
+        127.24451425000001
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        36.942292895,
+        127.47263
+      ],
+      "roadName": "통영대전선/중부선",
+      "index": 2894,
+      "placeName": "대소 JC",
+      "rawPosition": [
+        36.9420522,
+        127.4711116
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.235403854,
+        127.42700765
+      ],
+      "roadName": "통영대전선/중부선",
+      "index": 3234,
+      "placeName": "호법 JC",
+      "rawPosition": [
+        37.23581,
+        127.42672
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.531788506,
+        127.198738875
+      ],
+      "roadName": "통영대전선/중부선",
+      "index": 3643,
+      "placeName": "하남 JC",
+      "rawPosition": [
+        37.53187975,
+        127.19852019999999
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        36.282045927,
+        127.452507281
+      ],
+      "roadName": "통영대전선/중부선",
+      "index": 2072,
+      "placeName": "산내 JC",
+      "rawPosition": [
+        36.282475575,
+        127.44943500000001
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.727387831,
+        127.610165741
+      ],
+      "roadName": "통영대전선/중부선",
+      "index": 1347,
+      "placeName": "장수 JC",
+      "rawPosition": [
+        35.72659625,
+        127.60789775
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        36.563222403,
+        127.431136201
+      ],
+      "roadName": "통영대전선/중부선",
+      "index": 2432,
+      "placeName": "청주 JC",
+      "rawPosition": [
+        36.5641077,
+        127.4344201
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.137860204,
+        128.09915433
+      ],
+      "roadName": "통영대전선/중부선",
+      "index": 478,
+      "placeName": "진주 JC",
+      "rawPosition": [
+        35.137672,
+        128.0995051
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        36.741196823,
+        127.46353859
+      ],
+      "roadName": "통영대전선/중부선",
+      "index": 2643,
+      "placeName": "오창 JC",
+      "rawPosition": [
+        36.7434565,
+        127.4610199
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.37225839,
+        127.316794304
+      ],
+      "roadName": "통영대전선/중부선",
+      "index": 3421,
+      "placeName": "경기광주 JC",
+      "rawPosition": [
+        37.3724839,
+        127.3192974
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.534722219,
+        127.769872666
+      ],
+      "roadName": "통영대전선/중부선",
+      "index": 1052,
+      "placeName": "함양 JC",
+      "rawPosition": [
+        35.535396,
+        127.7711876
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        36.343546263,
+        127.482429068
+      ],
+      "roadName": "통영대전선",
+      "index": 2150,
+      "placeName": "비룡 JC",
+      "rawPosition": [
+        36.3438744,
+        127.48198155
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        36.282045927,
+        127.452507281
+      ],
+      "roadName": "통영대전선",
+      "index": 2072,
+      "placeName": "산내 JC",
+      "rawPosition": [
+        36.282475575,
+        127.44943500000001
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.727387831,
+        127.610165741
+      ],
+      "roadName": "통영대전선",
+      "index": 1347,
+      "placeName": "장수 JC",
+      "rawPosition": [
+        35.72659625,
+        127.60789775
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.137860204,
+        128.09915433
+      ],
+      "roadName": "통영대전선",
+      "index": 478,
+      "placeName": "진주 JC",
+      "rawPosition": [
+        35.137672,
+        128.0995051
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.534722219,
+        127.769872666
+      ],
+      "roadName": "통영대전선",
+      "index": 1052,
+      "placeName": "함양 JC",
+      "rawPosition": [
+        35.535396,
+        127.7711876
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        36.34442683,
+        127.482215204
+      ],
+      "roadName": "중부선",
+      "index": 0,
+      "placeName": "비룡 JC",
+      "rawPosition": [
+        36.3438744,
+        127.48198155
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        36.404453562,
+        127.41925136
+      ],
+      "roadName": "중부선",
+      "index": 96,
+      "placeName": "회덕 JC",
+      "rawPosition": [
+        36.4048636,
+        127.41872649999999
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        36.601429145,
+        127.420569807
+      ],
+      "roadName": "중부선",
+      "index": 325,
+      "placeName": "남이 JC",
+      "rawPosition": [
+        36.601305499999995,
+        127.4211651
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.259938072,
+        127.409872952
+      ],
+      "roadName": "중부선",
+      "index": 1115,
+      "placeName": "마장 JC",
+      "rawPosition": [
+        37.2605703,
+        127.4100818
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.478594721,
+        127.24431915
+      ],
+      "roadName": "중부선",
+      "index": 1413,
+      "placeName": "산곡 JC",
+      "rawPosition": [
+        37.47897005,
+        127.24451425000001
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        36.942292895,
+        127.47263
+      ],
+      "roadName": "중부선",
+      "index": 743,
+      "placeName": "대소 JC",
+      "rawPosition": [
+        36.9420522,
+        127.4711116
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.235403854,
+        127.42700765
+      ],
+      "roadName": "중부선",
+      "index": 1083,
+      "placeName": "호법 JC",
+      "rawPosition": [
+        37.23581,
+        127.42672
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.531788506,
+        127.198738875
+      ],
+      "roadName": "중부선",
+      "index": 1492,
+      "placeName": "하남 JC",
+      "rawPosition": [
+        37.53187975,
+        127.19852019999999
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        36.563222403,
+        127.431136201
+      ],
+      "roadName": "중부선",
+      "index": 281,
+      "placeName": "청주 JC",
+      "rawPosition": [
+        36.5641077,
+        127.4344201
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        36.741196823,
+        127.46353859
+      ],
+      "roadName": "중부선",
+      "index": 492,
+      "placeName": "오창 JC",
+      "rawPosition": [
+        36.7434565,
+        127.4610199
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.37225839,
+        127.316794304
+      ],
+      "roadName": "중부선",
+      "index": 1270,
+      "placeName": "경기광주 JC",
+      "rawPosition": [
+        37.3724839,
+        127.3192974
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.260856078,
+        127.409931915
+      ],
+      "roadName": "제2중부선",
+      "index": 15,
+      "placeName": "마장 JC",
+      "rawPosition": [
+        37.2605703,
+        127.4100818
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.478729182,
+        127.244608137
+      ],
+      "roadName": "제2중부선",
+      "index": 311,
+      "placeName": "산곡 JC",
+      "rawPosition": [
+        37.47897005,
+        127.24451425000001
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.3727664,
+        127.317102571
+      ],
+      "roadName": "제2중부선",
+      "index": 169,
+      "placeName": "경기광주 JC",
+      "rawPosition": [
+        37.3724839,
+        127.3192974
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.035947922,
+        127.138710841
+      ],
+      "roadName": "평택제천선",
+      "index": 237,
+      "placeName": "안성 JC",
+      "rawPosition": [
+        37.036496099999994,
+        127.13796883333333
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.054272267,
+        126.888568015
+      ],
+      "roadName": "평택제천선",
+      "index": 0,
+      "placeName": "서평택 JC",
+      "rawPosition": [
+        37.054464499999995,
+        126.88902392499999
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.031938453,
+        126.971022748
+      ],
+      "roadName": "평택제천선",
+      "index": 80,
+      "placeName": "평택 JC",
+      "rawPosition": [
+        37.032388499999996,
+        126.97105049999999
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        36.940916285,
+        127.47058541
+      ],
+      "roadName": "평택제천선",
+      "index": 576,
+      "placeName": "대소 JC",
+      "rawPosition": [
+        36.9420522,
+        127.4711116
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.037797112,
+        127.805148062
+      ],
+      "roadName": "평택제천선",
+      "index": 912,
+      "placeName": "노은 JC",
+      "rawPosition": [
+        37.036108,
+        127.804598
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.080112354,
+        128.175347815
+      ],
+      "roadName": "평택제천선",
+      "index": 1269,
+      "placeName": "제천 JC",
+      "rawPosition": [
+        37.080537525,
+        128.17467207500002
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.036720962,
+        127.737876646
+      ],
+      "roadName": "평택제천선",
+      "index": 851,
+      "placeName": "충주 JC",
+      "rawPosition": [
+        37.039870099999995,
+        127.73545789999999
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.034491033,
+        127.804046137
+      ],
+      "roadName": "중부내륙선",
+      "index": 2333,
+      "placeName": "노은 JC",
+      "rawPosition": [
+        37.036108,
+        127.804598
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.258866592,
+        128.515357036
+      ],
+      "roadName": "중부내륙선",
+      "index": 0,
+      "placeName": "내서 JC",
+      "rawPosition": [
+        35.2597757,
+        128.51486753333333
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.043746459,
+        127.737934376
+      ],
+      "roadName": "중부내륙선",
+      "index": 2393,
+      "placeName": "충주 JC",
+      "rawPosition": [
+        37.039870099999995,
+        127.73545789999999
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.283528818,
+        128.510374566
+      ],
+      "roadName": "중부내륙선",
+      "index": 31,
+      "placeName": "칠원 JC",
+      "rawPosition": [
+        35.283429,
+        128.51049
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.230132203,
+        127.590849727
+      ],
+      "roadName": "중부내륙선",
+      "index": 2655,
+      "placeName": "여주 JC",
+      "rawPosition": [
+        37.23011906666667,
+        127.59159896666667
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.759581021,
+        128.371756474
+      ],
+      "roadName": "중부내륙선",
+      "index": 633,
+      "placeName": "고령 JC",
+      "rawPosition": [
+        35.759619,
+        128.373011
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        36.162591038,
+        128.266062412
+      ],
+      "roadName": "중부내륙선",
+      "index": 1148,
+      "placeName": "김천 JC",
+      "rawPosition": [
+        36.16286746666666,
+        128.2645934666667
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.674519414,
+        128.43632062
+      ],
+      "roadName": "중부내륙선",
+      "index": 523,
+      "placeName": "현풍 JC",
+      "rawPosition": [
+        35.6753616,
+        128.43562876582874
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        36.36708747,
+        128.23924525
+      ],
+      "roadName": "중부내륙선",
+      "index": 1392,
+      "placeName": "낙동 JC",
+      "rawPosition": [
+        36.3670396,
+        128.2447143
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.290111601,
+        127.104781207
+      ],
+      "roadName": "영동선",
+      "index": 419,
+      "placeName": "신갈 JC",
+      "rawPosition": [
+        37.2905953,
+        127.10421696666667
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.344059229,
+        126.860745988
+      ],
+      "roadName": "영동선",
+      "index": 180,
+      "placeName": "안산 JC",
+      "rawPosition": [
+        37.3443768,
+        126.8610898
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.231937742,
+        127.591539525
+      ],
+      "roadName": "영동선",
+      "index": 884,
+      "placeName": "여주 JC",
+      "rawPosition": [
+        37.23011906666667,
+        127.59159896666667
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.388079398,
+        126.751994063
+      ],
+      "roadName": "영동선",
+      "index": 59,
+      "placeName": "월곶 JC",
+      "rawPosition": [
+        37.389325,
+        126.75291
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.434316592,
+        126.738787135
+      ],
+      "roadName": "영동선",
+      "index": 4,
+      "placeName": "서창 JC",
+      "rawPosition": [
+        37.434501524999995,
+        126.739528175
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.235811233,
+        127.42726024
+      ],
+      "roadName": "영동선",
+      "index": 732,
+      "placeName": "호법 JC",
+      "rawPosition": [
+        37.23581,
+        127.42672
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.322433033,
+        126.905951855
+      ],
+      "roadName": "영동선",
+      "index": 229,
+      "placeName": "둔대 JC",
+      "rawPosition": [
+        37.32313,
+        126.90557
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.362011855,
+        126.769703145
+      ],
+      "roadName": "영동선",
+      "index": 95,
+      "placeName": "군자 JC",
+      "rawPosition": [
+        37.3609879,
+        126.7692232
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.365589992,
+        127.903606971
+      ],
+      "roadName": "영동선",
+      "index": 1237,
+      "placeName": "만종 JC",
+      "rawPosition": [
+        37.36668196666667,
+        127.90340680000001
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.772091907,
+        128.827912635
+      ],
+      "roadName": "영동선",
+      "index": 2336,
+      "placeName": "강릉 JC",
+      "rawPosition": [
+        37.772401099999996,
+        128.82829305
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.38553742,
+        127.930547291
+      ],
+      "roadName": "영동선",
+      "index": 1273,
+      "placeName": "원주 JC",
+      "rawPosition": [
+        37.3856239,
+        127.9290048
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.218948991,
+        128.974246141
+      ],
+      "roadName": "중앙선:1/2",
+      "index": 31,
+      "placeName": "대저 JC",
+      "rawPosition": [
+        35.219217,
+        128.97428
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.28406943,
+        128.984845168
+      ],
+      "roadName": "중앙선:1/2",
+      "index": 105,
+      "placeName": "대동 JC",
+      "rawPosition": [
+        35.28369852499999,
+        128.985664
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.271585591,
+        128.983384491
+      ],
+      "roadName": "중앙선:1/2",
+      "index": 91,
+      "placeName": "대감 JC",
+      "rawPosition": [
+        35.271282,
+        128.985138
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.887903391,
+        128.691134992
+      ],
+      "roadName": "중앙선:2/2",
+      "index": 3,
+      "placeName": "동대구 JC",
+      "rawPosition": [
+        35.88825515,
+        128.69168144999998
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        36.432809296,
+        128.621622803
+      ],
+      "roadName": "중앙선:2/2",
+      "index": 832,
+      "placeName": "안동 JC",
+      "rawPosition": [
+        36.43283285,
+        128.62249125
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.080550084,
+        128.175271707
+      ],
+      "roadName": "중앙선:2/2",
+      "index": 1830,
+      "placeName": "제천 JC",
+      "rawPosition": [
+        37.080537525,
+        128.17467207500002
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.365558374,
+        127.901995017
+      ],
+      "roadName": "중앙선:2/2",
+      "index": 2265,
+      "placeName": "만종 JC",
+      "rawPosition": [
+        37.36668196666667,
+        127.90340680000001
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.892586871,
+        128.528274619
+      ],
+      "roadName": "중앙선:2/2",
+      "index": 169,
+      "placeName": "금호 JC",
+      "rawPosition": [
+        35.893314600000004,
+        128.52823139999998
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.752599783,
+        127.794158252
+      ],
+      "roadName": "중앙선:2/2",
+      "index": 2819,
+      "placeName": "춘천 JC",
+      "rawPosition": [
+        37.752807860000004,
+        127.79005376
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.755711643,
+        127.790056287
+      ],
+      "roadName": "서울양양선",
+      "index": 624,
+      "placeName": "춘천 JC",
+      "rawPosition": [
+        37.752807860000004,
+        127.79005376
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.575498681,
+        127.16927328
+      ],
+      "roadName": "서울양양선",
+      "index": 0,
+      "placeName": "강일 JC",
+      "rawPosition": [
+        37.5757598,
+        127.1696662
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        38.06882036,
+        128.597737664
+      ],
+      "roadName": "동해선",
+      "index": 1032,
+      "placeName": "양양 JC",
+      "rawPosition": [
+        38.06909885,
+        128.59837944999998
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        38.06882036,
+        128.597737664
+      ],
+      "roadName": "동해선(삼척속초)",
+      "index": 1032,
+      "placeName": "양양 JC",
+      "rawPosition": [
+        38.06909885,
+        128.59837944999998
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.503088925,
+        129.25766826
+      ],
+      "roadName": "부산포항선",
+      "index": 410,
+      "placeName": "울주 JC",
+      "rawPosition": [
+        35.502711,
+        129.256762
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.554666448,
+        129.25016311
+      ],
+      "roadName": "부산포항선",
+      "index": 471,
+      "placeName": "울산 JC",
+      "rawPosition": [
+        35.55384062500001,
+        129.25195086074078
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.279979649,
+        129.225170658
+      ],
+      "roadName": "부산포항선",
+      "index": 138,
+      "placeName": "기장 JC",
+      "rawPosition": [
+        35.2815516,
+        129.22120315
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.406430058,
+        127.09673998
+      ],
+      "roadName": "수도권제1순환선",
+      "index": 2,
+      "placeName": "판교 JC",
+      "rawPosition": [
+        37.406139233333334,
+        127.09732643333332
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.368655087,
+        126.869845985
+      ],
+      "roadName": "수도권제1순환선",
+      "index": 1070,
+      "placeName": "조남 JC",
+      "rawPosition": [
+        37.3692905,
+        126.86978099999999
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.39557831,
+        126.848805314
+      ],
+      "roadName": "수도권제1순환선",
+      "index": 1032,
+      "placeName": "도리 JC",
+      "rawPosition": [
+        37.395742,
+        126.849803
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.530957417,
+        127.196297935
+      ],
+      "roadName": "수도권제1순환선",
+      "index": 192,
+      "placeName": "하남 JC",
+      "rawPosition": [
+        37.53187975,
+        127.19852019999999
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.387289547,
+        127.001498161
+      ],
+      "roadName": "수도권제1순환선",
+      "index": 1192,
+      "placeName": "학의 JC",
+      "rawPosition": [
+        37.386199,
+        127.002246
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.435628925,
+        126.818126393
+      ],
+      "roadName": "수도권제1순환선",
+      "index": 979,
+      "placeName": "안현 JC",
+      "rawPosition": [
+        37.436724,
+        126.819273
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.57125066,
+        126.753403004
+      ],
+      "roadName": "수도권제1순환선",
+      "index": 789,
+      "placeName": "노오지 JC",
+      "rawPosition": [
+        37.571252,
+        126.754246
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.57357742,
+        127.164938765
+      ],
+      "roadName": "수도권제1순환선",
+      "index": 249,
+      "placeName": "강일 JC",
+      "rawPosition": [
+        37.5757598,
+        127.1696662
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.638607014,
+        126.804772472
+      ],
+      "roadName": "수도권제1순환선",
+      "index": 697,
+      "placeName": "일산 JC",
+      "rawPosition": [
+        37.6387503,
+        126.8047234
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.406430058,
+        127.09673998
+      ],
+      "roadName": "수도권제1순환선(판교퇴계원)",
+      "index": 2,
+      "placeName": "판교 JC",
+      "rawPosition": [
+        37.406139233333334,
+        127.09732643333332
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.530957417,
+        127.196297935
+      ],
+      "roadName": "수도권제1순환선(판교퇴계원)",
+      "index": 192,
+      "placeName": "하남 JC",
+      "rawPosition": [
+        37.53187975,
+        127.19852019999999
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.57357742,
+        127.164938765
+      ],
+      "roadName": "수도권제1순환선(판교퇴계원)",
+      "index": 249,
+      "placeName": "강일 JC",
+      "rawPosition": [
+        37.5757598,
+        127.1696662
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.638607014,
+        126.804772472
+      ],
+      "roadName": "수도권제1순환선(퇴계원일산)",
+      "index": 361,
+      "placeName": "일산 JC",
+      "rawPosition": [
+        37.6387503,
+        126.8047234
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.405685537,
+        127.094436342
+      ],
+      "roadName": "수도권제1순환선(판교일산)",
+      "index": 132,
+      "placeName": "판교 JC",
+      "rawPosition": [
+        37.406139233333334,
+        127.09732643333332
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.387289547,
+        127.001498161
+      ],
+      "roadName": "수도권제1순환선(판교일산)",
+      "index": 44,
+      "placeName": "학의 JC",
+      "rawPosition": [
+        37.386199,
+        127.002246
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.259799363,
+        128.514284433
+      ],
+      "roadName": "남해제1지선",
+      "index": 42,
+      "placeName": "내서 JC",
+      "rawPosition": [
+        35.2597757,
+        128.51486753333333
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.271400385,
+        128.474403233
+      ],
+      "roadName": "남해제1지선",
+      "index": 0,
+      "placeName": "산인 JC",
+      "rawPosition": [
+        35.271834266666666,
+        128.4738598666667
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.274868716,
+        128.642639098
+      ],
+      "roadName": "남해제1지선",
+      "index": 185,
+      "placeName": "창원 JC",
+      "rawPosition": [
+        35.27514746666666,
+        128.64658853333333
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.219149663,
+        128.795715792
+      ],
+      "roadName": "남해제2지선",
+      "index": 3,
+      "placeName": "냉정 JC",
+      "rawPosition": [
+        35.218819499999995,
+        128.7944931
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.42374917,
+        126.895552781
+      ],
+      "roadName": "제2경인선(인천안양)",
+      "index": 245,
+      "placeName": "일직 JC",
+      "rawPosition": [
+        37.423154100000005,
+        126.8953925
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.432885409,
+        126.739345232
+      ],
+      "roadName": "제2경인선(인천안양)",
+      "index": 99,
+      "placeName": "서창 JC",
+      "rawPosition": [
+        37.434501524999995,
+        126.739528175
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.438116325,
+        126.81807437
+      ],
+      "roadName": "제2경인선(인천안양)",
+      "index": 172,
+      "placeName": "안현 JC",
+      "rawPosition": [
+        37.436724,
+        126.819273
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.436867349,
+        126.65465243
+      ],
+      "roadName": "제2경인선(인천안양)",
+      "index": 23,
+      "placeName": "학익 JC",
+      "rawPosition": [
+        37.4369066,
+        126.6545446
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.524090116,
+        126.758774573
+      ],
+      "roadName": "경인선",
+      "index": 174,
+      "placeName": "서운 JC",
+      "rawPosition": [
+        37.52530456666667,
+        126.75849876666666
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.570307321,
+        126.754564426
+      ],
+      "roadName": "인천국제공항선",
+      "index": 283,
+      "placeName": "노오지 JC",
+      "rawPosition": [
+        37.571252,
+        126.754246
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.48537585,
+        126.488853898
+      ],
+      "roadName": "인천국제공항선",
+      "index": 16,
+      "placeName": "공항신도시 JC",
+      "rawPosition": [
+        37.48528,
+        126.48881
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.592113439,
+        126.830748721
+      ],
+      "roadName": "인천국제공항선",
+      "index": 359,
+      "placeName": "북로 JC",
+      "rawPosition": [
+        37.5921119,
+        126.8312214
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        36.05933985,
+        126.772321136
+      ],
+      "roadName": "서천공주선",
+      "index": 23,
+      "placeName": "동서천 JC",
+      "rawPosition": [
+        36.059218,
+        126.773736
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        36.483458717,
+        127.063158797
+      ],
+      "roadName": "서천공주선",
+      "index": 611,
+      "placeName": "서공주 JC",
+      "rawPosition": [
+        36.483638150000004,
+        127.06364690000001
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.17895776,
+        127.000200229
+      ],
+      "roadName": "오산화성선",
+      "index": 2,
+      "placeName": "서오산 JC",
+      "rawPosition": [
+        37.17841865,
+        127.00047864999999
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.940356281,
+        127.092773862
+      ],
+      "roadName": "새만금포항선의 지선",
+      "index": 4,
+      "placeName": "익산 JC",
+      "rawPosition": [
+        35.941233600000004,
+        127.09343185
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.88611323,
+        127.168201279
+      ],
+      "roadName": "새만금포항선의 지선",
+      "index": 97,
+      "placeName": "완주 JC",
+      "rawPosition": [
+        35.886411325,
+        127.168261675
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.806337598,
+        127.253107517
+      ],
+      "roadName": "새만금포항선의 지선",
+      "index": 243,
+      "placeName": "의암 JC",
+      "rawPosition": [
+        35.80707,
+        127.25391
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        36.404403283,
+        127.417753393
+      ],
+      "roadName": "호남선의 지선",
+      "index": 538,
+      "placeName": "회덕 JC",
+      "rawPosition": [
+        36.4048636,
+        127.41872649999999
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        36.081864479,
+        127.102605643
+      ],
+      "roadName": "호남선의 지선",
+      "index": 0,
+      "placeName": "논산 JC",
+      "rawPosition": [
+        36.07826864,
+        127.10242606
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        36.293996635,
+        127.316105687
+      ],
+      "roadName": "호남선의 지선",
+      "index": 344,
+      "placeName": "서대전 JC",
+      "rawPosition": [
+        36.2945184,
+        127.3173482
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        36.389433974,
+        127.340180772
+      ],
+      "roadName": "호남선의 지선",
+      "index": 458,
+      "placeName": "유성 JC",
+      "rawPosition": [
+        36.3903078,
+        127.3375874
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.328695158,
+        126.80621248
+      ],
+      "roadName": "고창담양선",
+      "index": 175,
+      "placeName": "장성 JC",
+      "rawPosition": [
+        35.328407799999994,
+        126.80662315000001
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.245972698,
+        127.035579994
+      ],
+      "roadName": "고창담양선",
+      "index": 426,
+      "placeName": "대덕 JC",
+      "rawPosition": [
+        35.246539,
+        127.03542
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.415977536,
+        126.654712889
+      ],
+      "roadName": "고창담양선",
+      "index": 2,
+      "placeName": "고창 JC",
+      "rawPosition": [
+        35.41497555,
+        126.65267245000001
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        36.293971821,
+        127.317162636
+      ],
+      "roadName": "대전남부순환선",
+      "index": 1,
+      "placeName": "서대전 JC",
+      "rawPosition": [
+        36.2945184,
+        127.3173482
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        36.282439306,
+        127.449082454
+      ],
+      "roadName": "대전남부순환선",
+      "index": 126,
+      "placeName": "산내 JC",
+      "rawPosition": [
+        36.282475575,
+        127.44943500000001
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.178080804,
+        127.091847007
+      ],
+      "roadName": "봉담동탄선",
+      "index": 0,
+      "placeName": "동탄 JC",
+      "rawPosition": [
+        37.17799376666667,
+        127.09525653333333
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        37.176189682,
+        126.998879481
+      ],
+      "roadName": "봉담동탄선",
+      "index": 88,
+      "placeName": "서오산 JC",
+      "rawPosition": [
+        37.17841865,
+        127.00047864999999
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.674936605,
+        128.434706499
+      ],
+      "roadName": "중부내륙선의 지선",
+      "index": 0,
+      "placeName": "현풍 JC",
+      "rawPosition": [
+        35.6753616,
+        128.43562876582874
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.892719452,
+        128.525069283
+      ],
+      "roadName": "중부내륙선의 지선",
+      "index": 300,
+      "placeName": "금호 JC",
+      "rawPosition": [
+        35.893314600000004,
+        128.52823139999998
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.795121275,
+        128.464758385
+      ],
+      "roadName": "중부내륙선의 지선",
+      "index": 157,
+      "placeName": "옥포 JC",
+      "rawPosition": [
+        35.7951001,
+        128.464228
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.256967914,
+        126.798164646
+      ],
+      "roadName": "광주외곽순환선",
+      "index": 97,
+      "placeName": "남장성 JC",
+      "rawPosition": [
+        35.2601545,
+        126.798793
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.332704175,
+        129.038348163
+      ],
+      "roadName": "중앙선의 지선",
+      "index": 171,
+      "placeName": "양산 JC",
+      "rawPosition": [
+        35.33134995,
+        129.03919474999998
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.282456754,
+        128.986952594
+      ],
+      "roadName": "중앙선의 지선",
+      "index": 94,
+      "placeName": "대동 JC",
+      "rawPosition": [
+        35.28369852499999,
+        128.985664
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.224223443,
+        128.916884567
+      ],
+      "roadName": "중앙선의 지선",
+      "index": 0,
+      "placeName": "김해 JC",
+      "rawPosition": [
+        35.224706749999996,
+        128.9170715
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.282071646,
+        129.217627779
+      ],
+      "roadName": "부산외곽순환선",
+      "index": 488,
+      "placeName": "기장 JC",
+      "rawPosition": [
+        35.2815516,
+        129.22120315
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.269913557,
+        128.984868109
+      ],
+      "roadName": "부산외곽순환선",
+      "index": 264,
+      "placeName": "대감 JC",
+      "rawPosition": [
+        35.271282,
+        128.985138
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.281576291,
+        128.720698352
+      ],
+      "roadName": "부산외곽순환선",
+      "index": 2,
+      "placeName": "진영 JC",
+      "rawPosition": [
+        35.28176475,
+        128.72136445
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.289992944,
+        129.096664434
+      ],
+      "roadName": "부산외곽순환선",
+      "index": 374,
+      "placeName": "노포 JC",
+      "rawPosition": [
+        35.290031299999995,
+        129.09677605000002
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.906876361,
+        128.487733621
+      ],
+      "roadName": "대구외곽순환선:1/2",
+      "index": 116,
+      "placeName": "칠곡 JC",
+      "rawPosition": [
+        35.9068801,
+        128.4877524
+      ],
+      "pointType": "JC"
+    },
+    {
+      "type": "point",
+      "position": [
+        35.891378202,
+        128.701915427
+      ],
+      "roadName": "대구외곽순환선:2/2",
+      "index": 120,
+      "placeName": "상매 JC",
+      "rawPosition": [
+        35.8913503,
+        128.70201
+      ],
+      "pointType": "JC"
+    }
+  ]
+}

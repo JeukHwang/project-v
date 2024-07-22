@@ -35,9 +35,13 @@ interface RoadPointNode extends PointNode, RoadNode<number> {}
 interface RoadLineNode
   extends LineNode<RoadPointNode>,
     RoadNode<[start: number, end: number]> {}
-interface ICNode extends RoadPointNode, PlaceNode {}
-interface JCNode extends LineNode<RoadPointNode>, PlaceNode {}
+interface ICNode extends RoadPointNode, PlaceNode {
+  pointType: "IC";
+}
+interface JCNode extends RoadPointNode, PlaceNode {
+  pointType: "JC";
+}
 export type { ICNode, JCNode, RoadLineNode, RoadPointNode };
 
-type PathNode = PointNode | ICNode | LineNode | RoadLineNode | JCNode;
+type PathNode = PointNode | ICNode | JCNode | LineNode | RoadLineNode;
 export type { PathNode };

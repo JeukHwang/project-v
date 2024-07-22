@@ -1,12 +1,13 @@
 import { LatLngTuple } from "../lib/leaflet";
 import { ROAD } from "../road/import";
 import { RoadName } from "../road/type";
-import { findClosestPoint, length } from "../util";
+import { findClosestPoint, length, Subtype } from "../util";
 import { IC, JC } from "./import";
 import {
   ICNode,
   JCNode,
   LineNode,
+  PlaceName,
   PointNode,
   RoadLineNode,
   RoadPointNode,
@@ -16,22 +17,33 @@ export class PointUtil {
   public static closestRoadPoint(
     point: LatLngTuple,
     roadName: RoadName | null
-  ): ICNode {
-    const positions = roadName
-      ? ROAD.geometry[roadName]
-      : Object.values(ROAD.geometry).flat();
-    const { index } = findClosestPoint(positions, point);
-    return IC[index];
+  ): RoadPointNode {
+    let shortestDistance = Infinity;
+    let rpn: RoadPointNode = null as unknown as RoadPointNode;
+    for (const name of roadName ? [roadName] : ROAD.name) {
+      const {
+        distance: d,
+        point: p,
+        index: i,
+      } = findClosestPoint(ROAD.geometry[name], point);
+      if (d < shortestDistance) {
+        shortestDistance = d;
+        rpn = { type: "point", position: p, roadName: name, index: i };
+      }
+    }
+    return rpn;
   }
 
   public static closestIC(
     point: LatLngTuple,
     roadName: RoadName | null
   ): ICNode {
-    const ICs = roadName ? ICUtil.filter(roadName) : IC;
+    const ICs = roadName ? PlaceUtil.filterIC(roadName) : IC;
     const positions = ICs.map(({ position }) => position);
-    const { index } = findClosestPoint(positions, point);
-    return IC[index];
+    const { point: p } = findClosestPoint(positions, point);
+    return ICs.find(
+      ({ position }) => position[0] === p[0] && position[1] === p[1]
+    )!;
   }
 }
 
@@ -94,37 +106,46 @@ export class LineUtil {
   }
 }
 
-export class ICUtil {
-  public static filter(roadName: RoadName): ICNode[] {
+export type PlaceId = Subtype<string>;
+export class PlaceUtil {
+  public static id(node: ICNode | JCNode): PlaceId {
+    return JSON.stringify({
+      position: node.position,
+      roadName: node.roadName,
+      index: node.index,
+      placeName: node.placeName,
+      pointType: node.pointType,
+    }) as PlaceId;
+  }
+
+  public static get idList() {
+    return [...IC, ...JC].map((node) => PlaceUtil.id(node));
+  }
+
+  public static isEqual(
+    node1: ICNode | JCNode,
+    node2: ICNode | JCNode
+  ): boolean {
+    return PlaceUtil.id(node1) === PlaceUtil.id(node2);
+  }
+
+  public static filter(roadName: RoadName): (ICNode | JCNode)[] {
+    return [...PlaceUtil.filterIC(roadName), ...PlaceUtil.filterJC(roadName)];
+  }
+
+  public static filterIC(roadName: RoadName): ICNode[] {
     return IC.filter(({ roadName: name }) => name === roadName);
   }
-}
 
-export class JCUtil {
-  public static validate(jc: JCNode): void {
-    console.assert(
-      jc.fromNode.roadName !== jc.toNode.roadName,
-      "fromNode.roadName !== toNode.roadName"
-    );
+  public static filterJC(roadName: RoadName): JCNode[] {
+    return JC.filter(({ roadName: name }) => name === roadName);
   }
 
-  public static filter(roadName: RoadName): JCNode[] {
-    return JC.filter(({ fromNode, toNode }) => {
-      return roadName === fromNode.roadName || roadName === toNode.roadName;
-    });
+  public static groupJC(placeName: PlaceName): JCNode[] {
+    return JC.filter(({ placeName: name }) => name === placeName);
   }
 
-  public static realign(
-    jc: JCNode,
-    roadName: RoadName,
-    as: "from" | "to"
-  ): JCNode {
-    this.validate(jc);
-    const { close, far } = LineUtil.alignPoint(jc, roadName);
-    return {
-      ...jc,
-      fromNode: as === "from" ? close : far,
-      toNode: as === "from" ? far : close,
-    };
+  public static get listJC(): PlaceName[] {
+    return [...new Set(JC.map(({ placeName }) => placeName))];
   }
 }

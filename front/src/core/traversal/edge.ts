@@ -1,255 +1,88 @@
-import { ROADS_NAME } from "../../util/highway.legacy";
-import { distanceTo } from "../lib/leaflet";
 import { IC, JC } from "../node/import";
-import { ICNode, JCNode, RoadLineNode, RoadPointNode } from "../node/type";
-import { ICUtil, JCUtil } from "../node/util";
+import { ICNode, JCNode } from "../node/type";
+import { PlaceUtil } from "../node/util";
 import { ROAD } from "../road/import";
-import { length } from "../util";
 import { Edge } from "./util";
 
-// 지금은, IC, JC가 모두 되고 있는데... 그냥 
-// 도로 하나 기준으로 IC, JC 모든 점을 나열할 수 있어야 하는 것이 중요함
-// 
-const edge = new Edge();
-
-for (const roadName of ROAD.name) {
-  const icNodes = ICUtil.filter(roadName);
-  const jcNodes = JCUtil.filter(roadName).map((jc) =>
-    JCUtil.realign(jc, roadName, "from")
-  );
-
-  for (let i = 0; i < icNodes.length - 1; i++) {
-    for (let j = i + 1; j < icNodes.length; j++) {
-      const d = distanceTo(icNodes[i].position, icNodes[j].position);
-      edge.update(icNodes[i], icNodes[j], d);
+function constructBasicEdge(): Edge {
+  const edge = new Edge();
+  for (const roadName of ROAD.name) {
+    const placeNodes = PlaceUtil.filter(roadName);
+    placeNodes.sort((a, b) => a.index - b.index);
+    for (let i = 0; i < placeNodes.length - 1; i++) {
+      edge.set(placeNodes[i], placeNodes[i + 1]);
     }
   }
-
-  for (const ic of icNodes) {
-    for (const jc of jcNodes) {
-      const d = length(ic.position, jc.fromNode.position);
-      edge.update(ic, jc, d);
+  for (const placeName of PlaceUtil.listJC) {
+    const jcNodes = PlaceUtil.groupJC(placeName);
+    for (let i = 0; i < jcNodes.length - 1; i++) {
+      for (let j = i + 1; j < jcNodes.length; j++) {
+        edge.set(jcNodes[i], jcNodes[j]);
+      }
     }
   }
-
-
-for (let i = 0; i < jcNodes.length - 1; i++) {
-  for (let j = i + 1; j < jcNodes.length; j++) {
-    const d = distanceTo(jcNodes[i].fromNode.position, jcNodes[j].position);
-    edge.update(jcNodes[i], jcNodes[j], d);
-  }
+  return edge;
 }
-for (const road of ROADS_NAME) {
-  const roadIC = ICUtil.filter(road);
-  const roadJC = JC.filter(
-    ({ point1, point2 }) => point1.roadName === road || point2.roadName === road
-  );
-  // IC <-> IC
-  for (let i = 0; i < roadIC.length - 1; i++) {
-    for (let j = i + 1; j < roadIC.length; j++) {
-      const d = distance(roadIC[i].position, roadIC[j].position);
-      if (EDGES[roadIC[i].placeName] === undefined)
-        EDGES[roadIC[i].placeName] = [];
-      if (EDGES[roadIC[j].placeName] === undefined)
-        EDGES[roadIC[j].placeName] = [];
-      EDGES[roadIC[i].placeName].push([roadIC[i], roadIC[j], d]);
-      EDGES[roadIC[j].placeName].push([roadIC[j], roadIC[i], d]);
-    }
-  }
-  // IC <-> JC
-  for (const ic of roadIC) {
-    for (const jc of roadJC) {
-      const closePoint =
-        jc.point1.roadName === ic.roadName ? jc.point1 : jc.point2;
-      const d = distance(ic.position, closePoint.point);
-      if (EDGES[ic.placeName] === undefined) EDGES[ic.placeName] = [];
-      if (EDGES[jc.placeName] === undefined) EDGES[jc.placeName] = [];
-      EDGES[ic.placeName].push([ic, jc, d]);
-      EDGES[jc.placeName].push([jc, ic, d]);
-    }
-  }
+const basicEdge = constructBasicEdge();
+
+export function addFromToEdge(from: ICNode, to: ICNode): Edge {
+  const edge = new Edge(basicEdge.JSON);
+
+  const fromPlaces = [...PlaceUtil.filter(from.roadName), from];
+  fromPlaces.sort((a, b) => a.index - b.index);
+  const fromIndex = fromPlaces.findIndex(({ index }) => index === from.index);
+  edge.set(from, fromPlaces[fromIndex - 1]);
+  edge.set(from, fromPlaces[fromIndex + 1]);
+
+  const toPlaces = [...PlaceUtil.filter(to.roadName), to];
+  toPlaces.sort((a, b) => a.index - b.index);
+  const toIndex = toPlaces.findIndex(({ index }) => index === to.index);
+  edge.set(to, toPlaces[toIndex - 1]);
+  edge.set(to, toPlaces[toIndex + 1]);
+
+  return edge;
 }
 
-export function findRoadPathFromNodes(
-  from: RoadPointNode,
-  to: RoadPointNode
-): PathNodes<(RoadPointNode | RoadLineNode | NormalLineNode)[]> {
-  // find current road, last road
-  // copy EDGE
-  // add edge between from and nodes in same road with from
-  // add edge between from and nodes in same road with to
-  // do dijkstra shortest path algorithm
-  // backtracking to find
+type DistanceMap = { [key: string]: number };
+type BacktrackingMap = { [key: string]: ICNode | JCNode };
 
-  if (
-    from.roadName !== to.roadName &&
-    (from.roadName === "남해선(영암순천)" || to.roadName === "남해선(영암순천)")
-  ) {
-    return {
-      nodes: [from, to],
-      distance: distanceTo(from.position, to.position),
-    };
-  }
+export function dijkstra(edge: Edge, from: ICNode, to: ICNode): DistanceMap {
+  const distance = Object.fromEntries(
+    PlaceUtil.idList.map((id) => [id, Infinity])
+  ) as DistanceMap;
+  distance[PlaceUtil.id(from)] = 0;
+  const prev = {} as BacktrackingMap;
+  const will_visit = [...IC, ...JC];
 
-  const fromICNode: ICNode = {
-    ...from,
-    placeName: "FROM",
-    rawPosition: from.position,
-  };
-  const toICNode: ICNode = { ...to, placeName: "TO", rawPosition: to.position };
-
-  const fromRoad = from.roadName;
-  const toRoad = to.roadName;
-  const fromIC = IC.filter(({ roadName }) => roadName === fromRoad);
-  const fromJC = JC.filter(
-    ({ point1, point2 }) =>
-      point1.roadName === fromRoad || point2.roadName === fromRoad
-  );
-  const toIC = IC.filter(({ roadName }) => roadName === toRoad);
-  const toJC = JC.filter(
-    ({ point1, point2 }) =>
-      point1.roadName === toRoad || point2.roadName === toRoad
-  );
-
-  const edges = { ...EDGES } as {
-    [place: string]: [ICNode | JCNode, ICNode | JCNode, number][];
-  };
-  // from <-> fromIC
-  for (const ic of fromIC) {
-    const d = distanceTo(from.position, ic.position);
-    if (edges["FROM"] === undefined) edges["FROM"] = [];
-    if (edges[ic.placeName] === undefined) edges[ic.placeName] = [];
-    edges["FROM"].push([fromICNode, ic, d]);
-    edges[ic.placeName].push([ic, fromICNode, d]);
-  }
-  // from <-> fromJC
-  for (const jc of fromJC) {
-    const closePoint = jc.point1.roadName === fromRoad ? jc.point1 : jc.point2;
-    const d = distanceTo(from.position, closePoint.point);
-    if (edges["FROM"] === undefined) edges["FROM"] = [];
-    if (edges[jc.placeName] === undefined) edges[jc.placeName] = [];
-    edges["FROM"].push([fromICNode, jc, d]);
-    edges[jc.placeName].push([jc, fromICNode, d]);
-  }
-  // to <-> toIC
-  for (const ic of toIC) {
-    const d = distanceTo(to.position, ic.position);
-    if (edges["TO"] === undefined) edges["TO"] = [];
-    if (edges[ic.placeName] === undefined) edges[ic.placeName] = [];
-    edges["TO"].push([toICNode, ic, d]);
-    edges[ic.placeName].push([ic, toICNode, d]);
-  }
-  // to <-> toJC
-  for (const jc of toJC) {
-    const closePoint = jc.point1.roadName === toRoad ? jc.point1 : jc.point2;
-    const d = distanceTo(to.position, closePoint.point);
-    if (edges["TO"] === undefined) edges["TO"] = [];
-    if (edges[jc.placeName] === undefined) edges[jc.placeName] = [];
-    edges["TO"].push([toICNode, jc, d]);
-    edges[jc.placeName].push([jc, toICNode, d]);
-  }
-
-  const distance = {
-    [fromICNode.placeName]: 0,
-    [toICNode.placeName]: Infinity,
-  } as { [key: string]: number };
-  const prev = {
-    [fromICNode.placeName]: null,
-  } as { [key: string]: ICNode | JCNode | null };
-  const will_visit: (ICNode | JCNode | null)[] = [fromICNode];
-  const visited: (ICNode | JCNode)[] = [];
   while (will_visit.length > 0) {
-    const current = will_visit.pop()!;
-    if (visited.some((node) => node.placeName === current.placeName)) continue;
-    visited.push(current);
-    for (const [, toEdge, dist] of edges[current.placeName]) {
-      if (
-        distance[toEdge.placeName] === undefined ||
-        distance[toEdge.placeName] > distance[current.placeName] + dist
-      ) {
-        distance[toEdge.placeName] = distance[current.placeName] + dist;
-        prev[toEdge.placeName] = current;
-        will_visit.push(toEdge);
+    will_visit.sort(
+      (a, b) => distance[PlaceUtil.id(a)] - distance[PlaceUtil.id(b)]
+    );
+    const closestNode = will_visit.shift()!;
+    if (distance[PlaceUtil.id(closestNode)] === Infinity) break;
+    for (const neighbor of edge.neighbor(closestNode)) {
+      const d =
+        distance[PlaceUtil.id(closestNode)] + edge.get(closestNode, neighbor);
+      if (d < distance[PlaceUtil.id(neighbor)]) {
+        distance[PlaceUtil.id(neighbor)] = d;
+        prev[PlaceUtil.id(neighbor)] = closestNode;
       }
     }
   }
 
-  const minDistance = distance[toICNode.placeName];
+  const minDistance = distance[PlaceUtil.id(to)];
   const nodes = [];
-  let current: ICNode | JCNode | null = toICNode;
+  let current: ICNode | JCNode | null = to;
   while (current) {
     nodes.push(current);
     current = prev[current.placeName];
   }
   nodes.reverse();
 
-  console.log(nodes);
-
-  const roads: PathNodes<
-    (RoadPointNode | RoadLineNode | NormalLineNode)[]
-  >["nodes"] = [];
-  for (let i = 0; i < nodes.length - 1; i++) {
-    const before = nodes[i];
-    const after = nodes[i + 1];
-    if (before.type === "point" && after.type === "point") {
-      roads.push(before, findRoadLineFromPoints(before, after));
-    } else if (before.type === "point" && after.type === "junction") {
-      const closePoint =
-        before.roadName === after.point1.roadName ? after.point1 : after.point2;
-      const farPoint =
-        before.roadName === after.point1.roadName ? after.point2 : after.point1;
-      roads.push(before, findRoadLineFromPoints(before, closePoint));
-      roads.push(closePoint, findRoadLineFromPoints(closePoint, farPoint));
-    } else if (before.type === "junction" && after.type === "point") {
-      const closePoint =
-        before.point1.roadName === after.roadName
-          ? before.point1
-          : before.point2;
-      roads.push(closePoint, findRoadLineFromPoints(closePoint, after));
-    } else if (before.type === "junction" && after.type === "junction") {
-      const closeBefore =
-        before.point1.roadName === after.point1.roadName
-          ? before.point1
-          : before.point2;
-      const farBefore =
-        before.point1.roadName === after.point1.roadName
-          ? before.point2
-          : before.point1;
-      const closeAfter =
-        before.point1.roadName === after.point1.roadName
-          ? after.point1
-          : after.point2;
-      const farAfter =
-        before.point1.roadName === after.point1.roadName
-          ? after.point2
-          : after.point1;
-      roads.push(closeBefore, findRoadLineFromPoints(closeBefore, closeAfter));
-      roads.push(closeAfter, findRoadLineFromPoints(closeAfter, farAfter));
-    }
-  }
-  roads.push(to);
-
-  //   console.log(nodes, minDistance);
-
-  //   1  function Dijkstra(Graph, source):
-  //   2
-  //   3      for each vertex v in Graph.Vertices:
-  //   4          dist[v] ← INFINITY
-  //   5          prev[v] ← UNDEFINED
-  //   6          add v to Q
-  //   7      dist[source] ← 0
-  //   8
-  //   9      while Q is not empty:
-  //  10          u ← vertex in Q with minimum dist[u]
-  //  11          remove u from Q
-  //  12
-  //  13          for each neighbor v of u still in Q:
-  //  14              alt ← dist[u] + Graph.Edges(u, v)
-  //  15              if alt < dist[v]:
-  //  16                  dist[v] ← alt
-  //  17                  prev[v] ← u
-  //  18
-  //  19      return dist[], prev[]
-
-  return { nodes: roads, distance: minDistance };
+  console.log(distance);
+  console.log("prev", prev);
+  console.log(will_visit);
+  console.log(minDistance, nodes);
+  //   return { nodes: roads, distance: minDistance };
+  return distance;
 }

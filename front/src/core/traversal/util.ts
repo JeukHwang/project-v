@@ -1,53 +1,60 @@
-import { PlaceNode } from "../node/type";
-import { Subtype } from "../util";
+import { distanceTo } from "../lib/leaflet";
+import { ICNode, JCNode } from "../node/type";
+import { PlaceId, PlaceUtil } from "../node/util";
 
-type EdgeId = Subtype<string>;
+type EdgeData<T> = { first: T; second: T; distance: number };
+export class Edge<T extends ICNode | JCNode = ICNode | JCNode> {
+  private data: Map<PlaceId, EdgeData<T>>;
 
-export class Edge {
-  private data: Map<
-    EdgeId,
-    { first: PlaceNode; second: PlaceNode; distance: number }
-  > = new Map();
+  public constructor(data?: [PlaceId, EdgeData<T>][]) {
+    this.data = new Map(data);
+  }
 
   private normalize(
-    placeNode1: PlaceNode,
-    placeNode2: PlaceNode
-  ): { first: PlaceNode; second: PlaceNode; id: EdgeId } {
-    console.assert(
-      placeNode1.placeName !== placeNode2.placeName,
-      "PlaceName must be different"
-    );
+    placeNode1: T,
+    placeNode2: T
+  ): { first: T; second: T; id: PlaceId } {
+    // console.assert(
+    //   placeNode1.placeName !== placeNode2.placeName,
+    //   "PlaceName must be different"
+    // );
     return placeNode1.placeName < placeNode2.placeName
       ? {
           first: placeNode1,
           second: placeNode2,
-          id: `${placeNode1.placeName}/${placeNode2.placeName}` as EdgeId,
+          id: PlaceUtil.id(placeNode1),
         }
       : {
           first: placeNode2,
           second: placeNode1,
-          id: `${placeNode2.placeName}/${placeNode1.placeName}` as EdgeId,
+          id: PlaceUtil.id(placeNode2),
         };
   }
 
-  public get(fromNode: PlaceNode, toNode: PlaceNode): number {
+  public neighbor(node: T): T[] {
+    const list: T[] = [];
+    for (const { first, second } of this.data.values()) {
+      if (PlaceUtil.isEqual(first, node)) list.push(second);
+      else if (PlaceUtil.isEqual(second, node)) list.push(first);
+    }
+    return list;
+  }
+
+  public get(fromNode: T, toNode: T): number {
     const { id } = this.normalize(fromNode, toNode);
     return this.data.get(id)?.distance ?? Infinity;
   }
 
-  public set(fromNode: PlaceNode, toNode: PlaceNode, distance: number): void {
+  public set(fromNode: T, toNode: T, distance?: number): void {
     const { first, second, id } = this.normalize(fromNode, toNode);
-    this.data.set(id, { first, second, distance });
+    this.data.set(id, {
+      first,
+      second,
+      distance: distance ?? distanceTo(fromNode.position, toNode.position),
+    });
   }
 
-  public update(
-    fromNode: PlaceNode,
-    toNode: PlaceNode,
-    distance: number
-  ): void {
-    const { id } = this.normalize(fromNode, toNode);
-    const data = this.data.get(id);
-    if (data && data.distance <= distance) return;
-    this.data.set(id, { first: fromNode, second: toNode, distance });
+  public get JSON(): [PlaceId, EdgeData<T>][] {
+    return [...this.data.entries()];
   }
 }

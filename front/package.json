@@ -8,7 +8,7 @@
     "build": "tsc && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "start": "npx vite-node src/util/path/import.ts"
+    "execute": "npx vite-node src/core/main.ts"
   },
   "dependencies": {
     "colorgrad-js": "^0.1.0",
